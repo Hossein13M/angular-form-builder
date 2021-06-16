@@ -11,6 +11,10 @@ const routes: Routes = [
         path: 'form-builder-wrapper',
         loadChildren: () => import('../app/modules/form-builder-wrapper/form-builder-wrapper.module').then((m) => m.FormBuilderWrapperModule),
     },
+    {
+        path: 'test',
+        loadChildren: () => import('../app/modules/test/test.module').then((m) => m.TestModule),
+    },
 ];
 
 @NgModule({
