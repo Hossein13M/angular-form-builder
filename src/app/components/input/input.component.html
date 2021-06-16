@@ -1,0 +1,24 @@
+<mat-form-field class="w-100 py-auto my-auto" appearance="outline" [color]="inputFormConfiguration.color">
+    <mat-label>{{ inputFormConfiguration.label }}</mat-label>
+    <input
+        matInput
+        [attr.placeholder]="inputFormConfiguration.placeholder"
+        [formControl]="FC"
+        [type]="hideText ? 'password' : inputFormConfiguration.type"
+        [class.text-ltr]="inputFormConfiguration.isRtl"
+        [attr.inputmode]="inputMode"
+        [readonly]="inputFormConfiguration.readonly"
+        [autofocus]="inputFormConfiguration.autofocus"
+    />
+    <button *ngIf="inputFormConfiguration.isInputTypePassword" class="my-auto" type="button" mat-icon-button matSuffix (click)="hideText = !hideText">
+        <mat-icon fontSet="material-icons-outlined">{{ hideText ? 'visibility_off' : 'remove_red_eye' }}</mat-icon>
+    </button>
+<!--    <mat-error>-->
+<!--        <ng-container *ngFor="let v of inputFormConfiguration.errorMessages.length | keyvalue; let last = last">-->
+<!--            <ng-container *ngIf="FC && FC.hasError(v.key) && (FC.dirty || FC.touched)">-->
+<!--                <span class="app-input-mat-error">{{ v.value }}</span>-->
+<!--                <span *ngIf="!last" class="app-input-mat-error-sep"></span>-->
+<!--            </ng-container>-->
+<!--        </ng-container>-->
+<!--    </mat-error>-->
+</mat-form-field>
