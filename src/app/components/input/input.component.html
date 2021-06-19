@@ -13,12 +13,15 @@
     <button *ngIf="inputFormConfiguration.isInputTypePassword" class="my-auto" type="button" mat-icon-button matSuffix (click)="hideText = !hideText">
         <mat-icon fontSet="material-icons-outlined">{{ hideText ? 'visibility_off' : 'remove_red_eye' }}</mat-icon>
     </button>
-<!--    <mat-error>-->
-<!--        <ng-container *ngFor="let v of inputFormConfiguration.errorMessages.length | keyvalue; let last = last">-->
-<!--            <ng-container *ngIf="FC && FC.hasError(v.key) && (FC.dirty || FC.touched)">-->
-<!--                <span class="app-input-mat-error">{{ v.value }}</span>-->
-<!--                <span *ngIf="!last" class="app-input-mat-error-sep"></span>-->
-<!--            </ng-container>-->
-<!--        </ng-container>-->
-<!--    </mat-error>-->
+    <mat-hint>{{ inputFormConfiguration.hint }}</mat-hint>
+
+    <mat-error>
+        <!--        <ng-container *ngFor="let errorMessage of inputFormConfiguration.errorMessages; let last = last">-->
+        <!--            <span class="app-input-mat-error">{{ errorMessage.errorMessage }}</span>-->
+        <!--            <ng-container *ngIf="FC && FC.hasError(errorMessage.errorName) && (FC.dirty || FC.touched)">-->
+        <!--                <span>{{ errorMessage.errorMessage }}</span>-->
+        <!--                <span *ngIf="!last" class="app-input-mat-error-sep"></span>-->
+        <!--            </ng-container>-->
+        <!--        </ng-container>-->
+    </mat-error>
 </mat-form-field>

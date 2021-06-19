@@ -8,8 +8,9 @@ export interface InputFormConfiguration {
     placeholder?: string;
     isInputTypePassword?: boolean;
     color?: ThemePalette;
-    errorMessages?: [{ errorName: string; errorMessage: string }];
+    errorMessages?: Array<{ errorName: string; errorMessage: string }>;
     isRtl?: boolean;
     autofocus?: boolean;
     readonly?: boolean;
+    hint?: string;
 }
