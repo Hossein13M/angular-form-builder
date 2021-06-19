@@ -9,14 +9,17 @@ import { InputFormConfiguration } from './input.model';
 })
 export class InputComponent implements OnChanges {
     @Input('inputFormConfiguration') inputFormConfiguration: InputFormConfiguration = {
-        formControl: null,
+        formControl: new FormControl(),
         type: 'text',
-        label: '',
+        placeholder: 'placeholder',
+        label: 'test',
         isInputTypePassword: false,
         color: 'primary',
         isRtl: false,
         autofocus: false,
         readonly: false,
+        errorMessages: [{ errorName: 'email', errorMessage: 'hello' }],
+        hint: 'hint',
     };
 
     public inputMode: 'email' | 'numeric' | 'url' | 'tel' | 'text' = 'text';
