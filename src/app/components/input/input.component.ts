@@ -8,12 +8,14 @@ import { InputFormConfiguration } from './input.model';
     styleUrls: ['./input.component.scss'],
 })
 export class InputComponent implements OnChanges {
+    public hideInputTextForPasswordInputs = false;
+
     @Input('inputFormConfiguration') inputFormConfiguration: InputFormConfiguration = {
         formControl: new FormControl(),
         type: 'text',
         placeholder: 'placeholder',
         label: 'test',
-        isInputTypePassword: false,
+        isInputTypePassword: true,
         color: 'primary',
         isRtl: false,
         autofocus: false,
@@ -22,25 +24,9 @@ export class InputComponent implements OnChanges {
         hint: 'hint',
     };
 
-    public inputMode: 'email' | 'numeric' | 'url' | 'tel' | 'text' = 'text';
-    public hideText = false;
-
     ngOnChanges(): void {
         if (!this.FC) throw new Error('FC Input is required');
-        if (this.inputFormConfiguration.isInputTypePassword) this.hideText = true;
-
-        switch (this.inputFormConfiguration.type) {
-            case 'email':
-            case 'tel':
-            case 'url':
-                this.inputMode = this.inputFormConfiguration.type;
-                break;
-            case 'number':
-                this.inputMode = 'numeric';
-                break;
-            default:
-                this.inputMode = 'text';
-        }
+        if (this.inputFormConfiguration.isInputTypePassword) this.hideInputTextForPasswordInputs = true;
     }
 
     public get FC(): FormControl {
