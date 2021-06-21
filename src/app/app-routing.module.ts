@@ -5,7 +5,7 @@ const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'form-builder-wrapper',
+        redirectTo: 'test',
     },
     {
         path: 'form-builder-wrapper',
