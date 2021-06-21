@@ -1,0 +1,14 @@
+<a (click)="handleClick()" [dir]="buttonConfiguration.isRtl ? 'rtl' : 'ltr'">
+    <button
+        [routerLink]="buttonConfiguration.localNavigationUrl"
+        mat-flat-button
+        [matTooltip]="buttonConfiguration.tooltipText ?? ''"
+        [matTooltipDisabled]="!buttonConfiguration.hasToolTip"
+        [matTooltipPosition]="buttonConfiguration.tooltipPosition ?? 'below'"
+        [matTooltipHideDelay]="buttonConfiguration.tooltipHideDelay ?? 0"
+        [color]="buttonConfiguration.themeColor"
+    >
+        <span [className]="buttonConfiguration.tailwindsClassForLabel">{{ buttonConfiguration.label }}</span>
+        <mat-icon *ngIf="buttonConfiguration.hasIcon" fontSet="material-icons-outlined">{{ buttonConfiguration.icon }}</mat-icon>
+    </button>
+</a>
