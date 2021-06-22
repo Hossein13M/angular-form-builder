@@ -1,7 +1,7 @@
 <a (click)="handleClick()" [dir]="buttonConfiguration.isRtl ? 'rtl' : 'ltr'">
     <button
-        [routerLink]="buttonConfiguration.localNavigationUrl"
         mat-flat-button
+        [routerLink]="buttonConfiguration.localNavigationUrl"
         [matTooltip]="buttonConfiguration.tooltipText ?? ''"
         [matTooltipDisabled]="!buttonConfiguration.hasToolTip"
         [matTooltipPosition]="buttonConfiguration.tooltipPosition ?? 'below'"
