@@ -4,3 +4,11 @@ mat-card {
 mat-card-actions {
     display: flex;
 }
+mat-grid-tile {
+    background: lightblue;
+}
+
+mat-grid-list {
+    min-width: 1200px;
+    padding: 20px;
+}

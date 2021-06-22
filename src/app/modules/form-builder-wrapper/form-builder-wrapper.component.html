@@ -5,10 +5,16 @@
             <mat-card-subtitle>Choose your form</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content class="flex-grow overflow-auto">
-            <p>
-                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with
-                mountainous terrain, the Shiba Inu was originally bred for hunting.
-            </p>
+            <mat-grid-list cols="2" gutterSize="30px" class="mx-5">
+                <mat-grid-tile>
+                    <div class="dastan">
+                        <div *ngFor="let componentConfiguration of componentsListConfiguration">
+                            <app-button [buttonConfiguration]="componentConfiguration"></app-button>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile>2</mat-grid-tile>
+            </mat-grid-list>
         </mat-card-content>
         <mat-card-actions class="flex justify-around mb-12">
             <button mat-flat-button color="primary" (click)="saveForm()">Save Form</button>
