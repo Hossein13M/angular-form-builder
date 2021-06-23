@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ButtonModel } from '../../components/button/button.model';
+import { ButtonConfiguration } from '../../components/button/buttonConfiguration';
 
 @Component({
     selector: 'app-test',
@@ -7,7 +7,7 @@ import { ButtonModel } from '../../components/button/button.model';
     styleUrls: ['./test.component.scss'],
 })
 export class TestComponent {
-    buttonConfiguration: ButtonModel = {
+    buttonConfiguration: ButtonConfiguration = {
         type: 'accept',
         themeColor: 'warn',
         label: 'button label',
