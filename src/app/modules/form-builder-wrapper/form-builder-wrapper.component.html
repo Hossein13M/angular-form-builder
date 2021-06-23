@@ -4,21 +4,47 @@
             <mat-card-title>Angular Form Builder/Viewer</mat-card-title>
             <mat-card-subtitle>Choose your form</mat-card-subtitle>
         </mat-card-header>
+
         <mat-card-content class="flex-grow overflow-auto">
-            <mat-grid-list cols="2" gutterSize="30px" class="mx-5">
-                <mat-grid-tile>
-                    <div class="dastan">
-                        <div *ngFor="let componentConfiguration of componentsListConfiguration">
-                            <app-button [buttonConfiguration]="componentConfiguration"></app-button>
+            <mat-grid-list cols="1" rowHeight="150px" gutterSize="30px" class="mx-5">
+                <!-- section -->
+                <mat-grid-tile *ngFor="let section of sections" class="w-full">
+                    <div class="flex flex-col w-full h-full">
+                        <h1 class="text-center">here comes the components</h1>
+
+                        <div class="flex flex-row justify-around mt-auto section-button">
+                            <button
+                                class="w-full p-1 bg-blue-100 hover:bg-blue-200"
+                                matTooltip="Section Setting"
+                                matTooltipPosition="below"
+                                (click)="openSettingDialog()"
+                            >
+                                <mat-icon fontSet="material-icons-outlined">settings</mat-icon>
+                            </button>
+                            <button
+                                class="w-full p-1 bg-blue-100 hover:bg-blue-200"
+                                matTooltip="Remove Section"
+                                matTooltipPosition="below"
+                                (click)="removeSection(section.id)"
+                            >
+                                <mat-icon fontSet="material-icons-outlined">remove_circle</mat-icon>
+                            </button>
                         </div>
                     </div>
                 </mat-grid-tile>
-                <mat-grid-tile>2</mat-grid-tile>
+
+                <!-- section empty state  -->
+                <button (click)="addSection()">
+                    <mat-grid-tile class="empty-state-section" matTooltip="Add New Section" matTooltipPosition="below">
+                        <mat-icon fontSet="material-icons-outlined" class="add-section-button">add_circle </mat-icon>
+                    </mat-grid-tile>
+                </button>
             </mat-grid-list>
         </mat-card-content>
-        <mat-card-actions class="flex justify-around mb-12">
+
+        <mat-card-actions class="flex justify-around">
             <button mat-flat-button color="primary" (click)="saveForm()">Save Form</button>
-            <button mat-flat-button color="warn" (click)="clearForm()">Cancel</button>
+            <button mat-flat-button color="warn" (click)="clearForm()">Discard Form</button>
         </mat-card-actions>
     </mat-card>
 </div>
