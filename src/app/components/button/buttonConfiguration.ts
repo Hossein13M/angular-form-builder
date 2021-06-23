@@ -1,4 +1,4 @@
-export interface ButtonModel {
+export interface ButtonConfiguration {
     type: 'accept' | 'reject' | 'upload' | 'download' | 'localRoute' | 'externalLink';
     themeColor: 'primary' | 'accent' | 'warn';
     label: string;

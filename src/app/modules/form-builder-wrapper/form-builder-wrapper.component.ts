@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ButtonModel } from '../../components/button/button.model';
+import { Section } from './section.model';
 
 @Component({
     selector: 'app-form-builder-wrapper',
@@ -7,38 +7,22 @@ import { ButtonModel } from '../../components/button/button.model';
     styleUrls: ['./form-builder-wrapper.component.scss'],
 })
 export class FormBuilderWrapperComponent {
-    public componentsListConfiguration: Array<ButtonModel> = [
-        {
-            type: 'accept',
-            themeColor: 'primary',
-            label: 'input component',
-            // isRtl?: boolean,
-            // tailwindsClassForLabel?: string,
-            hasToolTip: true,
-            tooltipText: 'input component',
-            tooltipPosition: 'below',
-            tooltipHideDelay: 500,
-            hasIcon: true,
-            icon: 'add',
-        },
-        {
-            type: 'accept',
-            themeColor: 'primary',
-            label: 'button component',
-            // isRtl?: boolean,
-            // tailwindsClassForLabel?: string,
-            hasToolTip: true,
-            tooltipText: 'button component',
-            tooltipPosition: 'below',
-            tooltipHideDelay: 500,
-            hasIcon: true,
-            icon: 'add',
-        },
-    ];
+    public sections: Array<Section> = [];
+
     public saveForm(): void {
         console.log('saveForm');
     }
     public clearForm(): void {
         console.log('clearForm');
     }
+
+    public addSection(): void {
+        this.sections.push({ columnsCount: 1, id: this.sections.length });
+    }
+
+    public removeSection(sectionId: number): void {
+        this.sections.splice(sectionId, 1);
+    }
+
+    public openSettingDialog(): void {}
 }
