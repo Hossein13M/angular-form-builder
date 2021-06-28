@@ -34,7 +34,7 @@ export class FormBuilderWrapperComponent {
 
     public openSettingDialog(): void {
         this.dialog
-            .open(SettingModalComponent, { data: { name: 'hello' }, height: '600px', width: '1200px' })
+            .open(SettingModalComponent, { data: { name: 'hello' }, height: '700px', width: '1300px' })
             .afterClosed()
             .subscribe((result) => console.log(result));
     }
