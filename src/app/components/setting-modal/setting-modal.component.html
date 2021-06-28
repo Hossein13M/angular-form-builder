@@ -1,10 +1,10 @@
-<div class="container flex justify-between items-center p-5 h-full">
-    <mat-card class="bg-gray-100 flex-col">
+<div class="h-full flex justify-between items-center p-5">
+    <mat-card class="flex flex-col bg-gray-100">
         <mat-card-header class="flex justify-center flex-shrink-0 text-center">
             <mat-card-subtitle>
                 <mat-form-field appearance="outline" class="w-72">
                     <mat-label>Select your component type</mat-label>
-                    <mat-select value="input">
+                    <mat-select value="button" #matSelect>
                         <mat-option value="input">Input Component</mat-option>
                         <mat-option value="button">Button Component</mat-option>
                     </mat-select>
@@ -12,16 +12,17 @@
             </mat-card-subtitle>
         </mat-card-header>
 
-        <mat-card-content>
-            <p>Component Setting</p>
+        <mat-card-content class="flex-grow overflow-auto">
+            <p class="text-center border-b">{{ matSelect.value === 'input' ? 'Input ' : 'Button ' }}Component Configuration</p>
+            <!--                        <app-button-configuration *ngIf="matSelect.value === 'button'"></app-button-configuration>-->
+            <!--                        <app-input-configuration *ngIf="matSelect.value === 'input'"></app-input-configuration>-->
         </mat-card-content>
 
-        <mat-card-actions class="">
+        <mat-card-actions class="flex justify-center self-end w-full mt-auto">
             <button mat-stroked-button class="bg-red-600 hover:bg-red-700" (click)="resetComponentSettings()">Reset</button>
         </mat-card-actions>
     </mat-card>
 
-    <!--  dastan  -->
     <mat-card>Simple card</mat-card>
     <mat-card>Simple card</mat-card>
 </div>
