@@ -17,11 +17,12 @@ export class FormBuilderWrapperComponent {
     }
 
     public addSection(): void {
-        this.sections.push({ columnsCount: 1, id: this.sections.length });
+        this.sections.push({ columnsCount: 1 });
     }
 
-    public removeSection(sectionId: number): void {
-        this.sections.splice(sectionId, 1);
+    public removeSection(section: Section): void {
+        const sectionIndex = this.sections.indexOf(section);
+        this.sections.splice(sectionIndex, 1);
     }
 
     public openSettingDialog(): void {}

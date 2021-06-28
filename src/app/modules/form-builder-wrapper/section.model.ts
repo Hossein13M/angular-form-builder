@@ -3,7 +3,6 @@ import { InputFormConfiguration } from '../../components/input/input.model';
 
 export interface Section {
     columnsCount: number;
-    id: number;
     columnInfo?: Array<SectionColumn>;
 }
 
