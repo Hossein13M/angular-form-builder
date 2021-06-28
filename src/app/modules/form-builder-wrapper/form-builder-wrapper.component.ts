@@ -7,13 +7,14 @@ import { Section } from './section.model';
     styleUrls: ['./form-builder-wrapper.component.scss'],
 })
 export class FormBuilderWrapperComponent {
-    public sections: Array<Section> = [];
+    public sections: Array<Section> = [{ columnsCount: 1 }];
 
     public saveForm(): void {
-        console.log('saveForm');
+        console.log(this.sections);
     }
+
     public clearForm(): void {
-        console.log('clearForm');
+        this.sections = [];
     }
 
     public addSection(): void {

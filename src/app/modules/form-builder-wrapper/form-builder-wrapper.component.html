@@ -19,7 +19,7 @@
                                 matTooltipPosition="below"
                                 (click)="openSettingDialog()"
                             >
-                                <mat-icon fontSet="material-icons-outlined">settings</mat-icon>
+                                <mat-icon fontSet="material-icons-outlined" class="text-blue-600">settings</mat-icon>
                             </button>
                             <button
                                 class="w-full p-1 bg-blue-100 hover:bg-blue-200"
@@ -27,7 +27,7 @@
                                 matTooltipPosition="below"
                                 (click)="removeSection(section)"
                             >
-                                <mat-icon fontSet="material-icons-outlined">remove_circle</mat-icon>
+                                <mat-icon fontSet="material-icons-outlined" class="text-blue-600">remove_circle</mat-icon>
                             </button>
                         </div>
                     </div>
@@ -36,15 +36,15 @@
                 <!-- section empty state  -->
                 <button (click)="addSection()">
                     <mat-grid-tile class="empty-state-section" matTooltip="Add New Section" matTooltipPosition="below">
-                        <mat-icon fontSet="material-icons-outlined" class="add-section-button">add_circle </mat-icon>
+                        <mat-icon fontSet="material-icons-outlined" class="add-section-button text-blue-600">add_circle </mat-icon>
                     </mat-grid-tile>
                 </button>
             </mat-grid-list>
         </mat-card-content>
 
         <mat-card-actions class="flex justify-around">
-            <button mat-flat-button color="primary" (click)="saveForm()">Save Form</button>
-            <button mat-flat-button color="warn" (click)="clearForm()">Discard Form</button>
+            <button mat-flat-button class="bg-light-blue-300 hover:bg-light-blue-400" (click)="saveForm()">Save Form</button>
+            <button mat-flat-button class="bg-amber-300 hover:bg-amber-400" (click)="clearForm()">Discard Form</button>
         </mat-card-actions>
     </mat-card>
 </div>
