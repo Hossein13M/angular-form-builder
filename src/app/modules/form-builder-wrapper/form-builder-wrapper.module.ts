@@ -8,9 +8,22 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FormBuilderWrapperComponent } from './form-builder-wrapper.component';
 import { FormBuilderWrapperRoutingModule } from './form-builder-wrapper.routing.module';
 import { ButtonModule } from '../../components/button/button.module';
+import { SettingModalModule } from '../../components/setting-modal/setting-modal.module';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
     declarations: [FormBuilderWrapperComponent],
-    imports: [CommonModule, FormBuilderWrapperRoutingModule, MatCardModule, MatButtonModule, MatGridListModule, ButtonModule, MatIconModule, MatTooltipModule],
+    imports: [
+        CommonModule,
+        FormBuilderWrapperRoutingModule,
+        MatCardModule,
+        MatButtonModule,
+        MatGridListModule,
+        ButtonModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatDialogModule,
+        SettingModalModule,
+    ],
 })
 export class FormBuilderWrapperModule {}

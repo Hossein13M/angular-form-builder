@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Section } from './section.model';
+import { MatDialog } from '@angular/material/dialog';
+import { SettingModalComponent } from '../../components/setting-modal/setting-modal.component';
 
 @Component({
     selector: 'app-form-builder-wrapper',
@@ -7,22 +9,33 @@ import { Section } from './section.model';
     styleUrls: ['./form-builder-wrapper.component.scss'],
 })
 export class FormBuilderWrapperComponent {
-    public sections: Array<Section> = [];
+    public sections: Array<Section> = [{ columnsCount: 1 }];
+
+    constructor(private dialog: MatDialog) {
+        this.openSettingDialog();
+    }
 
     public saveForm(): void {
-        console.log('saveForm');
+        console.log(this.sections);
     }
+
     public clearForm(): void {
-        console.log('clearForm');
+        this.sections = [];
     }
 
     public addSection(): void {
-        this.sections.push({ columnsCount: 1, id: this.sections.length });
+        this.sections.push({ columnsCount: 1 });
     }
 
-    public removeSection(sectionId: number): void {
-        this.sections.splice(sectionId, 1);
+    public removeSection(section: Section): void {
+        const sectionIndex = this.sections.indexOf(section);
+        this.sections.splice(sectionIndex, 1);
     }
 
-    public openSettingDialog(): void {}
+    public openSettingDialog(): void {
+        this.dialog
+            .open(SettingModalComponent, { data: { name: 'hello' }, height: '600px', width: '1200px' })
+            .afterClosed()
+            .subscribe((result) => console.log(result));
+    }
 }
