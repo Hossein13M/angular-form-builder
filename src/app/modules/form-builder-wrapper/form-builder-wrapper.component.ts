@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Section } from './section.model';
+import { MatDialog } from '@angular/material/dialog';
+import { SettingModalComponent } from '../../components/setting-modal/setting-modal.component';
 
 @Component({
     selector: 'app-form-builder-wrapper',
@@ -8,6 +10,10 @@ import { Section } from './section.model';
 })
 export class FormBuilderWrapperComponent {
     public sections: Array<Section> = [{ columnsCount: 1 }];
+
+    constructor(private dialog: MatDialog) {
+        this.openSettingDialog();
+    }
 
     public saveForm(): void {
         console.log(this.sections);
@@ -26,5 +32,10 @@ export class FormBuilderWrapperComponent {
         this.sections.splice(sectionIndex, 1);
     }
 
-    public openSettingDialog(): void {}
+    public openSettingDialog(): void {
+        this.dialog
+            .open(SettingModalComponent, { data: { name: 'hello' }, height: '600px', width: '1200px' })
+            .afterClosed()
+            .subscribe((result) => console.log(result));
+    }
 }
