@@ -1,6 +1,6 @@
-<div class="h-full flex justify-between items-center p-5">
-    <mat-card class="flex flex-col bg-gray-100">
-        <mat-card-header class="flex justify-center flex-shrink-0 text-center">
+<div class="h-full flex justify-center items-center">
+    <mat-card class="flex flex-col bg-gray-100 mx-5">
+        <mat-card-header class="flex justify-center text-center">
             <mat-card-subtitle>
                 <mat-form-field appearance="outline" class="w-72">
                     <mat-label>Select your component type</mat-label>
@@ -12,10 +12,10 @@
             </mat-card-subtitle>
         </mat-card-header>
 
-        <mat-card-content class="flex-grow overflow-auto">
+        <mat-card-content>
             <p class="text-center border-b">{{ matSelect.value === 'input' ? 'Input ' : 'Button ' }}Component Configuration</p>
-            <!--                        <app-button-configuration *ngIf="matSelect.value === 'button'"></app-button-configuration>-->
-            <!--                        <app-input-configuration *ngIf="matSelect.value === 'input'"></app-input-configuration>-->
+<!--            <app-button-configuration *ngIf="matSelect.value === 'button'"></app-button-configuration>-->
+            <!--<app-input-configuration *ngIf="matSelect.value === 'input'"></app-input-configuration>-->
         </mat-card-content>
 
         <mat-card-actions class="flex justify-center self-end w-full mt-auto">
@@ -23,6 +23,6 @@
         </mat-card-actions>
     </mat-card>
 
-    <mat-card>Simple card</mat-card>
-    <mat-card>Simple card</mat-card>
+    <mat-card class="flex flex-col bg-gray-100 mx-5">Simple card</mat-card>
+    <mat-card class="flex flex-col bg-gray-100 mx-5">Simple card</mat-card>
 </div>

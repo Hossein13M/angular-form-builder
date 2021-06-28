@@ -1,11 +1,11 @@
-<div class="container-fluid h-screen flex justify-center items-center bg-gray-200">
-    <mat-card class="flex-col h-5/6">
-        <mat-card-header class="flex justify-center flex-shrink-0 text-center pt-3">
+<div class="h-screen flex justify-center items-center bg-gray-200 py-14">
+    <mat-card class="flex-col h-full w-5/6">
+        <mat-card-header class="flex justify-center text-center pt-3">
             <mat-card-title>Angular Form Builder/Viewer</mat-card-title>
             <mat-card-subtitle>Choose your form</mat-card-subtitle>
         </mat-card-header>
 
-        <mat-card-content class="flex-grow overflow-auto">
+        <mat-card-content class="flex-grow">
             <mat-grid-list cols="1" rowHeight="150px" gutterSize="30px" class="mx-5">
                 <!-- section -->
                 <mat-grid-tile *ngFor="let section of sections" class="w-full">
