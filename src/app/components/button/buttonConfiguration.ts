@@ -10,6 +10,7 @@ export interface ButtonConfiguration {
     tooltipHideDelay?: number;
     hasIcon: boolean;
     icon?: string;
+    navLink?: string;
     localNavigationUrl?: string;
     externalLink?: string;
 }
