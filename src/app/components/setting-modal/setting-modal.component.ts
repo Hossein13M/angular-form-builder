@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./setting-modal.component.scss'],
 })
 export class SettingModalComponent {
-    public resetComponentSettings() {
+    public removeComponentFromSection() {
         console.log('hel');
     }
 }
