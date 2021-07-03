@@ -13,10 +13,17 @@ export class ButtonConfigurationComponent {
         themeColor: ['primary', Validators.required],
         label: ['', Validators.required],
         isRtl: [false, Validators.required],
-        hasToolTip: ['', Validators.required],
         tooltipText: ['', Validators.required],
     });
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
+    public buttonTypes: Array<{ name: string; icon: string }> = [
+        { name: 'accept', icon: 'check_circle' },
+        { name: 'reject', icon: 'cancel' },
+        { name: 'upload', icon: 'upload' },
+        { name: 'download', icon: 'download' },
+        { name: 'localRoute', icon: 'alt_route' },
+        { name: 'externalLink', icon: 'link' },
+    ];
 
     constructor(private fb: FormBuilder) {}
 
