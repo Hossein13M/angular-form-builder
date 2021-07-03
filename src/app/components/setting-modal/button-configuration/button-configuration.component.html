@@ -42,4 +42,18 @@
             <mat-option [value]="true"> <mat-icon color="primary">format_textdirection_r_to_l</mat-icon> <span>RTL</span> </mat-option>
         </mat-select>
     </mat-form-field>
+
+    <mat-form-field appearance="outline" class="mx-3">
+        <mat-label>Button Type</mat-label>
+        <mat-select formControlName="type">
+            <mat-select-trigger class="flex">
+                <mat-icon color="primary">{{ form.get('type')!.value.icon }}</mat-icon>
+                <span style="line-height: 24px" class="mx-4">{{ form.get('type')!.value.name | titlecase }}</span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let buttonType of buttonTypes" [value]="buttonType">
+                <mat-icon color="primary">{{ buttonType.icon }}</mat-icon>
+                <span>{{ buttonType.name | titlecase }}</span>
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
 </form>
