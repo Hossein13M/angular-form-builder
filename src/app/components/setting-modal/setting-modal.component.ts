@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class SettingModalComponent {
     public removeComponentFromSection() {
-        console.log('hel');
+        console.log('hello world');
     }
 }
