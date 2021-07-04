@@ -1,8 +1,8 @@
-<form (submit)="submitForm()" [formGroup]="form" class="grid grid-cols-2">
+<form (submit)="submitForm()" [formGroup]="form" class="flex flex-col h-full">
     <mat-form-field appearance="outline" class="mx-3">
         <mat-label>Label</mat-label>
         <input matInput type="text" formControlName="label" />
-        <button *ngIf="form.get('label')" matSuffix mat-icon-button aria-label="Clear" (click)="form.get('label')?.setValue('')">
+        <button *ngIf="form.get('label')!.value" matSuffix mat-icon-button (click)="form.get('label')?.setValue('')">
             <mat-icon>close</mat-icon>
         </button>
     </mat-form-field>
@@ -10,7 +10,7 @@
     <mat-form-field appearance="outline" class="mx-3">
         <mat-label>Tooltip text:</mat-label>
         <input matInput type="text" formControlName="tooltipText" />
-        <button *ngIf="form.get('tooltipText')" matSuffix mat-icon-button aria-label="Clear" (click)="form.get('tooltipText')?.setValue('')">
+        <button *ngIf="form.get('tooltipText')!.value" matSuffix mat-icon-button (click)="form.get('tooltipText')?.setValue('')">
             <mat-icon>close</mat-icon>
         </button>
     </mat-form-field>
@@ -29,19 +29,19 @@
         </mat-select>
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="mx-3">
-        <mat-label>Text Alignment</mat-label>
-        <mat-select formControlName="isRtl">
-            <mat-select-trigger class="flex">
-                <mat-icon [color]="form.get('isRtl')!.value">{{
-                    form.get('isRtl')!.value ? 'format_textdirection_r_to_l' : 'format_textdirection_l_to_r'
-                }}</mat-icon>
-                <span style="line-height: 24px" class="mx-4">{{ form.get('isRtl')!.value ? 'RTL' : 'LTR' }}</span>
-            </mat-select-trigger>
-            <mat-option [value]="false"> <mat-icon color="primary">format_textdirection_l_to_r</mat-icon> <span>LTR</span> </mat-option>
-            <mat-option [value]="true"> <mat-icon color="primary">format_textdirection_r_to_l</mat-icon> <span>RTL</span> </mat-option>
-        </mat-select>
-    </mat-form-field>
+    <!--    <mat-form-field appearance="outline" class="mx-3">-->
+    <!--        <mat-label>Text Alignment</mat-label>-->
+    <!--        <mat-select formControlName="isRtl">-->
+    <!--            <mat-select-trigger class="flex">-->
+    <!--                <mat-icon [color]="form.get('isRtl')!.value">{{-->
+    <!--                    form.get('isRtl')!.value ? 'format_textdirection_r_to_l' : 'format_textdirection_l_to_r'-->
+    <!--                }}</mat-icon>-->
+    <!--                <span style="line-height: 24px" class="mx-4">{{ form.get('isRtl')!.value ? 'RTL' : 'LTR' }}</span>-->
+    <!--            </mat-select-trigger>-->
+    <!--            <mat-option [value]="false"> <mat-icon color="primary">format_textdirection_l_to_r</mat-icon> <span>LTR</span> </mat-option>-->
+    <!--            <mat-option [value]="true"> <mat-icon color="primary">format_textdirection_r_to_l</mat-icon> <span>RTL</span> </mat-option>-->
+    <!--        </mat-select>-->
+    <!--    </mat-form-field>-->
 
     <mat-form-field appearance="outline" class="mx-3">
         <mat-label>Button Type</mat-label>
@@ -56,4 +56,14 @@
             </mat-option>
         </mat-select>
     </mat-form-field>
+
+    <mat-form-field appearance="outline" class="mx-3" *ngIf="form.get('type')!.value.name === 'external Link' || form.get('type')!.value.name === 'download'">
+        <mat-label>{{ form.get('type')!.value.name | titlecase }} :</mat-label>
+        <input matInput type="text" formControlName="downloadOrExternalNavigateLink" />
+        <button *ngIf="form.get('tooltipText')!.value" matSuffix mat-icon-button (click)="form.get('downloadOrExternalNavigateLink')?.setValue('')">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <button class="w-3/5 mx-auto mt-auto" mat-flat-button color="primary" type="submit">Save Form</button>
 </form>

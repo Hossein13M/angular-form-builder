@@ -14,6 +14,7 @@ export class ButtonConfigurationComponent {
         label: ['', Validators.required],
         isRtl: [false, Validators.required],
         tooltipText: ['', Validators.required],
+        downloadOrExternalNavigateLink: ['', Validators.required],
     });
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
     public buttonTypes: Array<{ name: string; icon: string }> = [
@@ -21,8 +22,8 @@ export class ButtonConfigurationComponent {
         { name: 'reject', icon: 'cancel' },
         { name: 'upload', icon: 'upload' },
         { name: 'download', icon: 'download' },
-        { name: 'localRoute', icon: 'alt_route' },
-        { name: 'externalLink', icon: 'link' },
+        { name: 'local Route', icon: 'alt_route' },
+        { name: 'external Link', icon: 'link' },
     ];
 
     constructor(private fb: FormBuilder) {}
