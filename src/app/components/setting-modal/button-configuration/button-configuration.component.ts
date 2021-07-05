@@ -12,7 +12,6 @@ export class ButtonConfigurationComponent {
         type: ['', Validators.required],
         themeColor: ['primary', Validators.required],
         label: ['', Validators.required],
-        isRtl: [false, Validators.required],
         tooltipText: ['', Validators.required],
         downloadOrExternalNavigateLink: ['', Validators.required],
     });
@@ -23,12 +22,12 @@ export class ButtonConfigurationComponent {
         { name: 'upload', icon: 'upload' },
         { name: 'download', icon: 'download' },
         { name: 'local Route', icon: 'alt_route' },
-        { name: 'external Link', icon: 'link' },
+        { name: 'externalLink', icon: 'link' },
     ];
 
     constructor(private fb: FormBuilder) {}
 
     public submitForm(): void {
-        console.log(this.form);
+        console.log(this.form.value);
     }
 }

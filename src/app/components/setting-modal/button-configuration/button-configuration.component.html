@@ -57,13 +57,13 @@
         </mat-select>
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="mx-3" *ngIf="form.get('type')!.value.name === 'external Link' || form.get('type')!.value.name === 'download'">
-        <mat-label>{{ form.get('type')!.value.name | titlecase }} :</mat-label>
+    <mat-form-field appearance="outline" class="mx-3" *ngIf="form.get('type')!.value.name === 'externalLink' || form.get('type')!.value.name === 'download'">
+        <mat-label>Link :</mat-label>
         <input matInput type="text" formControlName="downloadOrExternalNavigateLink" />
         <button *ngIf="form.get('tooltipText')!.value" matSuffix mat-icon-button (click)="form.get('downloadOrExternalNavigateLink')?.setValue('')">
             <mat-icon>close</mat-icon>
         </button>
     </mat-form-field>
 
-    <button class="w-3/5 mx-auto mt-auto" mat-flat-button color="primary" type="submit">Save Form</button>
+    <button class="w-3/5 mx-auto mt-auto" mat-flat-button color="primary" type="submit">Save Component Setting</button>
 </form>
