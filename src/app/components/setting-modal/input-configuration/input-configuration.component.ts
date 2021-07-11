@@ -9,9 +9,16 @@ import { ThemePalette } from '@angular/material/core';
 })
 export class InputConfigurationComponent {
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
+    public inputTypes: Array<{ name: string; icon: string }> = [
+        { name: 'text', icon: 'article' },
+        { name: 'email', icon: 'email' },
+        { name: 'tel', icon: 'phone' },
+        { name: 'url', icon: 'link' },
+        { name: 'numeric', icon: 'pin' },
+    ];
 
     public form: FormGroup = this.fb.group({
-        type: ['text', Validators.required],
+        type: ['', Validators.required],
         label: ['', Validators.required],
         placeholder: [],
         isInputTypePassword: [false, Validators.required],
