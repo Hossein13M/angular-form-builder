@@ -1,4 +1,4 @@
-import { ButtonConfiguration } from '../../components/button/buttonConfiguration';
+import { ButtonModel } from '../../components/button/button.model';
 import { InputFormConfiguration } from '../../components/input/input.model';
 
 export interface Section {
@@ -9,5 +9,5 @@ export interface Section {
 export interface SectionColumn {
     flexNumber: number;
     componentType: 'input' | 'button';
-    componentConfiguration: ButtonConfiguration | InputFormConfiguration;
+    componentConfiguration: ButtonModel | InputFormConfiguration;
 }
