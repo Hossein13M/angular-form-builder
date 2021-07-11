@@ -1,5 +1,19 @@
 <form (submit)="submitForm()" [formGroup]="form" class="flex flex-col h-full">
     <mat-form-field appearance="outline" class="mx-3">
+        <mat-label>Component theme</mat-label>
+        <mat-select formControlName="type">
+            <mat-select-trigger class="flex">
+                <mat-icon color="primary">{{ form.get('type')!.value.icon }}</mat-icon>
+                <span style="line-height: 24px" class="mx-4">{{ form.get('type')!.value.name | titlecase }}</span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let inputType of inputTypes" [value]="inputType">
+                <mat-icon color="primary">{{ inputType.icon }}</mat-icon>
+                <span>{{ inputType.name | titlecase }}</span>
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="mx-3">
         <mat-label>Label</mat-label>
         <input matInput type="text" formControlName="label" />
         <button *ngIf="form.get('label')!.value" matSuffix mat-icon-button (click)="form.get('label')?.setValue('')">
@@ -41,4 +55,6 @@
             </mat-option>
         </mat-select>
     </mat-form-field>
+
+    <button type="submit">save</button>
 </form>
