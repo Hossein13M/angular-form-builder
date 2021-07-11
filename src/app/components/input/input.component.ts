@@ -10,13 +10,13 @@ import { InputFormConfiguration } from './input.model';
 export class InputComponent implements OnChanges {
     public hideInputTextForPasswordInputs = false;
 
-    @Input('inputFormConfiguration') inputFormConfiguration: InputFormConfiguration = {
+    @Input() inputFormConfiguration: InputFormConfiguration = {
         formControl: new FormControl(),
         type: 'text',
         placeholder: 'placeholder',
         label: 'test',
         isInputTypePassword: true,
-        color: 'primary',
+        themeColor: 'primary',
         isRtl: false,
         autofocus: false,
         readonly: false,
