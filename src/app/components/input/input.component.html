@@ -1,4 +1,4 @@
-<mat-form-field appearance="outline" [color]="inputFormConfiguration.color">
+<mat-form-field appearance="outline" [color]="inputFormConfiguration.themeColor">
     <mat-label>{{ inputFormConfiguration.label }}</mat-label>
     <input
         matInput
@@ -22,13 +22,13 @@
     </button>
     <mat-hint *ngIf="inputFormConfiguration.hint">{{ inputFormConfiguration.hint }}</mat-hint>
 
-<!--    <mat-error>-->
-<!--        <ng-container *ngFor="let errorMessage of inputFormConfiguration.errorMessages; let last = last">-->
-<!--            <span class="app-input-mat-error">{{ errorMessage.errorMessage }}</span>-->
-<!--            <ng-container *ngIf="FC && FC.hasError(errorMessage.errorName) && (FC.dirty || FC.touched)">-->
-<!--                <span>{{ errorMessage.errorMessage }}</span>-->
-<!--                <span *ngIf="!last" class="app-input-mat-error-sep"></span>-->
-<!--            </ng-container>-->
-<!--        </ng-container>-->
-<!--    </mat-error>-->
+    <!--    <mat-error>-->
+    <!--        <ng-container *ngFor="let errorMessage of inputFormConfiguration.errorMessages; let last = last">-->
+    <!--            <span class="app-input-mat-error">{{ errorMessage.errorMessage }}</span>-->
+    <!--            <ng-container *ngIf="FC && FC.hasError(errorMessage.errorName) && (FC.dirty || FC.touched)">-->
+    <!--                <span>{{ errorMessage.errorMessage }}</span>-->
+    <!--                <span *ngIf="!last" class="app-input-mat-error-sep"></span>-->
+    <!--            </ng-container>-->
+    <!--        </ng-container>-->
+    <!--    </mat-error>-->
 </mat-form-field>

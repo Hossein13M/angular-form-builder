@@ -7,7 +7,7 @@ export interface InputFormConfiguration {
     label: string;
     placeholder?: string;
     isInputTypePassword?: boolean;
-    color?: ThemePalette;
+    themeColor?: ThemePalette;
     errorMessages?: Array<{ errorName: string; errorMessage: string }>;
     isRtl?: boolean;
     autofocus?: boolean;
