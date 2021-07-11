@@ -93,9 +93,18 @@
                         "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css", "src/styles.scss"],
                         "scripts": []
                     }
+                },
+                "lint": {
+                    "builder": "@angular-eslint/builder:lint",
+                    "options": {
+                        "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+                    }
                 }
             }
         }
     },
-    "defaultProject": "angular-form-builder"
+    "defaultProject": "angular-form-builder",
+    "cli": {
+        "defaultCollection": "@angular-eslint/schematics"
+    }
 }
