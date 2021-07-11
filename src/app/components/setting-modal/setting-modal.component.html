@@ -1,28 +1,34 @@
 <div class="h-full flex justify-center items-center grid grid-cols-3">
-    <mat-card class="flex flex-col bg-gray-100">
-        <mat-card-header class="flex justify-center text-center">
-            <mat-card-subtitle>
-                <mat-form-field appearance="outline" class="w-72">
+    <mat-card class="bg-gray-100">
+        <div class="max-w-full text-center w-full mx-0 my-auto px-3.5">
+            <div class="text-base w-full flex justify-center items-baseline">
+                <mat-form-field appearance="outline" class="w-full p-0 m-0">
                     <mat-label>Select your component type</mat-label>
                     <mat-select value="input" #matSelect>
                         <mat-option value="input">Input Component</mat-option>
                         <mat-option value="button">Button Component</mat-option>
                     </mat-select>
                 </mat-form-field>
+
+                <button class="ml-4" mat-icon-button color="warn" matTooltip="Remove Column" matTooltipPosition="below" (click)="removeComponentFromSection()">
+                    <mat-icon class="text-4xl" inline fontSet="material-icons-outlined">highlight_off</mat-icon>
+                </button>
+            </div>
+
+            <mat-card-subtitle>
+                <p class="text-center text-lg font-black">{{ matSelect.value === 'input' ? 'Input ' : 'Button ' }}Component Configuration</p>
             </mat-card-subtitle>
-        </mat-card-header>
+        </div>
 
         <mat-card-content>
-            <p class="text-center border-b font-semibold">{{ matSelect.value === 'input' ? 'Input ' : 'Button ' }}Component Configuration</p>
             <app-button-configuration *ngIf="matSelect.value === 'button'"></app-button-configuration>
             <app-input-configuration *ngIf="matSelect.value === 'input'"></app-input-configuration>
         </mat-card-content>
-
-        <mat-card-actions class="flex justify-center self-end w-full mt-auto">
-            <button mat-stroked-button class="bg-red-600 hover:bg-red-700" (click)="removeComponentFromSection()">Remove Column</button>
-        </mat-card-actions>
     </mat-card>
 
-    <mat-card class="flex flex-col bg-gray-100 mx-5">Simple card</mat-card>
-    <mat-card class="flex flex-col bg-gray-100 mx-5">Simple card</mat-card>
+    <mat-card class="flex flex-col justify-center items-center bg-gray-100 mx-5 h-5/6 empty-state-section">
+        <button (click)="addColumn()">
+            <mat-icon fontSet="material-icons-outlined" class="text-blue-600 text-7xl flex justify-center items-center">add_circle </mat-icon>
+        </button>
+    </mat-card>
 </div>

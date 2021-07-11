@@ -1,3 +1,8 @@
 .mat-card {
     min-height: 650px;
 }
+.empty-state-section {
+    border: 3px dashed #3f51b5;
+    opacity: 0.8;
+    background: #e1edfc repeating-linear-gradient(45deg, #e7f4ff, #e7f4ff 5px, #e1edfc 5px, #e1edfc 25px);
+}

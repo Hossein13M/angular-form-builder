@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
     styleUrls: ['./setting-modal.component.scss'],
 })
 export class SettingModalComponent {
-    public removeComponentFromSection() {
+    public removeComponentFromSection(): void {
         console.log('hello world');
+    }
+
+    public addColumn(): void {
+        console.log('added');
     }
 }
