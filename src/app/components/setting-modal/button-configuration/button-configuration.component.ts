@@ -8,13 +8,6 @@ import { ThemePalette } from '@angular/material/core';
     styleUrls: ['./button-configuration.component.scss'],
 })
 export class ButtonConfigurationComponent {
-    public form: FormGroup = this.fb.group({
-        type: ['', Validators.required],
-        themeColor: ['primary', Validators.required],
-        label: ['', Validators.required],
-        tooltipText: ['', Validators.required],
-        downloadOrExternalNavigateLink: ['', Validators.required],
-    });
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
     public buttonTypes: Array<{ name: string; icon: string }> = [
         { name: 'accept', icon: 'check_circle' },
@@ -24,6 +17,14 @@ export class ButtonConfigurationComponent {
         { name: 'local Route', icon: 'alt_route' },
         { name: 'externalLink', icon: 'link' },
     ];
+
+    public form: FormGroup = this.fb.group({
+        type: ['', Validators.required],
+        themeColor: ['primary', Validators.required],
+        label: ['', Validators.required],
+        tooltipText: ['', Validators.required],
+        downloadOrExternalNavigateLink: ['', Validators.required],
+    });
 
     constructor(private fb: FormBuilder) {}
 
