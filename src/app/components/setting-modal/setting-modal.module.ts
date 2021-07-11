@@ -8,6 +8,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { InputConfigurationModule } from './input-configuration/input-configuration.module';
 import { ButtonConfigurationModule } from './button-configuration/button-configuration.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
     declarations: [SettingModalComponent],
@@ -20,6 +23,9 @@ import { ButtonConfigurationModule } from './button-configuration/button-configu
         MatButtonModule,
         InputConfigurationModule,
         ButtonConfigurationModule,
+        MatIconModule,
+        MatDividerModule,
+        MatTooltipModule,
     ],
     entryComponents: [SettingModalComponent],
     exports: [SettingModalComponent],
