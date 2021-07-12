@@ -1,36 +1,34 @@
-<div class="h-full flex flex-col">
-    <div class="flex justify-center items-center grid grid-cols-3">
-        <mat-card *ngFor="let column of columns" class="bg-gray-100 mx-2">
-            <div class="max-w-full text-center w-full mx-0 my-auto px-3.5">
-                <div class="text-base w-full flex justify-center items-baseline">
-                    <mat-form-field appearance="outline" class="w-full p-0 m-0">
-                        <mat-label>Select your component type</mat-label>
-                        <mat-select value="input" #matSelect>
-                            <mat-option value="input">Input Component</mat-option>
-                            <mat-option value="button">Button Component</mat-option>
-                        </mat-select>
-                    </mat-form-field>
+<div class="flex justify-center items-center grid grid-cols-3">
+    <mat-card *ngFor="let column of columns" class="bg-gray-100 mx-2 flex flex-col h-full">
+        <div class="max-w-full text-center w-full mx-0 px-3.5">
+            <mat-card-title class="text-base w-full flex justify-center items-baseline">
+                <mat-form-field appearance="outline" class="w-full p-0 m-0">
+                    <mat-label>Select your component type</mat-label>
+                    <mat-select value="button" #matSelect>
+                        <mat-option value="input">Input Component</mat-option>
+                        <mat-option value="button">Button Component</mat-option>
+                    </mat-select>
+                </mat-form-field>
 
-                    <button class="ml-4" mat-icon-button color="warn" matTooltip="Remove Column" matTooltipPosition="below" (click)="removeColumn(column)">
-                        <mat-icon class="text-4xl" inline fontSet="material-icons-outlined">highlight_off</mat-icon>
-                    </button>
-                </div>
+                <button class="ml-4" mat-icon-button color="warn" matTooltip="Remove Column" matTooltipPosition="below" (click)="removeColumn(column)">
+                    <mat-icon class="text-4xl" inline fontSet="material-icons-outlined">highlight_off</mat-icon>
+                </button>
+            </mat-card-title>
 
-                <mat-card-subtitle>
-                    <p class="text-center text-lg font-black">{{ matSelect.value === 'input' ? 'Input ' : 'Button ' }}Component Configuration</p>
-                </mat-card-subtitle>
-            </div>
+            <mat-card-subtitle>
+                <p class="text-center text-lg font-black">{{ matSelect.value === 'input' ? 'Input ' : 'Button ' }}Component Configuration</p>
+            </mat-card-subtitle>
+        </div>
 
-            <mat-card-content>
-                <app-button-configuration *ngIf="matSelect.value === 'button'"></app-button-configuration>
-                <app-input-configuration *ngIf="matSelect.value === 'input'"></app-input-configuration>
-            </mat-card-content>
+        <mat-card-content class="h-full">
+            <app-button-configuration *ngIf="matSelect.value === 'button'"></app-button-configuration>
+            <app-input-configuration *ngIf="matSelect.value === 'input'"></app-input-configuration>
+        </mat-card-content>
+    </mat-card>
+
+    <button (click)="addColumn()">
+        <mat-card *ngIf="checkColumnsCountForLessThanThree()" class="flex flex-col justify-center items-center bg-gray-100 mx-5 h-5/6 empty-state-section">
+            <mat-icon fontSet="material-icons-outlined" class="text-blue-600 text-7xl flex justify-center items-center">add_circle </mat-icon>
         </mat-card>
-
-        <button (click)="addColumn()">
-            <mat-card *ngIf="checkColumnsCountForLessThanThree()" class="flex flex-col justify-center items-center bg-gray-100 mx-5 h-5/6 empty-state-section">
-                <mat-icon fontSet="material-icons-outlined" class="text-blue-600 text-7xl flex justify-center items-center">add_circle </mat-icon>
-            </mat-card>
-        </button>
-    </div>
+    </button>
 </div>
