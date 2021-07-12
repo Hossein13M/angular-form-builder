@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ColumnModel } from './column.model';
 
 @Component({
     selector: 'app-setting-modal',
@@ -6,11 +7,18 @@ import { Component } from '@angular/core';
     styleUrls: ['./setting-modal.component.scss'],
 })
 export class SettingModalComponent {
-    public removeComponentFromSection(): void {
-        console.log('hello world');
-    }
+    public columns: Array<ColumnModel> = [{ columnId: 1 }];
 
     public addColumn(): void {
-        console.log('added');
+        this.columns.push({ columnId: 1 });
+    }
+
+    public removeColumn(column: ColumnModel): void {
+        const columnIndex = this.columns.indexOf(column);
+        this.columns.splice(columnIndex, 1);
+    }
+
+    public checkColumnsCountForLessThanThree(): boolean {
+        return this.columns.length < 3;
     }
 }
