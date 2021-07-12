@@ -1,60 +1,65 @@
 <form (submit)="submitForm()" [formGroup]="form" class="flex flex-col h-full">
-    <mat-form-field appearance="outline" class="mx-3">
-        <mat-label>Input Type</mat-label>
-        <mat-select formControlName="type">
-            <mat-select-trigger class="flex">
-                <mat-icon color="primary">{{ form.get('type')!.value.icon }}</mat-icon>
-                <span style="line-height: 24px" class="mx-4">{{ form.get('type')!.value.name | titlecase }}</span>
-            </mat-select-trigger>
-            <mat-option *ngFor="let inputType of inputTypes" [value]="inputType">
-                <mat-icon color="primary">{{ inputType.icon }}</mat-icon>
-                <span>{{ inputType.name | titlecase }}</span>
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
+    <div class="h-5/6 overflow-y-auto flex flex-col">
+        <mat-form-field appearance="outline" class="mx-3">
+            <mat-label>Input Type</mat-label>
+            <mat-select formControlName="type">
+                <mat-select-trigger class="flex">
+                    <mat-icon color="primary">{{ form.get('type')!.value.icon }}</mat-icon>
+                    <span style="line-height: 24px" class="mx-4">{{ form.get('type')!.value.name | titlecase }}</span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let inputType of inputTypes" [value]="inputType">
+                    <mat-icon color="primary">{{ inputType.icon }}</mat-icon>
+                    <span>{{ inputType.name | titlecase }}</span>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
 
-    <mat-form-field appearance="outline" class="mx-3">
-        <mat-label>Label</mat-label>
-        <input matInput type="text" formControlName="label" />
-        <button *ngIf="form.get('label')!.value" matSuffix mat-icon-button (click)="form.get('label')?.setValue('')">
-            <mat-icon>close</mat-icon>
-        </button>
-    </mat-form-field>
+        <mat-form-field appearance="outline" class="mx-3">
+            <mat-label>Label</mat-label>
+            <input matInput type="text" formControlName="label" />
+            <button *ngIf="form.get('label')!.value" matSuffix mat-icon-button (click)="form.get('label')?.setValue('')">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
 
-    <mat-form-field appearance="outline" class="mx-3">
-        <mat-label>Placeholder</mat-label>
-        <input matInput type="text" formControlName="placeholder" />
-        <button *ngIf="form.get('placeholder')!.value" matSuffix mat-icon-button (click)="form.get('placeholder')?.setValue('')">
-            <mat-icon>close</mat-icon>
-        </button>
-    </mat-form-field>
+        <mat-form-field appearance="outline" class="mx-3">
+            <mat-label>Placeholder</mat-label>
+            <input matInput type="text" formControlName="placeholder" />
+            <button *ngIf="form.get('placeholder')!.value" matSuffix mat-icon-button (click)="form.get('placeholder')?.setValue('')">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
 
-    <mat-form-field appearance="outline" class="mx-3">
-        <mat-label>Hint</mat-label>
-        <input matInput type="text" formControlName="hint" />
-        <button *ngIf="form.get('hint')!.value" matSuffix mat-icon-button (click)="form.get('hint')?.setValue('')">
-            <mat-icon>close</mat-icon>
-        </button>
-    </mat-form-field>
+        <mat-form-field appearance="outline" class="mx-3">
+            <mat-label>Hint</mat-label>
+            <input matInput type="text" formControlName="hint" />
+            <button *ngIf="form.get('hint')!.value" matSuffix mat-icon-button (click)="form.get('hint')?.setValue('')">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
 
-    <div class="mx-3 mb-3.5">
-        <mat-slide-toggle class="my-2" formControlName="isInputTypePassword" color="primary"> Is your input component's type password? </mat-slide-toggle>
-        <mat-slide-toggle class="my-2" formControlName="isRtl" color="primary"> Is your input component's alignment RTL? </mat-slide-toggle>
+        <mat-form-field appearance="outline" class="mx-3">
+            <mat-label>Input theme</mat-label>
+            <mat-select formControlName="themeColor">
+                <mat-select-trigger class="flex">
+                    <mat-icon [color]="form.get('themeColor')!.value">circle</mat-icon>
+                    <span style="line-height: 24px" class="mx-4">{{ form.get('themeColor')!.value | titlecase }}</span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let themeColor of themeColors" [value]="themeColor">
+                    <mat-icon [color]="themeColor">circle</mat-icon>
+                    <span>{{ themeColor | titlecase }}</span>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="mx-3 mb-3.5">
+            <mat-slide-toggle class="my-2" formControlName="isInputTypePassword" color="primary"> Is your input component's type password? </mat-slide-toggle>
+            <mat-slide-toggle class="my-2" formControlName="isRtl" color="primary"> Is your input component's alignment RTL? </mat-slide-toggle>
+        </div>
     </div>
 
-    <mat-form-field appearance="outline" class="mx-3">
-        <mat-label>Input theme</mat-label>
-        <mat-select formControlName="themeColor">
-            <mat-select-trigger class="flex">
-                <mat-icon [color]="form.get('themeColor')!.value">circle</mat-icon>
-                <span style="line-height: 24px" class="mx-4">{{ form.get('themeColor')!.value | titlecase }}</span>
-            </mat-select-trigger>
-            <mat-option *ngFor="let themeColor of themeColors" [value]="themeColor">
-                <mat-icon [color]="themeColor">circle</mat-icon>
-                <span>{{ themeColor | titlecase }}</span>
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
-
-    <button type="submit">save</button>
+    <button class="w-3/5 mx-auto my-auto" mat-flat-button color="primary" type="submit">
+        <mat-icon class="mx-2" fontSet="material-icons-outlined">save</mat-icon>
+        <span>Save Component Settings</span>
+    </button>
 </form>
