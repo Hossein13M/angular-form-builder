@@ -10,6 +10,9 @@ import { FormBuilderWrapperRoutingModule } from './form-builder-wrapper.routing.
 import { ButtonModule } from '../../components/button/button.module';
 import { SettingModalModule } from '../../components/setting-modal/setting-modal.module';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [FormBuilderWrapperComponent],
@@ -24,6 +27,9 @@ import { MatDialogModule } from '@angular/material/dialog';
         MatTooltipModule,
         MatDialogModule,
         SettingModalModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
     ],
 })
 export class FormBuilderWrapperModule {}
