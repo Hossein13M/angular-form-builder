@@ -19,6 +19,7 @@ export class ButtonConfigurationComponent {
     ];
 
     public form: FormGroup = this.fb.group({
+        formControlName: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
         type: ['', Validators.required],
         themeColor: ['primary', Validators.required],
         label: ['', Validators.required],
