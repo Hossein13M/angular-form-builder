@@ -4,7 +4,7 @@
             <mat-card-title class="text-base w-full flex justify-center items-baseline">
                 <mat-form-field appearance="outline" class="w-full p-0 m-0">
                     <mat-label>Select your component type</mat-label>
-                    <mat-select value="button" #matSelect>
+                    <mat-select value="input" #matSelect>
                         <mat-option value="input">Input Component</mat-option>
                         <mat-option value="button">Button Component</mat-option>
                     </mat-select>
@@ -20,7 +20,7 @@
             </mat-card-subtitle>
         </div>
 
-        <mat-card-content class="h-full">
+        <mat-card-content class="overflow-y-auto h-5/6">
             <app-button-configuration *ngIf="matSelect.value === 'button'"></app-button-configuration>
             <app-input-configuration *ngIf="matSelect.value === 'input'"></app-input-configuration>
         </mat-card-content>
