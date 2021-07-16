@@ -3,7 +3,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import 'app/styles/global';
 @import 'app/styles/scrollbar';
+@import 'app/styles/tooltip';
 
 html,
 body {
