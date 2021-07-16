@@ -2,13 +2,12 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import 'assets/styles/scrollbar';
+
+@import 'app/styles/global';
+@import 'app/styles/scrollbar';
+@import 'app/styles/tooltip';
 
 html,
 body {
     height: 100%;
-}
-body {
-    margin: 0;
-    font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
