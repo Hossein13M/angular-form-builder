@@ -11,13 +11,15 @@
                         <button *ngIf="form.get('name')!.value" matSuffix mat-icon-button (click)="form.get('name')?.setValue(null)">
                             <mat-icon>close</mat-icon>
                         </button>
+                        <mat-hint *ngIf="!form.get('name')!.hasError('pattern')">Can not be changed in future</mat-hint>
                         <mat-error *ngIf="form.get('name')!.hasError('pattern')"> Only English letters are accepted </mat-error>
                     </mat-form-field>
                 </form>
             </mat-card-title>
 
             <mat-card-subtitle>
-                <span>Create your form by creating sections and then configure those section's column. In each column you can set up to 3 components</span>
+                <hr class="w-full my-3 h-1" />
+                <h3>Create your form by creating sections and then configure those section's column. In each column you can set up to 3 components</h3>
             </mat-card-subtitle>
         </mat-card-header>
 
