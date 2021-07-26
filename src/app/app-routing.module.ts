@@ -5,10 +5,10 @@ const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'form-builder-wrapper',
+        redirectTo: 'form-builder',
     },
     {
-        path: 'form-builder-wrapper',
+        path: 'form-builder',
         loadChildren: () => import('../app/modules/form-builder-wrapper/form-builder-wrapper.module').then((m) => m.FormBuilderWrapperModule),
     },
 ];
