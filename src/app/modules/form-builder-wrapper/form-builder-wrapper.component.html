@@ -28,7 +28,7 @@
                 <!-- section -->
                 <mat-grid-tile *ngFor="let section of sections" class="w-full">
                     <div class="flex flex-col w-full h-full">
-                        <h1 class="text-center">here comes the components</h1>
+                        <h1 class="text-center">Section's components preview</h1>
 
                         <div class="flex flex-row justify-around mt-auto section-button">
                             <button
@@ -53,7 +53,7 @@
 
                 <!-- section empty state  -->
                 <button (click)="addSection()">
-                    <mat-grid-tile class="empty-state-section" matTooltip="Add New Section" matTooltipPosition="below">
+                    <mat-grid-tile class="empty-state-section" matTooltip="Add Section" matTooltipPosition="below">
                         <mat-icon fontSet="material-icons-outlined" class="add-section-button text-blue-600">add_circle </mat-icon>
                     </mat-grid-tile>
                 </button>
