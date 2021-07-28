@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { InputFormConfiguration } from '../../models/input.model';
+import { InputFormConfiguration } from '#models/input.model';
 
 @Component({
     selector: 'app-input',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ColumnModel } from '../../models/column.model';
+import { ColumnModel } from '#models/column.model';
 
 @Component({
     selector: 'app-setting-modal',
