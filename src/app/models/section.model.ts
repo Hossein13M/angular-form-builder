@@ -1,5 +1,5 @@
-import { ButtonModel } from '../../components/button/button.model';
-import { InputFormConfiguration } from '../../components/input/input.model';
+import { ButtonModel } from './button.model';
+import { InputFormConfiguration } from './input.model';
 
 export interface Section {
     columnsCount: number;
