@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Section } from '../../models/section.model';
 import { MatDialog } from '@angular/material/dialog';
-import { SettingModalComponent } from '../../components/setting-modal/setting-modal.component';
+import { SettingModalComponent } from '../setting-modal/setting-modal.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
