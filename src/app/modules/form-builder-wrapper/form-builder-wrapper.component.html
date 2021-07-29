@@ -61,8 +61,14 @@
         </mat-card-content>
 
         <mat-card-actions class="flex justify-around">
-            <button mat-flat-button color="primary" class="bg-light-blue-300 hover:bg-light-blue-400" (click)="saveForm()">Save Form</button>
-            <button mat-flat-button color="warn" class="bg-amber-300 hover:bg-amber-400" (click)="clearForm()">Discard Form</button>
+            <button mat-flat-button color="primary" class="bg-light-blue-300 hover:bg-light-blue-400" (click)="saveForm()">
+                <mat-icon class="text-2xl" inline fontSet="material-icons-outlined">save</mat-icon>
+                <span>Save Form</span>
+            </button>
+            <button mat-flat-button color="warn" class="bg-amber-300 hover:bg-amber-400" (click)="clearForm()">
+                <mat-icon class="text-2xl" inline fontSet="material-icons-outlined">clear</mat-icon>
+                <span>Discard Form</span>
+            </button>
         </mat-card-actions>
     </mat-card>
 </div>
