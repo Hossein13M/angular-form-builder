@@ -10,7 +10,7 @@ import { Section } from '#models/section.model';
     styleUrls: ['./form-builder-wrapper.component.scss'],
 })
 export class FormBuilderWrapperComponent {
-    public sections: Array<Section> = [];
+    public sections: Array<Section> = [{ columnsCount: 1 }];
     public form: FormGroup = this.fb.group({
         name: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
     });
@@ -36,12 +36,16 @@ export class FormBuilderWrapperComponent {
 
     public openSettingDialog(): void {
         this.dialog
-            .open(SettingModalComponent, { data: { name: 'hello' }, height: '750px', width: '1600px' })
+            .open(SettingModalComponent, { data: { name: 'hello' }, height: '800px', width: '1600px' })
             .afterClosed()
-            .subscribe((result) => console.log(result));
+            .subscribe((result) => result && this.createSectionPreview());
     }
 
     public submitForm(): void {
         console.log('hello form!');
+    }
+
+    private createSectionPreview(): void {
+        // TODO: will be developed later
     }
 }
