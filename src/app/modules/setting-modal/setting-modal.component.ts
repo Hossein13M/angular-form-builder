@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ColumnModel } from '#models/column.model';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
     selector: 'app-setting-modal',
@@ -8,6 +9,8 @@ import { ColumnModel } from '#models/column.model';
 })
 export class SettingModalComponent {
     public columns: Array<ColumnModel> = [{ columnId: 1 }];
+
+    constructor(private matDialog: MatDialogRef<SettingModalComponent>) {}
 
     public addColumn(): void {
         this.columns.push({ columnId: 1 });
@@ -20,5 +23,13 @@ export class SettingModalComponent {
 
     public checkColumnsCountForLessThanThree(): boolean {
         return this.columns.length < 3;
+    }
+
+    public saveSectionSetting(): void {
+        this.matDialog.close(true);
+    }
+
+    public cancelSectionSettings(): void {
+        this.matDialog.close(false);
     }
 }
