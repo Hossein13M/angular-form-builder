@@ -67,7 +67,7 @@
         </div>
     </div>
 
-    <button class="w-3/5 mx-auto my-auto" mat-flat-button color="primary" type="submit">
+    <button class="w-3/5 mx-auto my-auto" mat-flat-button color="primary" type="submit" [disabled]="form.invalid">
         <mat-icon class="mx-2" fontSet="material-icons-outlined">save</mat-icon>
         <span>Save Component Settings</span>
     </button>
