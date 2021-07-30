@@ -6,13 +6,21 @@
 
                 <form (submit)="submitForm()" [formGroup]="form">
                     <mat-form-field appearance="outline" class="mx-3 flex justify-center">
-                        <mat-label>Form Name</mat-label>
+                        <mat-label>
+                            <span>Form Name</span>
+                        </mat-label>
                         <input matInput type="text" formControlName="name" pattern="[a-zA-Z ]*" />
                         <button *ngIf="form.get('name')!.value" matSuffix mat-icon-button (click)="form.get('name')?.setValue(null)">
                             <mat-icon>close</mat-icon>
                         </button>
-                        <mat-hint *ngIf="!form.get('name')!.hasError('pattern')">Can not be changed in future</mat-hint>
-                        <mat-error *ngIf="form.get('name')!.hasError('pattern')"> Only English letters are accepted </mat-error>
+                        <mat-hint *ngIf="!form.get('name')!.hasError('pattern')" class="flex">
+                            <span>Can not be changed in future</span>
+                            <mat-icon>info</mat-icon>
+                        </mat-hint>
+                        <mat-error *ngIf="form.get('name')!.hasError('pattern')" class="flex">
+                            <span>Only English letters are accepted</span>
+                            <mat-icon>error</mat-icon>
+                        </mat-error>
                     </mat-form-field>
                 </form>
             </mat-card-title>
