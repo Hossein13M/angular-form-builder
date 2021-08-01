@@ -11,15 +11,15 @@
                         </mat-label>
                         <input matInput type="text" formControlName="name" pattern="[a-zA-Z ]*" />
                         <button *ngIf="form.get('name')!.value" matSuffix mat-icon-button (click)="form.get('name')?.setValue(null)">
-                            <mat-icon>close</mat-icon>
+                            <mat-icon fontSet="material-icons-outlined">close</mat-icon>
                         </button>
                         <mat-hint *ngIf="!form.get('name')!.hasError('pattern')" class="flex">
-                            <span>Can not be changed in future</span>
-                            <mat-icon>info</mat-icon>
+                            <span>Can't be changed in future</span>
+                            <mat-icon fontSet="material-icons-outlined">info</mat-icon>
                         </mat-hint>
                         <mat-error *ngIf="form.get('name')!.hasError('pattern')" class="flex">
                             <span>Only English letters are accepted</span>
-                            <mat-icon>error</mat-icon>
+                            <mat-icon fontSet="material-icons-outlined">error</mat-icon>
                         </mat-error>
                     </mat-form-field>
                 </form>
@@ -70,11 +70,11 @@
 
         <mat-card-actions class="flex justify-around">
             <button mat-flat-button color="primary" class="bg-light-blue-300 hover:bg-light-blue-400" (click)="saveForm()">
-                <mat-icon class="text-2xl" inline fontSet="material-icons-outlined">save</mat-icon>
+                <mat-icon fontSet="material-icons-outlined" class="text-2xl" inline>save</mat-icon>
                 <span>Save Form</span>
             </button>
             <button mat-flat-button color="warn" class="bg-amber-300 hover:bg-amber-400" (click)="clearForm()">
-                <mat-icon class="text-2xl" inline fontSet="material-icons-outlined">clear</mat-icon>
+                <mat-icon fontSet="material-icons-outlined" class="text-2xl" inline>clear</mat-icon>
                 <span>Discard Form</span>
             </button>
         </mat-card-actions>

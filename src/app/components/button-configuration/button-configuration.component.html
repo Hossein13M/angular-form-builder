@@ -4,7 +4,7 @@
             <mat-label>Form Control Name</mat-label>
             <input matInput type="text" formControlName="formControlName" pattern="[a-zA-Z ]*" />
             <button *ngIf="form.get('formControlName')!.value" matSuffix mat-icon-button (click)="form.get('formControlName')?.setValue('')">
-                <mat-icon>close</mat-icon>
+                <mat-icon fontSet="material-icons-outlined">close</mat-icon>
             </button>
             <mat-error *ngIf="form.get('formControlName')!.hasError('pattern')"> You should only use English letters for this field </mat-error>
         </mat-form-field>
@@ -13,7 +13,7 @@
             <mat-label>Label</mat-label>
             <input matInput type="text" formControlName="label" />
             <button *ngIf="form.get('label')!.value" matSuffix mat-icon-button (click)="form.get('label')?.setValue('')">
-                <mat-icon>close</mat-icon>
+                <mat-icon fontSet="material-icons-outlined">close</mat-icon>
             </button>
         </mat-form-field>
 
@@ -21,7 +21,7 @@
             <mat-label>Tooltip</mat-label>
             <input matInput type="text" formControlName="tooltipText" />
             <button *ngIf="form.get('tooltipText')!.value" matSuffix mat-icon-button (click)="form.get('tooltipText')?.setValue('')">
-                <mat-icon>close</mat-icon>
+                <mat-icon fontSet="material-icons-outlined">close</mat-icon>
             </button>
         </mat-form-field>
 
@@ -29,11 +29,11 @@
             <mat-label>Button Type</mat-label>
             <mat-select formControlName="type">
                 <mat-select-trigger class="flex">
-                    <mat-icon color="primary">{{ form.get('type')!.value.icon }}</mat-icon>
+                    <mat-icon fontSet="material-icons-outlined" color="primary">{{ form.get('type')!.value.icon }}</mat-icon>
                     <span style="line-height: 24px" class="mx-4">{{ form.get('type')!.value.name | titlecase }}</span>
                 </mat-select-trigger>
                 <mat-option *ngFor="let buttonType of buttonTypes" [value]="buttonType">
-                    <mat-icon color="primary">{{ buttonType.icon }}</mat-icon>
+                    <mat-icon fontSet="material-icons-outlined" color="primary">{{ buttonType.icon }}</mat-icon>
                     <span>{{ buttonType.name | titlecase }}</span>
                 </mat-option>
             </mat-select>
@@ -47,7 +47,7 @@
             <mat-label>Link</mat-label>
             <input matInput type="text" formControlName="downloadOrExternalNavigateLink" />
             <button *ngIf="form.get('tooltipText')!.value" matSuffix mat-icon-button (click)="form.get('downloadOrExternalNavigateLink')?.setValue('')">
-                <mat-icon>close</mat-icon>
+                <mat-icon fontSet="material-icons-outlined">close</mat-icon>
             </button>
         </mat-form-field>
 
@@ -55,11 +55,11 @@
             <mat-label>Button theme</mat-label>
             <mat-select formControlName="themeColor">
                 <mat-select-trigger class="flex">
-                    <mat-icon [color]="form.get('themeColor')!.value">circle</mat-icon>
+                    <mat-icon fontSet="material-icons-outlined" [color]="form.get('themeColor')!.value">circle</mat-icon>
                     <span style="line-height: 24px" class="mx-4">{{ form.get('themeColor')!.value | titlecase }}</span>
                 </mat-select-trigger>
                 <mat-option *ngFor="let themeColor of themeColors" [value]="themeColor">
-                    <mat-icon [color]="themeColor">circle</mat-icon>
+                    <mat-icon fontSet="material-icons-outlined" [color]="themeColor">circle</mat-icon>
                     <span>{{ themeColor | titlecase }}</span>
                 </mat-option>
             </mat-select>
@@ -67,7 +67,7 @@
     </div>
 
     <button class="w-3/5 mx-auto my-auto" mat-flat-button color="primary" type="submit" [disabled]="form.invalid">
-        <mat-icon class="mx-2" fontSet="material-icons-outlined">save</mat-icon>
+        <mat-icon fontSet="material-icons-outlined" class="mx-2">save</mat-icon>
         <span>Save Component Settings</span>
     </button>
 </form>

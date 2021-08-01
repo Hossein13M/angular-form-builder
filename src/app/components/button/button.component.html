@@ -9,6 +9,6 @@
         [color]="buttonConfiguration.themeColor"
     >
         <span [className]="buttonConfiguration.tailwindsClassForLabel">{{ buttonConfiguration.label }}</span>
-        <mat-icon *ngIf="buttonConfiguration.hasIcon" fontSet="material-icons-outlined">{{ buttonConfiguration.icon }}</mat-icon>
+        <mat-icon fontSet="material-icons-outlined" *ngIf="buttonConfiguration.hasIcon">{{ buttonConfiguration.icon }}</mat-icon>
     </button>
 </a>
