@@ -2,7 +2,10 @@
     <mat-card class="flex flex-col h-full w-5/6 px-0 pt-0">
         <mat-card-header class="flex flex-col text-center m-0 w-full bg-blue-300 mb-10">
             <mat-card-title class="text-base flex justify-around items-baseline pt-5">
-                <h1 class="font-medium">Angular Form Builder / Viewer</h1>
+                <h1 class="flex items-center">
+                    <span class="mx-2"> FormBuilder</span>
+                    <mat-icon fontSet="material-icons-outlined"> dashboard </mat-icon>
+                </h1>
 
                 <form (submit)="submitForm()" [formGroup]="form">
                     <mat-form-field appearance="outline" class="mx-3 flex justify-center">
@@ -11,15 +14,15 @@
                         </mat-label>
                         <input matInput type="text" formControlName="name" pattern="[a-zA-Z ]*" />
                         <button *ngIf="form.get('name')!.value" matSuffix mat-icon-button (click)="form.get('name')?.setValue(null)">
-                            <mat-icon>close</mat-icon>
+                            <mat-icon fontSet="material-icons-outlined">close</mat-icon>
                         </button>
                         <mat-hint *ngIf="!form.get('name')!.hasError('pattern')" class="flex">
-                            <span>Can not be changed in future</span>
-                            <mat-icon>info</mat-icon>
+                            <span>Can't be changed in future</span>
+                            <mat-icon fontSet="material-icons-outlined">info</mat-icon>
                         </mat-hint>
                         <mat-error *ngIf="form.get('name')!.hasError('pattern')" class="flex">
                             <span>Only English letters are accepted</span>
-                            <mat-icon>error</mat-icon>
+                            <mat-icon fontSet="material-icons-outlined">error</mat-icon>
                         </mat-error>
                     </mat-form-field>
                 </form>
@@ -70,11 +73,11 @@
 
         <mat-card-actions class="flex justify-around">
             <button mat-flat-button color="primary" class="bg-light-blue-300 hover:bg-light-blue-400" (click)="saveForm()">
-                <mat-icon class="text-2xl" inline fontSet="material-icons-outlined">save</mat-icon>
+                <mat-icon fontSet="material-icons-outlined" class="text-2xl" inline>save</mat-icon>
                 <span>Save Form</span>
             </button>
             <button mat-flat-button color="warn" class="bg-amber-300 hover:bg-amber-400" (click)="clearForm()">
-                <mat-icon class="text-2xl" inline fontSet="material-icons-outlined">clear</mat-icon>
+                <mat-icon fontSet="material-icons-outlined" class="text-2xl" inline>clear</mat-icon>
                 <span>Discard Form</span>
             </button>
         </mat-card-actions>
