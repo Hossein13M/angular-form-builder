@@ -32,7 +32,6 @@ export class ButtonConfigurationComponent implements OnInit {
         this.form.get('type')!.valueChanges.subscribe((value) => {
             if (value.name === 'download' || value.name === 'externalLink') {
                 this.form.addControl('downloadOrExternalNavigateLink', new FormControl('', Validators.required));
-                console.log(this.form);
             } else {
                 if (!this.form.get('downloadOrExternalNavigateLink')) this.form.removeControl('downloadOrExternalNavigateLink');
             }
