@@ -17,10 +17,6 @@ export class FormBuilderWrapperComponent {
 
     constructor(private dialog: MatDialog, private fb: FormBuilder) {}
 
-    public saveForm(): void {
-        console.log(this.sections);
-    }
-
     public clearForm(): void {
         this.sections = [];
     }
