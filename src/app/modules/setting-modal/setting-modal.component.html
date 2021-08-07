@@ -34,15 +34,10 @@
         </button>
     </div>
 
-    <div class="flex justify-evenly items-end">
-        <button mat-flat-button color="primary" matTooltip="Save Section Settings" matTooltipPosition="below" (click)="saveSectionSetting()">
-            <mat-icon fontSet="material-icons-outlined" class="text-3xl" inline>save</mat-icon>
-            <span>Save Section Settings</span>
-        </button>
-
-        <button mat-flat-button color="warn" matTooltip="Discard Section Settings" matTooltipPosition="below" (click)="cancelSectionSettings()">
-            <mat-icon fontSet="material-icons-outlined" class="text-3xl" inline>clear</mat-icon>
-            <span>Discard Section Settings</span>
+    <div class="flex justify-center items-end">
+        <button mat-flat-button color="warn" matTooltip="Close Section Settings" matTooltipPosition="below" (click)="cancelSectionSettings()">
+            <mat-icon fontSet="material-icons-outlined" class="text-3xl" inline>close</mat-icon>
+            <span>Close Section Settings</span>
         </button>
     </div>
 </div>

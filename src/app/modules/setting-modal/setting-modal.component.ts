@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ColumnModel } from '#models/column.model';
 import { MatDialogRef } from '@angular/material/dialog';
+import { ColumnModel } from '#models/column.model';
 
 @Component({
     selector: 'app-setting-modal',
@@ -25,11 +25,7 @@ export class SettingModalComponent {
         return this.columns.length < 3;
     }
 
-    public saveSectionSetting(): void {
-        this.matDialog.close(true);
-    }
-
     public cancelSectionSettings(): void {
-        this.matDialog.close(false);
+        this.matDialog.close(true);
     }
 }
