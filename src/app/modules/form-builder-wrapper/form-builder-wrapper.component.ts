@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { SettingModalComponent } from '../setting-modal/setting-modal.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Section } from '#models/section.model';
+import { SettingModalComponent } from '../setting-modal/setting-modal.component';
 
 @Component({
     selector: 'app-form-builder-wrapper',
