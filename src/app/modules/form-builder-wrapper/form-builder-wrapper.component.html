@@ -18,11 +18,9 @@
                         </button>
                         <mat-hint *ngIf="!form.get('name')!.hasError('pattern')" class="flex">
                             <span>Can't be changed in future</span>
-                            <mat-icon fontSet="material-icons-outlined">info</mat-icon>
                         </mat-hint>
                         <mat-error *ngIf="form.get('name')!.hasError('pattern')" class="flex">
                             <span>Only English letters are accepted</span>
-                            <mat-icon fontSet="material-icons-outlined">error</mat-icon>
                         </mat-error>
                     </mat-form-field>
                 </form>
