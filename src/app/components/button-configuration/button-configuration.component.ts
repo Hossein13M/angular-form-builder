@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
 
 @Component({
     selector: 'app-button-configuration',
@@ -9,6 +10,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class ButtonConfigurationComponent implements OnInit {
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
+    @Output() componentConfiguration: EventEmitter<ButtonFormConfiguration> = new EventEmitter<ButtonFormConfiguration>();
+
     public buttonTypes: Array<{ name: string; icon: string }> = [
         { name: 'accept', icon: 'check_circle' },
         { name: 'reject', icon: 'cancel' },
@@ -38,7 +41,7 @@ export class ButtonConfigurationComponent implements OnInit {
         });
     }
 
-    public submitForm(): void {
-        console.log(this.form.value);
+    public submitComponentConfigurationForm(): void {
+        this.componentConfiguration.emit(this.form.value);
     }
 }

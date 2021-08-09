@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
+import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
 
 @Component({
     selector: 'app-input-configuration',
@@ -9,6 +10,7 @@ import { ThemePalette } from '@angular/material/core';
 })
 export class InputConfigurationComponent {
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
+    @Output() componentConfiguration: EventEmitter<InputFormConfiguration> = new EventEmitter<InputFormConfiguration>();
     public inputTypes: Array<{ name: string; icon: string }> = [
         { name: 'text', icon: 'article' },
         { name: 'email', icon: 'email' },
@@ -30,7 +32,7 @@ export class InputConfigurationComponent {
 
     constructor(private fb: FormBuilder) {}
 
-    public submitForm() {
-        console.log(this.form.value);
+    public submitComponentConfigurationForm() {
+        this.componentConfiguration.emit(this.form.value);
     }
 }

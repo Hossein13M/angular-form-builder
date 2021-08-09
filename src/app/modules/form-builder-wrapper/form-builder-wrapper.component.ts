@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Section } from '#models/section.model';
 import { SettingModalComponent } from '../setting-modal/setting-modal.component';
+import { ColumnComponentModel } from '#models/columnComponent.model';
 
 @Component({
     selector: 'app-form-builder-wrapper',
@@ -10,7 +11,7 @@ import { SettingModalComponent } from '../setting-modal/setting-modal.component'
     styleUrls: ['./form-builder-wrapper.component.scss'],
 })
 export class FormBuilderWrapperComponent {
-    public sections: Array<Section> = [{ columnsCount: 1 }];
+    public sections: Array<Section> = [];
     public form: FormGroup = this.fb.group({
         name: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
     });
@@ -19,6 +20,7 @@ export class FormBuilderWrapperComponent {
 
     public clearForm(): void {
         this.sections = [];
+        this.form.reset();
     }
 
     public addSection(): void {
@@ -30,18 +32,28 @@ export class FormBuilderWrapperComponent {
         this.sections.splice(sectionIndex, 1);
     }
 
-    public openSettingDialog(): void {
+    public openSettingDialog(sectionIndex: number): void {
         this.dialog
-            .open(SettingModalComponent, { data: { name: 'hello' }, height: '800px', width: '1600px' })
+            .open(SettingModalComponent, { data: { sectionIndex: sectionIndex }, height: '800px', width: '1600px' })
             .afterClosed()
-            .subscribe((result) => result && this.createSectionPreview());
+            .subscribe((sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> }) => {
+                sectionInfo && this.createSectionPreview(sectionInfo);
+            });
     }
 
     public submitForm(): void {
-        console.log('hello form!');
+        const data = { ...this.form.value, sections: this.sections };
+        console.log(data);
     }
 
-    private createSectionPreview(): void {
-        // TODO: will be developed later
+    public isSubmitButtonDisable(): boolean {
+        return this.form.valid && !!this.sections.length;
+    }
+
+    private createSectionPreview(sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> }): void {
+        this.sections[sectionInfo.sectionIndex] = {
+            columnInfo: sectionInfo.sectionColumns,
+            columnsCount: sectionInfo.sectionColumns.length,
+        };
     }
 }
