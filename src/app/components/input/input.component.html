@@ -8,7 +8,7 @@
         [class.text-ltr]="inputFormConfiguration.isRtl"
         [attr.type]="inputFormConfiguration.type === 'numeric' ? 'number' : inputFormConfiguration.type"
         [attr.inputmode]="inputFormConfiguration.type"
-        [readonly]="inputFormConfiguration.readonly"
+        [readonly]="inputFormConfiguration.readonly || readonlyForDemo"
         [autofocus]="inputFormConfiguration.autofocus"
     />
     <button

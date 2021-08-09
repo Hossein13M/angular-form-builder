@@ -9,6 +9,7 @@ import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
 })
 export class InputComponent implements OnChanges {
     public hideInputTextForPasswordInputs = false;
+    @Input() readonlyForDemo: boolean = false;
 
     @Input() inputFormConfiguration: InputFormConfiguration = {
         componentType: 'input',
@@ -26,7 +27,7 @@ export class InputComponent implements OnChanges {
     };
 
     ngOnChanges(): void {
-        if (!this.FC) throw new Error('FC Input is required');
+        // if (!this.FC) throw new Error('FC Input is required');
         if (this.inputFormConfiguration.isInputTypePassword) this.hideInputTextForPasswordInputs = true;
     }
 
