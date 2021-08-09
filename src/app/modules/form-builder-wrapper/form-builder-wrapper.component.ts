@@ -11,7 +11,7 @@ import { ColumnComponentModel } from '#models/columnComponent.model';
     styleUrls: ['./form-builder-wrapper.component.scss'],
 })
 export class FormBuilderWrapperComponent {
-    public sections: Array<Section> = [{ columnsCount: 1 }];
+    public sections: Array<Section> = [];
     public form: FormGroup = this.fb.group({
         name: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
     });
@@ -20,6 +20,7 @@ export class FormBuilderWrapperComponent {
 
     public clearForm(): void {
         this.sections = [];
+        this.form.reset();
     }
 
     public addSection(): void {
@@ -35,13 +36,18 @@ export class FormBuilderWrapperComponent {
         this.dialog
             .open(SettingModalComponent, { data: { sectionIndex: sectionIndex }, height: '800px', width: '1600px' })
             .afterClosed()
-            .subscribe(
-                (sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> }) => sectionInfo && this.createSectionPreview(sectionInfo)
-            );
+            .subscribe((sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> }) => {
+                sectionInfo && this.createSectionPreview(sectionInfo);
+            });
     }
 
     public submitForm(): void {
-        console.log(this.sections);
+        const data = { ...this.form.value, sections: this.sections };
+        console.log(data);
+    }
+
+    public isSubmitButtonDisable(): boolean {
+        return this.form.valid && !!this.sections.length;
     }
 
     private createSectionPreview(sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> }): void {
