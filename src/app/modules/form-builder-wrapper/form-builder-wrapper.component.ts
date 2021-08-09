@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Section } from '#models/section.model';
 import { SettingModalComponent } from '../setting-modal/setting-modal.component';
+import { ColumnComponentModel } from '#models/columnComponent.model';
 
 @Component({
     selector: 'app-form-builder-wrapper',
@@ -30,18 +31,23 @@ export class FormBuilderWrapperComponent {
         this.sections.splice(sectionIndex, 1);
     }
 
-    public openSettingDialog(): void {
+    public openSettingDialog(sectionIndex: number): void {
         this.dialog
-            .open(SettingModalComponent, { data: { name: 'hello' }, height: '800px', width: '1600px' })
+            .open(SettingModalComponent, { data: { sectionIndex: sectionIndex }, height: '800px', width: '1600px' })
             .afterClosed()
-            .subscribe((result) => result && this.createSectionPreview());
+            .subscribe(
+                (sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> }) => sectionInfo && this.createSectionPreview(sectionInfo)
+            );
     }
 
     public submitForm(): void {
-        console.log('hello form!');
+        console.log(this.sections);
     }
 
-    private createSectionPreview(): void {
-        // TODO: will be developed later
+    private createSectionPreview(sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> }): void {
+        this.sections[sectionInfo.sectionIndex] = {
+            columnInfo: sectionInfo.sectionColumns,
+            columnsCount: sectionInfo.sectionColumns.length,
+        };
     }
 }

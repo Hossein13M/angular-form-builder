@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ColumnModel } from '#models/column.model';
 import { ColumnComponentModel } from '#models/columnComponent.model';
 
@@ -10,9 +10,12 @@ import { ColumnComponentModel } from '#models/columnComponent.model';
 })
 export class SettingModalComponent {
     public columns: Array<ColumnModel> = [{ columnId: 1 }];
-    public columnComponents: Array<ColumnComponentModel> = [];
+    public sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> } = {
+        sectionIndex: this.data.sectionIndex,
+        sectionColumns: [],
+    };
 
-    constructor(private matDialog: MatDialogRef<SettingModalComponent>) {}
+    constructor(private matDialog: MatDialogRef<SettingModalComponent>, @Inject(MAT_DIALOG_DATA) public data: { sectionIndex: number }) {}
 
     public addColumn(): void {
         this.columns.push({ columnId: 1 });
@@ -32,11 +35,11 @@ export class SettingModalComponent {
     }
 
     public saveSectionSettings(): void {
-        this.matDialog.close(this.columnComponents);
+        this.matDialog.close(this.sectionInfo);
     }
 
     public getComponentConfigurationEvent(event: any, componentType: 'button' | 'input', columnIndex: number) {
         console.log(event, componentType, columnIndex);
-        this.columnComponents.push({ index: columnIndex, componentType: componentType, componentInfo: event });
+        this.sectionInfo.sectionColumns.push({ index: columnIndex, componentType: componentType, componentInfo: event });
     }
 }
