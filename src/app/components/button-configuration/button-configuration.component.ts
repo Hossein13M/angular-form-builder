@@ -22,6 +22,7 @@ export class ButtonConfigurationComponent implements OnInit {
     ];
 
     public form: FormGroup = this.fb.group({
+        componentType: ['button'],
         formControlName: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
         type: ['', Validators.required],
         themeColor: ['primary', Validators.required],

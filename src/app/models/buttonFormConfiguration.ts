@@ -1,4 +1,5 @@
 export interface ButtonFormConfiguration {
+    componentType: 'button';
     type: 'accept' | 'reject' | 'upload' | 'download' | 'localRoute' | 'externalLink';
     themeColor: 'primary' | 'accent' | 'warn';
     label: string;
