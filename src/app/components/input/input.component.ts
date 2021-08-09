@@ -9,6 +9,7 @@ import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
 })
 export class InputComponent implements OnChanges {
     public hideInputTextForPasswordInputs = false;
+    @Input() readonlyForDemo: boolean = false;
 
     @Input() inputFormConfiguration: InputFormConfiguration = {
         componentType: 'input',
