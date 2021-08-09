@@ -40,12 +40,7 @@
                         <div class="flex justify-evenly w-full text-center h-full items-center">
                             <div class="h-full flex justify-center items-center w-1/3" *ngFor="let column of sections[index].columnInfo">
                                 <!--  button component  -->
-                                <app-button
-                                    [disabledForDemo]="true"
-                                    *ngIf="column.componentInfo.componentType === 'button'"
-                                    [buttonConfiguration]="column.componentInfo"
-                                >
-                                </app-button>
+                                <app-button *ngIf="column.componentInfo.componentType === 'button'" [buttonConfiguration]="column.componentInfo"> </app-button>
                                 <!--  input component  -->
                                 <app-input
                                     [readonlyForDemo]="true"

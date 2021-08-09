@@ -27,7 +27,7 @@ export class InputComponent implements OnChanges {
     };
 
     ngOnChanges(): void {
-        // if (!this.FC) throw new Error('FC Input is required');
+        if (!this.FC) throw new Error('FC Input is required');
         if (this.inputFormConfiguration.isInputTypePassword) this.hideInputTextForPasswordInputs = true;
     }
 

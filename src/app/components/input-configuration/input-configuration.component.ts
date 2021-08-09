@@ -21,7 +21,7 @@ export class InputConfigurationComponent {
 
     public form: FormGroup = this.fb.group({
         componentType: ['input'],
-        formControlName: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
+        formControl: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
         type: ['', Validators.required],
         label: ['', Validators.required],
         placeholder: [],
@@ -34,6 +34,8 @@ export class InputConfigurationComponent {
     constructor(private fb: FormBuilder) {}
 
     public submitComponentConfigurationForm() {
-        this.componentConfiguration.emit(this.form.value);
+        const data: InputFormConfiguration = this.form.value;
+        data.formControl = this.fb.control([data.formControl]);
+        this.componentConfiguration.emit(data);
     }
 }

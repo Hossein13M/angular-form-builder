@@ -7,7 +7,7 @@
         [matTooltipPosition]="buttonConfiguration.tooltipPosition ?? 'below'"
         [matTooltipHideDelay]="buttonConfiguration.tooltipHideDelay ?? 0"
         [color]="buttonConfiguration.themeColor"
-        [disabled]="disabledForDemo"
+        [disabled]="disableButton"
     >
         <span [className]="buttonConfiguration.tailwindsClassForLabel">{{ buttonConfiguration.label }}</span>
         <mat-icon fontSet="material-icons-outlined" *ngIf="buttonConfiguration.hasIcon">{{ buttonConfiguration.icon }}</mat-icon>
