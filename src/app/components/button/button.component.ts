@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { ButtonModel } from '#models/button.model';
+import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
 
 @Component({
     selector: 'app-button',
@@ -8,7 +8,7 @@ import { ButtonModel } from '#models/button.model';
     styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-    @Input() buttonConfiguration!: ButtonModel;
+    @Input() buttonConfiguration!: ButtonFormConfiguration;
 
     constructor(private router: Router) {}
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
+import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
 
 @Component({
     selector: 'app-input-configuration',

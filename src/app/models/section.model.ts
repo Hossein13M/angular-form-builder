@@ -1,5 +1,5 @@
-import { ButtonModel } from './button.model';
-import { InputFormConfiguration } from './input.model';
+import { ButtonFormConfiguration } from './buttonFormConfiguration';
+import { InputFormConfiguration } from './inputFormConfiguration.model';
 
 export interface Section {
     columnsCount: number;
@@ -9,5 +9,5 @@ export interface Section {
 export interface SectionColumn {
     flexNumber: number;
     componentType: 'input' | 'button';
-    componentConfiguration: ButtonModel | InputFormConfiguration;
+    componentConfiguration: ButtonFormConfiguration | InputFormConfiguration;
 }

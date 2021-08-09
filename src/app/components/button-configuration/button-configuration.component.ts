@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
 
 @Component({
     selector: 'app-button-configuration',
