@@ -11,6 +11,7 @@ export class InputComponent implements OnChanges {
     public hideInputTextForPasswordInputs = false;
 
     @Input() inputFormConfiguration: InputFormConfiguration = {
+        componentType: 'input',
         formControl: new FormControl(),
         type: 'text',
         placeholder: 'placeholder',
