@@ -8,7 +8,7 @@ import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
     styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-    @Input() disabledForDemo: boolean = false;
+    @Input() disableButton: boolean = false;
     @Input() buttonConfiguration!: ButtonFormConfiguration;
 
     constructor(private router: Router) {}
