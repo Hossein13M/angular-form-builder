@@ -2,11 +2,11 @@
     <div class="h-5/6 overflow-y-auto flex flex-col">
         <mat-form-field appearance="outline" class="mx-3">
             <mat-label>Form Control Name</mat-label>
-            <input matInput type="text" formControlName="formControlName" pattern="[a-zA-Z ]*" />
-            <button *ngIf="form.get('formControlName')!.value" matSuffix mat-icon-button (click)="form.get('formControlName')?.setValue('')">
+            <input matInput type="text" formControlName="formControl" pattern="[a-zA-Z ]*" />
+            <button *ngIf="form.get('formControl')!.value" matSuffix mat-icon-button (click)="form.get('formControl')?.setValue('')">
                 <mat-icon fontSet="material-icons-outlined">close</mat-icon>
             </button>
-            <mat-error *ngIf="form.get('formControlName')!.hasError('pattern')"> You should only use English letters for this field </mat-error>
+            <mat-error *ngIf="form.get('formControl')!.hasError('pattern')"> You should only use English letters for this field </mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="mx-3">
