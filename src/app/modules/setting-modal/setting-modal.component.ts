@@ -3,6 +3,10 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ColumnModel } from '#models/column.model';
 import { ColumnComponentModel } from '#models/columnComponent.model';
 import { Section } from '#models/section.model';
+import { defaultInputConfiguration } from '../../const/defaultInputConfiguration';
+import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
+import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
+import { defaultButtonConfiguration } from '../../const/defaultButtonConfiguration';
 
 @Component({
     selector: 'app-setting-modal',
@@ -10,7 +14,10 @@ import { Section } from '#models/section.model';
     styleUrls: ['./setting-modal.component.scss'],
 })
 export class SettingModalComponent {
-    public columns: Array<ColumnModel> = [{ columnId: 1, columnComponentType: 'input' }];
+    public defaultButton = defaultButtonConfiguration;
+    public defaultInput = defaultInputConfiguration;
+
+    public columns: Array<ColumnModel> = [];
     public sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> } = {
         sectionIndex: this.data.sectionIndex,
         sectionColumns: [],
@@ -21,7 +28,8 @@ export class SettingModalComponent {
     }
 
     public addColumn(): void {
-        this.columns.push({ columnId: 1, columnComponentType: 'input' });
+        this.columns.push({ columnId: 1, columnComponentType: 'input', columnSetting: defaultInputConfiguration });
+        console.log(this.columns);
     }
 
     public removeColumn(column: ColumnModel): void {
@@ -54,5 +62,17 @@ export class SettingModalComponent {
         this.data.sectionInfo.columnInfo!.map((item) => {
             this.columns.push({ columnId: item.index, columnComponentType: item.componentType, columnSetting: item.componentInfo });
         });
+    }
+
+    public returnInputFormConfiguration(sectionColumn: ColumnModel): InputFormConfiguration {
+        if (this.columns.length > 0) {
+            return <InputFormConfiguration>sectionColumn.columnSetting;
+        } else {
+            return defaultInputConfiguration;
+        }
+    }
+
+    public returnButtonFormConfiguration(sectionColumn: ColumnModel): ButtonFormConfiguration {
+        return <ButtonFormConfiguration>sectionColumn.columnSetting;
     }
 }
