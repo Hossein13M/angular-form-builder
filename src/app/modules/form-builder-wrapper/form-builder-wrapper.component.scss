@@ -9,6 +9,10 @@ mat-card {
                 opacity: 0.8;
                 background: #e1edfc repeating-linear-gradient(45deg, #e7f4ff, #e7f4ff 5px, #e1edfc 5px, #e1edfc 25px);
             }
+            .component-group:nth-of-type(2n) {
+                border-left: 4px solid #b9b9b9;
+                border-right: 4px solid #b9b9b9;
+            }
             mat-grid-tile {
                 .section-button {
                 }

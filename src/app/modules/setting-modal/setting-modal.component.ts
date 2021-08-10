@@ -2,6 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ColumnModel } from '#models/column.model';
 import { ColumnComponentModel } from '#models/columnComponent.model';
+import { Section } from '#models/section.model';
 
 @Component({
     selector: 'app-setting-modal',
@@ -9,16 +10,18 @@ import { ColumnComponentModel } from '#models/columnComponent.model';
     styleUrls: ['./setting-modal.component.scss'],
 })
 export class SettingModalComponent {
-    public columns: Array<ColumnModel> = [{ columnId: 1 }];
+    public columns: Array<ColumnModel> = [{ columnId: 1, columnComponentType: 'input' }];
     public sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> } = {
         sectionIndex: this.data.sectionIndex,
         sectionColumns: [],
     };
 
-    constructor(private matDialog: MatDialogRef<SettingModalComponent>, @Inject(MAT_DIALOG_DATA) public data: { sectionIndex: number }) {}
+    constructor(private matDialog: MatDialogRef<SettingModalComponent>, @Inject(MAT_DIALOG_DATA) public data: { sectionIndex: number; sectionInfo: Section }) {
+        if (this.data.sectionInfo.columnsCount > 0) this.setDataForEditMode();
+    }
 
     public addColumn(): void {
-        this.columns.push({ columnId: 1 });
+        this.columns.push({ columnId: 1, columnComponentType: 'input' });
     }
 
     public removeColumn(column: ColumnModel): void {
@@ -44,5 +47,12 @@ export class SettingModalComponent {
         } else {
             this.sectionInfo.sectionColumns[columnIndex] = { index: columnIndex, componentType: componentType, componentInfo: event };
         }
+    }
+
+    private setDataForEditMode() {
+        this.columns = [];
+        this.data.sectionInfo.columnInfo!.map((item) => {
+            this.columns.push({ columnId: item.index, columnComponentType: item.componentType, columnSetting: item.componentInfo });
+        });
     }
 }
