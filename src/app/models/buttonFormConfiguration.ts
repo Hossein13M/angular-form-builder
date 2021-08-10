@@ -3,6 +3,7 @@ export interface ButtonFormConfiguration {
     type: 'accept' | 'reject' | 'upload' | 'download' | 'localRoute' | 'externalLink';
     themeColor: 'primary' | 'accent' | 'warn';
     label: string;
+    width: string;
     isRtl?: boolean;
     tailwindsClassForLabel?: string;
     hasToolTip: boolean;
