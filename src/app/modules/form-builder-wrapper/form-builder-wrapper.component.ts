@@ -24,7 +24,7 @@ export class FormBuilderWrapperComponent {
     }
 
     public addSection(): void {
-        this.sections.push({ columnsCount: 1 });
+        this.sections.push({ columnsCount: 0 });
     }
 
     public removeSection(section: Section): void {
