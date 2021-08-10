@@ -5,7 +5,7 @@
                 <mat-card-title class="text-base w-full flex justify-center items-baseline">
                     <mat-form-field appearance="outline" class="w-full p-0 m-0">
                         <mat-label>Select your component type</mat-label>
-                        <mat-select value="input" #matSelect>
+                        <mat-select [value]="column.columnComponentType ?? 'input'" #matSelect>
                             <mat-option value="input">Input Component</mat-option>
                             <mat-option value="button">Button Component</mat-option>
                         </mat-select>

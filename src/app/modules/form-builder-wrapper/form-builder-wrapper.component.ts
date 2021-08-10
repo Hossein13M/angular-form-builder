@@ -32,9 +32,9 @@ export class FormBuilderWrapperComponent {
         this.sections.splice(sectionIndex, 1);
     }
 
-    public openSettingDialog(sectionIndex: number): void {
+    public openSettingDialog(sectionIndex: number, sectionInfo: Section): void {
         this.dialog
-            .open(SettingModalComponent, { data: { sectionIndex: sectionIndex }, height: '800px', width: '1600px' })
+            .open(SettingModalComponent, { data: { sectionIndex, sectionInfo }, height: '800px', width: '1600px' })
             .afterClosed()
             .subscribe((sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> }) => {
                 sectionInfo && this.createSectionPreview(sectionInfo);
