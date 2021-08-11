@@ -4,9 +4,9 @@
         matInput
         [attr.placeholder]="inputFormConfiguration.placeholder"
         [formControl]="FC"
-        [type]="hideInputTextForPasswordInputs ? 'password' : inputFormConfiguration.type"
+        [type]="hideInputTextForPasswordInputs ? 'password' : inputFormConfiguration.type.name"
         [class.text-ltr]="inputFormConfiguration.isRtl"
-        [attr.type]="inputFormConfiguration.type === 'numeric' ? 'number' : inputFormConfiguration.type"
+        [attr.type]="inputFormConfiguration.type.name === 'numeric' ? 'number' : inputFormConfiguration.type.name"
         [attr.inputmode]="inputFormConfiguration.type"
         [readonly]="inputFormConfiguration.readonly || readonlyForDemo"
         [autofocus]="inputFormConfiguration.autofocus"

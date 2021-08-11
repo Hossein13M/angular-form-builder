@@ -4,7 +4,7 @@ import { ThemePalette } from '@angular/material/core';
 export interface InputFormConfiguration {
     componentType: 'input';
     formControl: FormControl | AbstractControl | null | undefined;
-    type: 'text' | 'email' | 'tel' | 'url' | 'numeric';
+    type: { name: 'text' | 'email' | 'tel' | 'url' | 'numeric'; icon: string };
     label: string;
     placeholder?: string;
     isInputTypePassword?: boolean;
