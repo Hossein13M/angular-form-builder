@@ -33,7 +33,7 @@
                 <!--  Input Component  -->
                 <app-input-configuration
                     *ngIf="columns[index].columnComponentType === 'input'"
-                    [inputConfiguration]="columns[index].columnComponentType === 'input' ? columns[index].columnSetting : defaultInput"
+                    [inputConfiguration]="returnInputFormConfiguration(column)"
                     (componentConfiguration)="getComponentConfigurationEvent($event, 'input', index)"
                 ></app-input-configuration>
             </mat-card-content>
