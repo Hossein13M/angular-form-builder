@@ -3,10 +3,9 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ColumnModel } from '#models/column.model';
 import { ColumnComponentModel } from '#models/columnComponent.model';
 import { Section } from '#models/section.model';
-import { defaultInputConfiguration } from '../../const/defaultInputConfiguration';
 import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
 import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
-import { defaultButtonConfiguration } from '../../const/defaultButtonConfiguration';
+import { defaultInputConfiguration } from '#const/defaultInputConfiguration';
 
 @Component({
     selector: 'app-setting-modal',
@@ -14,9 +13,6 @@ import { defaultButtonConfiguration } from '../../const/defaultButtonConfigurati
     styleUrls: ['./setting-modal.component.scss'],
 })
 export class SettingModalComponent implements OnInit {
-    public defaultButton = defaultButtonConfiguration;
-    public defaultInput = defaultInputConfiguration;
-
     public columns: Array<ColumnModel> = [];
     public sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> } = {
         sectionIndex: this.data.sectionIndex,
