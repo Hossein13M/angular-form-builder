@@ -23,14 +23,17 @@
 
             <mat-card-content class="overflow-y-auto h-5/6">
                 <!--  Button Component  -->
+
                 <app-button-configuration
-                    *ngIf="matSelect.value === 'button'"
+                    *ngIf="column.columnComponentType === 'button'"
+                    [buttonConfiguration]="returnButtonFormConfiguration(column)"
                     (componentConfiguration)="getComponentConfigurationEvent($event, 'button', index)"
                 ></app-button-configuration>
 
                 <!--  Input Component  -->
                 <app-input-configuration
-                    *ngIf="matSelect.value === 'input'"
+                    *ngIf="columns[index].columnComponentType === 'input'"
+                    [inputConfiguration]="returnInputFormConfiguration(column)"
                     (componentConfiguration)="getComponentConfigurationEvent($event, 'input', index)"
                 ></app-input-configuration>
             </mat-card-content>

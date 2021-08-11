@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
@@ -11,6 +11,7 @@ import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
 export class ButtonConfigurationComponent implements OnInit {
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
     @Output() componentConfiguration: EventEmitter<ButtonFormConfiguration> = new EventEmitter<ButtonFormConfiguration>();
+    @Input() buttonConfiguration!: ButtonFormConfiguration;
 
     public buttonTypes: Array<{ name: string; icon: string }> = [
         { name: 'accept', icon: 'check_circle' },
@@ -22,13 +23,13 @@ export class ButtonConfigurationComponent implements OnInit {
     ];
 
     public form: FormGroup = this.fb.group({
-        componentType: ['button'],
-        formControlName: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
-        type: ['', Validators.required],
-        width: ['180', Validators.required],
-        themeColor: ['primary', Validators.required],
-        label: ['', Validators.required],
-        tooltipText: [''],
+        componentType: [this.buttonConfiguration.componentType ?? 'button'],
+        formControlName: [this.buttonConfiguration.formControl ?? null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
+        type: [this.buttonConfiguration.type ?? '', Validators.required],
+        width: [this.buttonConfiguration.width ?? '180', Validators.required],
+        themeColor: [this.buttonConfiguration.themeColor ?? 'primary', Validators.required],
+        label: [this.buttonConfiguration.label ?? '', Validators.required],
+        tooltipText: [this.buttonConfiguration.tooltipText ?? ''],
     });
 
     constructor(private fb: FormBuilder) {}
