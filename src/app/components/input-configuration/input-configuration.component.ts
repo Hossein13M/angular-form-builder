@@ -42,7 +42,7 @@ export class InputConfigurationComponent implements OnInit {
     public submitComponentConfigurationForm() {
         const data: InputFormConfiguration = this.form.value;
         data.formControl = new FormControl(this.form.value.formControl);
-        this.componentConfiguration.emit(this.form.value);
+        this.componentConfiguration.emit(data);
     }
 
     private setFormValue(): void {
