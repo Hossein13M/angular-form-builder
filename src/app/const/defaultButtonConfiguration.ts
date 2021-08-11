@@ -1,12 +1,13 @@
 import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
+import { FormControl } from '@angular/forms';
 
 export const defaultButtonConfiguration: ButtonFormConfiguration = {
-    formControl: '',
+    formControlName: new FormControl(),
     componentType: 'button',
-    type: 'accept',
+    type: { name: 'accept', icon: 'check_circle' },
     themeColor: 'primary',
     label: '',
-    width: '',
+    width: '180',
     isRtl: false,
     tailwindsClassForLabel: '',
     hasToolTip: false,

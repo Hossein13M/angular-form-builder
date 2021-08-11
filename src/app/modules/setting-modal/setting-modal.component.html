@@ -5,7 +5,7 @@
                 <mat-card-title class="text-base w-full flex justify-center items-baseline">
                     <mat-form-field appearance="outline" class="w-full p-0 m-0">
                         <mat-label>Select your component type</mat-label>
-                        <mat-select [value]="column.columnComponentType ?? 'input'" #matSelect>
+                        <mat-select [value]="column.columnComponentType ?? 'input'" #matSelect (valueChange)="onComponentTypeValueChange(column, $event)">
                             <mat-option value="input">Input Component</mat-option>
                             <mat-option value="button">Button Component</mat-option>
                         </mat-select>
@@ -25,21 +25,21 @@
                 <!--  Button Component  -->
 
                 <app-button-configuration
-                    *ngIf="column.columnComponentType === 'button'"
+                    *ngIf="matSelect.value === 'button'"
                     [buttonConfiguration]="returnButtonFormConfiguration(column)"
                     (componentConfiguration)="getComponentConfigurationEvent($event, 'button', index)"
                 ></app-button-configuration>
 
                 <!--  Input Component  -->
                 <app-input-configuration
-                    *ngIf="columns[index].columnComponentType === 'input'"
+                    *ngIf="matSelect.value === 'input'"
                     [inputConfiguration]="returnInputFormConfiguration(column)"
                     (componentConfiguration)="getComponentConfigurationEvent($event, 'input', index)"
                 ></app-input-configuration>
             </mat-card-content>
         </mat-card>
 
-        <button (click)="addColumn()" matTooltip="Add new Column" matTooltipPosition="below">
+        <button (click)="addColumn('input')" matTooltip="Add new Column" matTooltipPosition="below">
             <mat-card *ngIf="checkColumnsCountForLessThanThree()" class="flex flex-col justify-center items-center bg-gray-100 mx-5 h-5/6 empty-state-section">
                 <mat-icon fontSet="material-icons-outlined" class="text-blue-600 text-7xl flex justify-center items-center">add_circle </mat-icon>
             </mat-card>

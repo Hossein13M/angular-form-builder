@@ -1,9 +1,9 @@
 import { AbstractControl, FormControl } from '@angular/forms';
 
 export interface ButtonFormConfiguration {
-    formControl: string | AbstractControl | FormControl | null | undefined;
+    formControlName: AbstractControl | FormControl | null | undefined;
     componentType: 'button';
-    type: 'accept' | 'reject' | 'upload' | 'download' | 'localRoute' | 'externalLink';
+    type: { name: 'accept' | 'reject' | 'upload' | 'download' | 'localRoute' | 'externalLink'; icon: string };
     themeColor: 'primary' | 'accent' | 'warn';
     label: string;
     width: string;
