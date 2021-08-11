@@ -1,22 +1,18 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ColumnModel } from '#models/column.model';
 import { ColumnComponentModel } from '#models/columnComponent.model';
 import { Section } from '#models/section.model';
-import { defaultInputConfiguration } from '../../const/defaultInputConfiguration';
 import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
 import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
-import { defaultButtonConfiguration } from '../../const/defaultButtonConfiguration';
+import { defaultInputConfiguration } from '#const/defaultInputConfiguration';
 
 @Component({
     selector: 'app-setting-modal',
     templateUrl: './setting-modal.component.html',
     styleUrls: ['./setting-modal.component.scss'],
 })
-export class SettingModalComponent {
-    public defaultButton = defaultButtonConfiguration;
-    public defaultInput = defaultInputConfiguration;
-
+export class SettingModalComponent implements OnInit {
     public columns: Array<ColumnModel> = [];
     public sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> } = {
         sectionIndex: this.data.sectionIndex,
@@ -25,6 +21,10 @@ export class SettingModalComponent {
 
     constructor(private matDialog: MatDialogRef<SettingModalComponent>, @Inject(MAT_DIALOG_DATA) public data: { sectionIndex: number; sectionInfo: Section }) {
         if (this.data.sectionInfo.columnsCount > 0) this.setDataForEditMode();
+    }
+
+    ngOnInit(): void {
+        this.data.sectionInfo.columnsCount === 0 && this.addColumn();
     }
 
     public addColumn(): void {
@@ -49,7 +49,6 @@ export class SettingModalComponent {
     }
 
     public getComponentConfigurationEvent(event: any, componentType: 'button' | 'input', columnIndex: number) {
-        console.log(event);
         if (this.sectionInfo.sectionColumns.length < columnIndex + 1) {
             this.sectionInfo.sectionColumns.push({ index: columnIndex, componentType: componentType, componentInfo: event });
         } else {

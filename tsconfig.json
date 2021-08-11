@@ -21,7 +21,8 @@
         "paths": {
             "#components/*": ["src/app/components/*"],
             "#models/*": ["src/app/models/*"],
-            "#env/*": ["src/environments/*"]
+            "#env/*": ["src/environments/*"],
+            "#const/*": ["src/app/const/*"]
         }
     },
     "angularCompilerOptions": {

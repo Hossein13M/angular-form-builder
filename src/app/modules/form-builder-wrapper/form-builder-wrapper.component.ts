@@ -43,6 +43,7 @@ export class FormBuilderWrapperComponent {
 
     public submitForm(): void {
         const data = { ...this.form.value, sections: this.sections };
+        console.log(data);
     }
 
     public isSubmitButtonDisable(): boolean {
