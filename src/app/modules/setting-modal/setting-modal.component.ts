@@ -29,7 +29,6 @@ export class SettingModalComponent {
 
     public addColumn(): void {
         this.columns.push({ columnId: 1, columnComponentType: 'input', columnSetting: defaultInputConfiguration });
-        console.log(this.columns);
     }
 
     public removeColumn(column: ColumnModel): void {
@@ -50,6 +49,7 @@ export class SettingModalComponent {
     }
 
     public getComponentConfigurationEvent(event: any, componentType: 'button' | 'input', columnIndex: number) {
+        console.log(event);
         if (this.sectionInfo.sectionColumns.length < columnIndex + 1) {
             this.sectionInfo.sectionColumns.push({ index: columnIndex, componentType: componentType, componentInfo: event });
         } else {
@@ -65,11 +65,7 @@ export class SettingModalComponent {
     }
 
     public returnInputFormConfiguration(sectionColumn: ColumnModel): InputFormConfiguration {
-        if (this.columns.length > 0) {
-            return <InputFormConfiguration>sectionColumn.columnSetting;
-        } else {
-            return defaultInputConfiguration;
-        }
+        return this.columns.length > 0 ? <InputFormConfiguration>sectionColumn.columnSetting : defaultInputConfiguration;
     }
 
     public returnButtonFormConfiguration(sectionColumn: ColumnModel): ButtonFormConfiguration {
