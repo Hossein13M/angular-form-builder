@@ -23,28 +23,39 @@ export class ButtonConfigurationComponent implements OnInit {
     ];
 
     public form: FormGroup = this.fb.group({
-        componentType: [this.buttonConfiguration.componentType ?? 'button'],
-        formControlName: [this.buttonConfiguration.formControl ?? null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
-        type: [this.buttonConfiguration.type ?? '', Validators.required],
-        width: [this.buttonConfiguration.width ?? '180', Validators.required],
-        themeColor: [this.buttonConfiguration.themeColor ?? 'primary', Validators.required],
-        label: [this.buttonConfiguration.label ?? '', Validators.required],
-        tooltipText: [this.buttonConfiguration.tooltipText ?? ''],
+        componentType: [''],
+        formControlName: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
+        type: ['', Validators.required],
+        width: ['', Validators.required],
+        themeColor: ['primary', Validators.required],
+        label: ['', Validators.required],
+        tooltipText: [''],
     });
 
     constructor(private fb: FormBuilder) {}
 
     ngOnInit() {
         this.form.get('type')!.valueChanges.subscribe((value) => {
-            if (value.name === 'download' || value.name === 'externalLink') {
-                this.form.addControl('downloadOrExternalNavigateLink', new FormControl('', Validators.required));
-            } else {
-                if (!this.form.get('downloadOrExternalNavigateLink')) this.form.removeControl('downloadOrExternalNavigateLink');
-            }
+            value.name === 'download' || value.name === 'externalLink'
+                ? this.form.addControl('downloadOrExternalNavigateLink', new FormControl('', Validators.required))
+                : !this.form.get('downloadOrExternalNavigateLink') && this.form.removeControl('downloadOrExternalNavigateLink');
         });
+        this.setDataForEditMode();
     }
 
     public submitComponentConfigurationForm(): void {
-        this.componentConfiguration.emit(this.form.value);
+        const data: ButtonFormConfiguration = this.form.value;
+        data.formControlName = new FormControl(this.form.value.formControlName);
+        this.componentConfiguration.emit(data);
+    }
+
+    private setDataForEditMode() {
+        this.form.get('componentType')?.setValue(this.buttonConfiguration.componentType);
+        this.form.get('formControlName')?.setValue(this.buttonConfiguration.formControlName!.value);
+        this.form.get('width')?.setValue(this.buttonConfiguration.width);
+        this.form.get('label')?.setValue(this.buttonConfiguration.label);
+        this.form.get('themeColor')?.setValue(this.buttonConfiguration.themeColor);
+        this.form.get('tooltipText')?.setValue(this.buttonConfiguration.tooltipText);
+        this.buttonTypes.map((buttonType) => buttonType.name === this.buttonConfiguration.type.name && this.form.get('type')?.setValue(buttonType));
     }
 }
