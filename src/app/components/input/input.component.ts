@@ -14,7 +14,7 @@ export class InputComponent implements OnChanges {
     @Input() inputFormConfiguration: InputFormConfiguration = {
         componentType: 'input',
         formControl: new FormControl(),
-        type: 'text',
+        type: { name: 'text', icon: 'article' },
         placeholder: 'placeholder',
         label: 'test',
         isInputTypePassword: true,

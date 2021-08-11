@@ -1,9 +1,10 @@
 import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
+import { FormControl } from '@angular/forms';
 
 export const defaultInputConfiguration: InputFormConfiguration = {
     componentType: 'input',
-    formControl: '',
-    type: 'text',
+    formControl: new FormControl(),
+    type: { name: 'text', icon: 'article' },
     label: '',
     placeholder: '',
     isInputTypePassword: false,
