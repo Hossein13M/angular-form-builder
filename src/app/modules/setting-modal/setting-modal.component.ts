@@ -35,6 +35,7 @@ export class SettingModalComponent {
     public removeColumn(column: ColumnModel): void {
         const columnIndex = this.columns.indexOf(column);
         this.columns.splice(columnIndex, 1);
+        this.sectionInfo.sectionColumns.splice(columnIndex, 1);
     }
 
     public checkColumnsCountForLessThanThree(): boolean {
