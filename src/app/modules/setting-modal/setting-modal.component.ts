@@ -50,15 +50,14 @@ export class SettingModalComponent {
     }
 
     public getComponentConfigurationEvent(event: any, componentType: 'button' | 'input', columnIndex: number): void {
-        this.sectionInfo.sectionColumns.length < columnIndex + 1
-            ? this.sectionInfo.sectionColumns.push({ index: columnIndex, componentType: componentType, componentInfo: event })
-            : (this.sectionInfo.sectionColumns[columnIndex] = { index: columnIndex, componentType: componentType, componentInfo: event });
+        this.sectionInfo.sectionColumns[columnIndex] = { index: columnIndex, componentType: componentType, componentInfo: event };
     }
 
     private setDataForEditMode(): void {
         this.columns = [];
         this.data.sectionInfo.columnInfo!.map((item) => {
             this.columns.push({ columnId: item.index, columnComponentType: item.componentType, columnSetting: item.componentInfo });
+            this.sectionInfo.sectionColumns.push({ index: item.index, componentInfo: item.componentInfo, componentType: item.componentType });
         });
     }
 
