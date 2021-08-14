@@ -1,0 +1,44 @@
+@import './scss/global.scss';
+@import './scss/scrollbar.scss';
+@import './scss/tooltip.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+mat-card {
+    display: flex;
+    mat-card-content {
+        mat-grid-list {
+            min-width: 1400px;
+            padding: 20px;
+            .empty-state-section {
+                border: 3px dashed #3f51b5;
+                opacity: 0.8;
+                background: #e1edfc repeating-linear-gradient(45deg, #e7f4ff, #e7f4ff 5px, #e1edfc 5px, #e1edfc 25px);
+            }
+            .component-group:nth-of-type(2n) {
+                border-left: 4px solid #b9b9b9;
+            }
+            .component-group:nth-of-type(2n + 3) {
+                border-left: 4px solid #b9b9b9;
+            }
+            mat-grid-tile {
+                .section-button {
+                }
+                border-radius: 10px;
+                background: #ecf1f5;
+                .add-section-button {
+                    font-size: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    mat-card-actions {
+        display: flex;
+    }
+}
