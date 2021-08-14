@@ -11,7 +11,9 @@ mat-card {
             }
             .component-group:nth-of-type(2n) {
                 border-left: 4px solid #b9b9b9;
-                border-right: 4px solid #b9b9b9;
+            }
+            .component-group:nth-of-type(2n + 3) {
+                border-left: 4px solid #b9b9b9;
             }
             mat-grid-tile {
                 .section-button {
