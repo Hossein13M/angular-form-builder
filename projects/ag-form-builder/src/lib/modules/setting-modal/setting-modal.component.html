@@ -39,10 +39,10 @@
             </mat-card-content>
         </mat-card>
 
-        <button mat-button [disableRipple]="true" (click)="addColumn('input')" matTooltip="Add new Column" matTooltipPosition="below">
+        <button mat-button [disableRipple]="true" (click)="addColumn('input')" matTooltip="Add new Column" matTooltipPosition="below" class="ag-p-0">
             <mat-card
                 *ngIf="checkColumnsCountForLessThanThree()"
-                class="ag-flex ag-flex-col ag-justify-center ag-items-center ag-bg-gray-100 ag-mx-5 ag-h-5-6 empty-state-section"
+                class="ag-flex ag-flex-col ag-justify-center ag-items-center ag-bg-gray-100 ag-mx-5 ag-h-5-6 empty-state-section ag-m-0"
             >
                 <mat-icon fontSet="material-icons-outlined" class="ag-text-blue-600 ag-text-7xl ag-flex ag-justify-center ag-items-center"
                     >add_circle
