@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(settingModal): fix problem with removing column component in edit mode">
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(tsconfig): add rule form importing version from package.json">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +95,7 @@
       <workItem from="1629014592345" duration="13000" />
       <workItem from="1629015184098" duration="343000" />
       <workItem from="1629022230592" duration="1561000" />
-      <workItem from="1629027477174" duration="389000" />
+      <workItem from="1629027477174" duration="756000" />
     </task>
     <task id="LOCAL-00001" summary="chore(global): implement library structure">
       <created>1628975165966</created>
@@ -106,11 +111,23 @@
       <option name="project" value="LOCAL" />
       <updated>1629022637834</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix(tsconfig): add rule form importing version from package.json">
+      <created>1629027903194</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629027903194</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="additionalRoots">
+      <list>
+        <option value="$PROJECT_DIR$/dist/ngx-form-builder" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -128,7 +145,8 @@
     <MESSAGE value="implement library structure" />
     <MESSAGE value="chore(global): implement library structure" />
     <MESSAGE value="feat(global): implement library structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(global): implement library structure" />
+    <MESSAGE value="fix(tsconfig): add rule form importing version from package.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(tsconfig): add rule form importing version from package.json" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
