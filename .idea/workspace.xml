@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="refactor(global): prettify and format ts files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/assets/styles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/ng-package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder/ng-package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/ngx-form-builder.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/ngx-form-builder.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(package.json): fix build problem">
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +89,7 @@
       <workItem from="1629015184098" duration="343000" />
       <workItem from="1629022230592" duration="1561000" />
       <workItem from="1629027477174" duration="5427000" />
-      <workItem from="1629042558472" duration="1292000" />
+      <workItem from="1629042558472" duration="2642000" />
     </task>
     <task id="LOCAL-00001" summary="chore(global): implement library structure">
       <created>1628975165966</created>
@@ -136,7 +126,49 @@
       <option name="project" value="LOCAL" />
       <updated>1629028383140</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="perf(global): enhance performance and reduce bundle size">
+      <created>1629044202273</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629044202273</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix(wrapper): remove showing version">
+      <created>1629044232095</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1629044232095</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix(appComponentSpec): remove title check test case">
+      <created>1629044253705</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1629044253705</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix(styles): remove style assets">
+      <created>1629044272127</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1629044272127</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix(package.json): fix dependency problem for glob-parent">
+      <created>1629044605356</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1629044605356</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix(package.json): fix build problem">
+      <created>1629045052802</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1629045052802</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +194,13 @@
     <MESSAGE value="chore(appComponentDemo):remove template and style file" />
     <MESSAGE value="chore(appComponentDemo): remove template and style file" />
     <MESSAGE value="refactor(global): prettify and format ts files" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(global): prettify and format ts files" />
+    <MESSAGE value="perf(global): enhance performance and reduce bundle size" />
+    <MESSAGE value="fix(wrapper): remove showing version" />
+    <MESSAGE value="fix(appComponentSpec): remove title check test case" />
+    <MESSAGE value="fix(styles): remove style assets" />
+    <MESSAGE value="fix(package.json): fix dependency problem for glob-parent" />
+    <MESSAGE value="fix(package.json): fix build problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(package.json): fix build problem" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
