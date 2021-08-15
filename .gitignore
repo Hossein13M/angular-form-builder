@@ -43,4 +43,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-/projects/ngx-form-builder/node_modules/
+/projects/ag-form-builder/node_modules/

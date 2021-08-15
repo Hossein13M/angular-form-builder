@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxFormBuilderComponent } from './ngx-form-builder.component';
+import { AgFormBuilderComponent } from './ag-form-builder.component';
 
-describe('NgxFormBuilderComponent', () => {
-    let component: NgxFormBuilderComponent;
-    let fixture: ComponentFixture<NgxFormBuilderComponent>;
+describe('AgFormBuilderComponent', () => {
+    let component: AgFormBuilderComponent;
+    let fixture: ComponentFixture<AgFormBuilderComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [NgxFormBuilderComponent],
+            declarations: [AgFormBuilderComponent],
         }).compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(NgxFormBuilderComponent);
+        fixture = TestBed.createComponent(AgFormBuilderComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

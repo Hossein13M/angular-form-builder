@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxFormBuilderComponent } from './ngx-form-builder.component';
+import { AgFormBuilderComponent } from './ag-form-builder.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WrapperModule } from './modules/wrapper/wrapper.module';
 
 @NgModule({
-    declarations: [NgxFormBuilderComponent],
+    declarations: [AgFormBuilderComponent],
     imports: [BrowserModule, BrowserAnimationsModule, WrapperModule],
-    exports: [NgxFormBuilderComponent],
+    exports: [AgFormBuilderComponent],
 })
-export class NgxFormBuilderModule {}
+export class AgFormBuilderModule {}

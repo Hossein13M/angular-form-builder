@@ -1,5 +1,5 @@
 {
-  "name": "ngx-form-builder",
+  "name": "ag-form-builder",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
@@ -9,10 +9,10 @@
     "test": "ng test",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "build:lib": "npm run copy:readme && ng build ngx-form-builder",
-    "build:demo": "NODE_ENV=production ng build ngx-form-builder-demo",
-    "publish:demo": "npx angular-cli-ghpages --dir=./dist/ngx-form-builder-demo",
-    "copy:readme": "copyfiles ./README.md ./dist/ngx-form-builder",
+    "build:lib": "npm run copy:readme && ng build ag-form-builder",
+    "build:demo": "NODE_ENV=production ng build ag-form-builder-demo",
+    "publish:demo": "npx angular-cli-ghpages --dir=./dist/ag-form-builder-demo",
+    "copy:readme": "copyfiles ./README.md ./dist/ag-form-builder",
     "semantic-release": "semantic-release"
   },
   "private": true,
