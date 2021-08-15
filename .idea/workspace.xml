@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(package.json): fix build problem">
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="ci(global): build project in docs folder for gh-page">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,7 @@
       <workItem from="1629015184098" duration="343000" />
       <workItem from="1629022230592" duration="1561000" />
       <workItem from="1629027477174" duration="5427000" />
-      <workItem from="1629042558472" duration="2642000" />
+      <workItem from="1629042558472" duration="3336000" />
     </task>
     <task id="LOCAL-00001" summary="chore(global): implement library structure">
       <created>1628975165966</created>
@@ -168,7 +168,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629045052802</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix(angular.json): change build output path for github page">
+      <created>1629045556364</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1629045556364</updated>
+    </task>
+    <task id="LOCAL-00013" summary="ci(global): build project in docs folder for gh-page">
+      <created>1629045974893</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1629045974893</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +214,9 @@
     <MESSAGE value="fix(styles): remove style assets" />
     <MESSAGE value="fix(package.json): fix dependency problem for glob-parent" />
     <MESSAGE value="fix(package.json): fix build problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(package.json): fix build problem" />
+    <MESSAGE value="fix(angular.json): change build output path for github page" />
+    <MESSAGE value="ci(global): build project in docs folder for gh-page" />
+    <option name="LAST_COMMIT_MESSAGE" value="ci(global): build project in docs folder for gh-page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
