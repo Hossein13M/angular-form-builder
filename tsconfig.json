@@ -1,40 +1,35 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "paths": {
-      "ngx-form-builder": [
-        "dist/ngx-form-builder/ngx-form-builder",
-        "dist/ngx-form-builder"
-      ],
-      "#components/*": ["projects/ngx-form-builder/src/lib/components/*"],
-      "#models/*": ["projects/ngx-form-builder/src/lib/models/*"],
-      "#env/*": ["projects/ngx-form-builder/src/lib/environments/*"],
-      "#const/*": ["projects/ngx-form-builder/src/lib/const/*"]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist/out-tsc",
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "declaration": false,
+        "downlevelIteration": true,
+        "paths": {
+            "ngx-form-builder": ["dist/ngx-form-builder/ngx-form-builder", "dist/ngx-form-builder"],
+            "#components/*": ["projects/ngx-form-builder/src/lib/components/*"],
+            "#models/*": ["projects/ngx-form-builder/src/lib/models/*"],
+            "#env/*": ["projects/ngx-form-builder/src/lib/environments/*"],
+            "#const/*": ["projects/ngx-form-builder/src/lib/const/*"]
+        },
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "target": "es2017",
+        "module": "es2020",
+        "lib": ["es2018", "dom"]
     },
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
-  },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+    "angularCompilerOptions": {
+        "enableI18nLegacyMessageIdFormat": false,
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true
+    }
 }
