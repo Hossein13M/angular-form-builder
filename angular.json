@@ -51,7 +51,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/ngx-form-builder-demo",
+                        "outputPath": "docs",
                         "index": "projects/ngx-form-builder-demo/src/index.html",
                         "main": "projects/ngx-form-builder-demo/src/main.ts",
                         "polyfills": "projects/ngx-form-builder-demo/src/polyfills.ts",
