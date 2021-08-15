@@ -2,88 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="ci(global): build project in docs folder for gh-page">
-      <change afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/public-api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/utility.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/3rdpartylicenses.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main.021017758cb4fe69188a.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main.021017758cb4fe69188a.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/.browserslistrc" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/.browserslistrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/assets/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/assets/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/polyfills.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/tsconfig.spec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/ng-package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/ng-package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/button-configuration/button-configuration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button-configuration/button-configuration.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/button-configuration/button-configuration.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button-configuration/button-configuration.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/button-configuration/button-configuration.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button-configuration/button-configuration.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/button-configuration/button-configuration.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button-configuration/button-configuration.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/button-configuration/button-configuration.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button-configuration/button-configuration.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/button/button.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button/button.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/button/button.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button/button.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/button/button.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button/button.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/button/button.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button/button.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/button/button.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button/button.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/input-configuration/input-configuration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/input-configuration/input-configuration.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/input-configuration/input-configuration.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/input-configuration/input-configuration.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/input-configuration/input-configuration.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/input/input.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/input/input.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/input/input.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/input/input.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/components/input/input.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/const/defaultButtonConfiguration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/const/defaultButtonConfiguration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/const/defaultInputConfiguration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/const/defaultInputConfiguration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/models/buttonFormConfiguration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/models/buttonFormConfiguration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/models/column.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/models/column.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/models/columnComponent.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/models/columnComponent.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/models/inputFormConfiguration.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/models/inputFormConfiguration.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/models/section.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/models/section.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/setting-modal/setting-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/setting-modal/setting-modal.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/setting-modal/setting-modal.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/setting-modal/setting-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/setting-modal/setting-modal.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/ngx-form-builder.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/ngx-form-builder.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/ngx-form-builder.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/ngx-form-builder.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/ngx-form-builder.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/ngx-form-builder.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/ngx-form-builder.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/scss/scrollbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/scrollbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/scss/tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/tooltip.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/public-api.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/tsconfig.lib.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/tsconfig.lib.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/tsconfig.lib.prod.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/tsconfig.lib.prod.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/tsconfig.spec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button-configuration/button-configuration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button-configuration/button-configuration.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +25,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="refactor/css" />
+                    <option name="lastUsedInstant" value="1629051581" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1629051580" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="1wiTa2T0X8SHdwN1ANsTCoRZsE8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
