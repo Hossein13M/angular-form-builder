@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="refactor(lib): remove tailwinds from library">
-      <change afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/mg-pd.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button-configuration/button-configuration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/button-configuration/button-configuration.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629058008492</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="refactor(lib): remove tailwinds from library">
+      <created>1629061834844</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1629061834844</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
