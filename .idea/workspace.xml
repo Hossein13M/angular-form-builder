@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="refactor(wrapper): add utility classes for wrapper component">
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="refactor(settingModal): add utility classes for settingModal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/utility.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/utility.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629056951742</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="refactor(settingModal): add utility classes for settingModal">
+      <created>1629057622941</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1629057622941</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +259,8 @@
     <MESSAGE value="fix(angular.json): change build output path for github page" />
     <MESSAGE value="ci(global): build project in docs folder for gh-page" />
     <MESSAGE value="refactor(wrapper): add utility classes for wrapper component" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(wrapper): add utility classes for wrapper component" />
+    <MESSAGE value="refactor(settingModal): add utility classes for settingModal" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(settingModal): add utility classes for settingModal" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
