@@ -1,7 +1,7 @@
 <div class="ag-flex ag-flex-col ag-justify-between ag-h-full">
-    <div class="ag-flex ag-justify-center ag-items-center grid grid-cols-3">
+    <div class="ag-flex ag-justify-center ag-items-center ag-grid ag-grid-cols-3">
         <mat-card *ngFor="let column of columns; let index = index" class="ag-bg-gray-100 mx-2 ag-flex ag-flex-col ag-h-full">
-            <div class="max-w-full ag-text-center ag-w-full mx-0 px-3.5">
+            <div class="ag-max-w-full ag-text-center ag-w-full mx-0 px-3.5">
                 <mat-card-title class="ag-text-base ag-w-full ag-flex ag-justify-center ag-items-baseline">
                     <mat-form-field appearance="outline" class="ag-w-full p-0 m-0">
                         <mat-label>Select your component type</mat-label>
@@ -12,12 +12,12 @@
                     </mat-form-field>
 
                     <button class="ml-4" mat-icon-button color="warn" matTooltip="Remove Column" matTooltipPosition="below" (click)="removeColumn(column)">
-                        <mat-icon fontSet="material-icons-outlined" class="text-4xl" inline>highlight_off</mat-icon>
+                        <mat-icon fontSet="material-icons-outlined" class="ag-text-4xl" inline>highlight_off</mat-icon>
                     </button>
                 </mat-card-title>
 
                 <mat-card-subtitle>
-                    <p class="ag-text-center text-lg font-black">{{ matSelect.value === 'input' ? 'Input ' : 'Button ' }}Component Configuration</p>
+                    <p class="ag-text-center ag-text-lg ag-font-black">{{ matSelect.value === 'input' ? 'Input ' : 'Button ' }}Component Configuration</p>
                 </mat-card-subtitle>
             </div>
 
@@ -41,19 +41,19 @@
 
         <button (click)="addColumn('input')" matTooltip="Add new Column" matTooltipPosition="below">
             <mat-card *ngIf="checkColumnsCountForLessThanThree()" class="ag-flex ag-flex-col ag-justify-center ag-items-center ag-bg-gray-100 mx-5 ag-h-5-6 empty-state-section">
-                <mat-icon fontSet="material-icons-outlined" class="ag-text-blue-600 text-7xl ag-flex ag-justify-center ag-items-center">add_circle </mat-icon>
+                <mat-icon fontSet="material-icons-outlined" class="ag-text-blue-600 ag-text-7xl ag-flex ag-justify-center ag-items-center">add_circle </mat-icon>
             </mat-card>
         </button>
     </div>
 
     <div class="ag-flex ag-justify-evenly ag-items-end">
         <button mat-flat-button color="warn" matTooltip="Close Section Settings" matTooltipPosition="below" (click)="discardSectionSettings()">
-            <mat-icon fontSet="material-icons-outlined" class="text-3xl" inline>close</mat-icon>
+            <mat-icon fontSet="material-icons-outlined" class="ag-text-3xl" inline>close</mat-icon>
             <span>Close Section Settings</span>
         </button>
 
         <button mat-flat-button color="primary" matTooltip="Close Section Settings" matTooltipPosition="below" (click)="saveSectionSettings()">
-            <mat-icon fontSet="material-icons-outlined" class="text-3xl" inline>save</mat-icon>
+            <mat-icon fontSet="material-icons-outlined" class="ag-text-3xl" inline>save</mat-icon>
             <span>Save Section Settings</span>
         </button>
     </div>

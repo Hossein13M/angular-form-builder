@@ -106,3 +106,39 @@
     font-size: 1.5rem !important;
     line-height: 2rem !important;
 }
+
+.ag-grid {
+    display: grid !important;
+}
+
+.ag-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.ag-max-w-full {
+    max-width: 100% !important;
+}
+
+.ag-text-4xl {
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
+}
+
+.ag-font-black {
+    font-weight: 900 !important;
+}
+
+.ag-text-lg {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+}
+
+.ag-text-7xl {
+    font-size: 4.5rem !important;
+    line-height: 1 !important;
+}
+
+.ag-text-3xl {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+}
