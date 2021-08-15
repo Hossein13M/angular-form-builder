@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    template: `<lib-ngx-form-builder></lib-ngx-form-builder> `,
 })
-export class AppComponent {
-  title = 'ngx-form-builder-demo';
-}
+export class AppComponent {}
