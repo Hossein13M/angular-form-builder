@@ -1,16 +1,16 @@
-<div class="ag-h-full ag-flex ag-justify-center py-14">
-    <mat-card class="ag-flex ag-flex-col ag-h-full ag-w-5-6 px-0 pt-0 ag-bg-gray-100">
-        <mat-card-header class="ag-flex ag-flex-col ag-text-center m-0 ag-w-full ag-bg-blue-300 mb-10">
-            <mat-card-title class="ag-text-base ag-flex ag-justify-around ag-items-baseline pt-5">
+<div class="ag-h-full ag-flex ag-justify-center ag-py-14">
+    <mat-card class="ag-flex ag-flex-col ag-h-full ag-w-5-6 ag-px-0 ag-pt-0 ag-bg-gray-100">
+        <mat-card-header class="ag-flex ag-flex-col ag-text-center ag-m-0 ag-w-full ag-bg-blue-300 ag-mb-10">
+            <mat-card-title class="ag-text-base ag-flex ag-justify-around ag-items-baseline ag-pt-5">
                 <a href="https://github.com/hossein13m/angular-form-builder" target="_blank">
                     <h1 class="ag-flex ag-items-center">
-                        <span class="mx-2"> AG FormBuilder </span>
+                        <span class="ag-mx-2"> AG FormBuilder </span>
                         <mat-icon fontSet="material-icons-outlined"> dashboard </mat-icon>
                     </h1>
                 </a>
 
                 <form (submit)="submitForm()" id="form" [formGroup]="form">
-                    <mat-form-field appearance="outline" class="mx-3 ag-flex ag-justify-center">
+                    <mat-form-field appearance="outline" class="ag-mx-3 ag-flex ag-justify-center">
                         <mat-label>
                             <span>Form Name</span>
                         </mat-label>
@@ -29,19 +29,19 @@
             </mat-card-title>
 
             <mat-card-subtitle>
-                <hr class="ag-w-full my-3" />
+                <hr class="ag-w-full ag-my-3" />
                 <h3>Create your form by creating sections and then configure those section's column. In each Section you can set up to 3 components</h3>
             </mat-card-subtitle>
         </mat-card-header>
 
-        <mat-card-content class="ag-overflow-y-auto ag-h-5-6">
-            <mat-grid-list cols="1" rowHeight="150px" gutterSize="30px" class="mx-5">
+        <mat-card-content class="ag-overflow-y-auto ag-h-5-6 ag-mt-10">
+            <mat-grid-list cols="1" rowHeight="150px" gutterSize="30px" class="ag-mx-5">
                 <!-- section -->
                 <mat-grid-tile *ngFor="let section of sections; let index = index" class="ag-w-full">
                     <div class="ag-flex ag-flex-col ag-w-full ag-h-full">
                         <div class="ag-flex ag-justify-around ag-w-full ag-text-center ag-h-full ag-items-center">
                             <div *ngIf="sections[index].columnsCount === 0" class="ag-flex ag-items-center">
-                                <h1 class="mb-0">Click on setting button to add components into this section</h1>
+                                <h1 class="ag-mb-0">Click on setting button to add components into this section</h1>
                             </div>
                             <div
                                 class="ag-h-full ag-flex ag-justify-center ag-items-center ag-w-full component-group"
@@ -58,7 +58,7 @@
                             </div>
                         </div>
 
-                        <div class="ag-flex ag-flex-row ag-justify-around mt-auto section-button">
+                        <div class="ag-flex ag-flex-row ag-justify-around ag-mt-auto section-button">
                             <button
                                 mat-button
                                 class="ag-w-full p-1 ag-bg-blue-100 ag-hover-bg-blue-200"
