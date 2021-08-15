@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="refactor(lib): remove tailwinds from library">
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(tailwindConfig): remove tailwind config file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/setting-modal/setting-modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/scss/tooltip.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="refactor/css" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
@@ -30,12 +38,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="refactor/css" />
-                    <option name="lastUsedInstant" value="1629051581" />
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1629062593" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1629051580" />
+                    <option name="branchName" value="refactor/css" />
+                    <option name="lastUsedInstant" value="1629051581" />
                   </RecentBranch>
                 </list>
               </option>
@@ -63,7 +71,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -77,6 +85,20 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="InputConfigurationComponent.should create" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file-path value="$PROJECT_DIR$/src/app/components/input-configuration/input-configuration.component.spec.ts" />
+      <test-names>
+        <test-name value="InputConfigurationComponent" />
+        <test-name value="should create" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Tests (angular-form-builder)" type="JavaScriptTestRunnerKarma">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
@@ -98,6 +120,22 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+        <item itemvalue="Karma.InputConfigurationComponent.should create" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -243,7 +281,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629061921338</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix(settingModal): fix button hover issue">
+      <created>1629062243152</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1629062243153</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix(tailwindConfig): remove tailwind config file">
+      <created>1629062650978</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1629062650978</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +333,9 @@
     <MESSAGE value="refactor(settingModal): add utility classes for settingModal" />
     <MESSAGE value="refactor(buttons): add mat-button directive to buttons" />
     <MESSAGE value="refactor(lib): remove tailwinds from library" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(lib): remove tailwinds from library" />
+    <MESSAGE value="fix(settingModal): fix button hover issue" />
+    <MESSAGE value="fix(tailwindConfig): remove tailwind config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(tailwindConfig): remove tailwind config file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
