@@ -1,0 +1,16 @@
+//@import '../../../node_modules/tailwindcss/base.css';
+//@import '../../../node_modules/tailwindcss/components.css';
+//@import '../../../node_modules/tailwindcss/utilities.css';
+//
+//@import '../src/lib/scss/scrollbar';
+//@import '../src/lib/scss/global';
+//@import '../src/lib/scss/tooltip';
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

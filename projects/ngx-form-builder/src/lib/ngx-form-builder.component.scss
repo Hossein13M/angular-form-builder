@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './scss/global.scss';
+@import './scss/scrollbar.scss';
+@import './scss/tooltip.scss';
+
+html,
+body {
+    height: 100%;
+}
