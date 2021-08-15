@@ -1,9 +1,9 @@
 {
     "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-    "dest": "../../dist/ngx-form-builder",
+    "dest": "../../dist/ag-form-builder",
     "lib": {
         "entryFile": "src/public-api.ts",
         "cssUrl": "inline"
     },
-    "assets": ["./src/lib/ngx-form-builder.component.scss", "./styles/**/*.scss"]
+    "assets": ["./src/lib/ag-form-builder.component.scss", "./styles/**/*.scss"]
 }

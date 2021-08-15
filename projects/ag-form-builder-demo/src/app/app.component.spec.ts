@@ -18,6 +18,6 @@ describe('AppComponent', () => {
         const fixture = TestBed.createComponent(AppComponent);
         fixture.detectChanges();
         const compiled = fixture.nativeElement as HTMLElement;
-        expect(compiled.querySelector('.content span')?.textContent).toContain('ngx-form-builder-demo app is running!');
+        expect(compiled.querySelector('.content span')?.textContent).toContain('ag-form-builder-demo app is running!');
     });
 });

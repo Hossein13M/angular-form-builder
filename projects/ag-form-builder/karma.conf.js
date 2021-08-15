@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, '../../coverage/ngx-form-builder'),
+      dir: require('path').join(__dirname, '../../coverage/ag-form-builder'),
       subdir: '.',
       reporters: [
         { type: 'html' },

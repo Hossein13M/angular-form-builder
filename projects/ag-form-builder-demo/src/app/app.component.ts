@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-root',
-    template: `<lib-ngx-form-builder></lib-ngx-form-builder> `,
+    template: `<lib-ag-form-builder></lib-ag-form-builder> `,
 })
 export class AppComponent {}

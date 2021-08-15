@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NgxFormBuilderModule } from '../../../ngx-form-builder/src/lib/ngx-form-builder.module';
+import { AgFormBuilderModule } from '../../../ag-form-builder/src/lib/ag-form-builder.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [AppComponent],
-    imports: [BrowserModule, NgxFormBuilderModule, BrowserAnimationsModule],
+    imports: [BrowserModule, AgFormBuilderModule, BrowserAnimationsModule],
     providers: [],
     bootstrap: [AppComponent],
 })
