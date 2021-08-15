@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(tsconfig): add rule form importing version from package.json">
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="refactor(global): prettify and format ts files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder-demo/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/assets/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/ng-package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder/ng-package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/modules/wrapper/wrapper.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/ngx-form-builder.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ngx-form-builder/src/lib/ngx-form-builder.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1wiTa2T0X8SHdwN1ANsTCoRZsE8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -61,6 +63,7 @@
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (angular-form-builder)" type="JavaScriptTestRunnerKarma">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
@@ -95,7 +98,8 @@
       <workItem from="1629014592345" duration="13000" />
       <workItem from="1629015184098" duration="343000" />
       <workItem from="1629022230592" duration="1561000" />
-      <workItem from="1629027477174" duration="756000" />
+      <workItem from="1629027477174" duration="5427000" />
+      <workItem from="1629042558472" duration="1292000" />
     </task>
     <task id="LOCAL-00001" summary="chore(global): implement library structure">
       <created>1628975165966</created>
@@ -118,16 +122,25 @@
       <option name="project" value="LOCAL" />
       <updated>1629027903194</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="chore(appComponentDemo): remove template and style file">
+      <created>1629028338888</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629028338888</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor(global): prettify and format ts files">
+      <created>1629028383140</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629028383140</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="additionalRoots">
-      <list>
-        <option value="$PROJECT_DIR$/dist/ngx-form-builder" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -146,7 +159,10 @@
     <MESSAGE value="chore(global): implement library structure" />
     <MESSAGE value="feat(global): implement library structure" />
     <MESSAGE value="fix(tsconfig): add rule form importing version from package.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(tsconfig): add rule form importing version from package.json" />
+    <MESSAGE value="chore(appComponentDemo):remove template and style file" />
+    <MESSAGE value="chore(appComponentDemo): remove template and style file" />
+    <MESSAGE value="refactor(global): prettify and format ts files" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(global): prettify and format ts files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

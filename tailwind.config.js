@@ -5,7 +5,7 @@ module.exports = {
     important: true,
     purge: {
         enable: true,
-        content: ['./ngx-form-builder/src/lib/**/*.{html,ts}'],
+        content: ['./src/**/*.{html,ts}'],
         preserveHtmlElements: false,
     },
     darkMode: 'class',

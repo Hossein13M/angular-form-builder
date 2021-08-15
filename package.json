@@ -9,8 +9,8 @@
     "test": "ng test",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "build:lib": "npm run copy:readme && ng build ng-sortgrid",
-    "build:demo": "ng build ngx-form-builder-demo --base-href='https://hossein13m.github.io/angular-form-builder/'",
+    "build:lib": "npm run copy:readme && ng build ngx-form-builder",
+    "build:demo": "NODE_ENV=production ng build ngx-form-builder-demo --base-href='https://hossein13m.github.io/angular-form-builder/'",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/ngx-form-builder-demo",
     "copy:readme": "copyfiles ./README.md ./dist/ngx-form-builder",
     "semantic-release": "semantic-release"
@@ -29,7 +29,6 @@
     "@angular/router": "~12.2.0",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
-    "@tailwindcss/typography": "^0.4.1",
     "eslint": "^7.32.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
@@ -53,6 +52,7 @@
     "ng-packagr": "^12.1.1",
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.7",
+    "@tailwindcss/typography": "^0.4.1",
     "typescript": "~4.3.5",
     "semantic-release": "^17.4.4"
   },
