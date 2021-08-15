@@ -4,7 +4,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { SettingModalComponent } from '../setting-modal/setting-modal.component';
 import { ColumnComponentModel } from '#models/columnComponent.model';
-import packageInfo from 'package.json';
 
 @Component({
     selector: 'lib-wrapper',
@@ -12,7 +11,6 @@ import packageInfo from 'package.json';
     styleUrls: ['./wrapper.component.scss'],
 })
 export class WrapperComponent {
-    public version: string = packageInfo.version;
     public sections: Array<Section> = [];
     public form: FormGroup = this.fb.group({
         name: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
