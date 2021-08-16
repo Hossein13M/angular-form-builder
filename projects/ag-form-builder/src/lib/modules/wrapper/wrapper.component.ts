@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Section } from '#models/section.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
@@ -11,6 +11,7 @@ import { ColumnComponentModel } from '#models/columnComponent.model';
     styleUrls: ['./wrapper.component.scss'],
 })
 export class WrapperComponent {
+    @Output() emittedFormInfo: EventEmitter<{ name: string; section: Array<Section> }> = new EventEmitter<{ name: string; section: Array<Section> }>();
     public sections: Array<Section> = [];
     public form: FormGroup = this.fb.group({
         name: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
@@ -43,7 +44,7 @@ export class WrapperComponent {
 
     public submitForm(): void {
         const data = { ...this.form.value, sections: this.sections };
-        console.log(data);
+        this.emittedFormInfo.emit(data);
     }
 
     public isSubmitButtonDisable(): boolean {
