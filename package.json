@@ -1,6 +1,6 @@
 {
   "name": "ag-form-builder",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,8 +10,9 @@
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "build:lib": "npm run copy:readme && ng build ag-form-builder",
-    "build:demo": "NODE_ENV=production ng build ag-form-builder-demo",
+    "build:demo": "NODE_ENV=production ng build ag-form-builder-demo --base-href='https://github.com/hossein13m/angular-form-builder/'",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/ag-form-builder-demo",
+    "publish:lib": "npx semantic-release",
     "copy:readme": "copyfiles ./README.md ./dist/ag-form-builder",
     "semantic-release": "semantic-release"
   },
@@ -52,7 +53,7 @@
     "ng-packagr": "^12.1.1",
     "prettier": "^2.3.2",
     "typescript": "~4.3.5",
-    "semantic-release": "^17.4.4"
+    "semantic-release": "^17.4.5"
   },
   "repository": {
     "type": "git",
