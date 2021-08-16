@@ -51,7 +51,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "docs",
+                        "outputPath": "dist",
                         "index": "projects/ag-form-builder-demo/src/index.html",
                         "main": "projects/ag-form-builder-demo/src/main.ts",
                         "polyfills": "projects/ag-form-builder-demo/src/polyfills.ts",
@@ -81,7 +81,8 @@
                                     "with": "projects/ag-form-builder-demo/src/environments/environment.prod.ts"
                                 }
                             ],
-                            "outputHashing": "all"
+                            "outputHashing": "all",
+                            "baseHref": "https://hossein13m.github.io/angular-form-builder/"
                         },
                         "development": {
                             "buildOptimizer": false,
