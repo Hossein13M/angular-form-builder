@@ -9,9 +9,6 @@ cache:
         - ./node_modules
 jobs:
     include:
-        - stage: lint
-          script:
-              - ng lint
         - stage: build & publish demo
           script:
               - npm run build:demo

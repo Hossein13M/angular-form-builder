@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="feat(eventEmitter): emit an event on saving form">
-      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="feat(global): implement travis">
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +155,7 @@
       <workItem from="1629042558472" duration="3336000" />
       <workItem from="1629101418510" duration="2419000" />
       <workItem from="1629105838284" duration="1407000" />
-      <workItem from="1629116286460" duration="1234000" />
+      <workItem from="1629116286460" duration="2067000" />
     </task>
     <task id="LOCAL-00001" summary="chore(global): implement library structure">
       <created>1628975165966</created>
@@ -322,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629102172475</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="feat(global): implement travis">
+      <created>1629117753881</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1629117753881</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +368,8 @@
     <MESSAGE value="perf(css): reduce css bundle size" />
     <MESSAGE value="chore(routing): add routing to project" />
     <MESSAGE value="feat(eventEmitter): emit an event on saving form" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(eventEmitter): emit an event on saving form" />
+    <MESSAGE value="feat(global): implement travis" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(global): implement travis" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
