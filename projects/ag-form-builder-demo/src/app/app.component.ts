@@ -15,7 +15,6 @@ import { Section } from '#models/section.model';
                 display: flex;
                 justify-content: center;
                 padding: 3.5rem 0;
-                width: 100%;
             }
         `,
     ],

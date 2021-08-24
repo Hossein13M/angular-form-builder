@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(demo): fix project layout and bring it to the demo application">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/modules/wrapper/wrapper.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hossein13m.github.io" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -161,7 +159,7 @@
       <workItem from="1629278230525" duration="16000" />
       <workItem from="1629702013448" duration="2873000" />
       <workItem from="1629793266422" duration="154000" />
-      <workItem from="1629810298611" duration="945000" />
+      <workItem from="1629810298611" duration="1033000" />
     </task>
     <task id="LOCAL-00001" summary="chore(global): implement library structure">
       <created>1628975165966</created>
@@ -338,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629225162764</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fix(demo): fix project layout and bring it to the demo application">
+      <created>1629811247703</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1629811247703</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
