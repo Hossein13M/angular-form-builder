@@ -1,6 +1,6 @@
 {
   "name": "ag-form-builder",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
