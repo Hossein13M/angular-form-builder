@@ -7,7 +7,7 @@ AG-FormBuilder is an Angular library for creating dynamic forms and interacting 
 Use the package manager NPM to install AG-FormBuilder.
 
 ```bash
-npm install ag-formbuilder
+npm i ag-form-builder
 ```
 
 ## Usage
