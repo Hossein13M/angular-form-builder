@@ -1,6 +1,6 @@
 {
     "name": "ag-form-builder",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "peerDependencies": {
         "@angular/common": "^12.2.0",
         "@angular/core": "^12.2.0",
@@ -8,5 +8,21 @@
     },
     "devDependencies": {
         "tslib": "^2.3.0"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hossein13m/angular-form-builder.git"
+    },
+    "description": "AG-FormBuilder is an Angular library for creating dynamic forms and interacting with them.",
+    "keywords": [
+        "javaScript",
+        "typeScript",
+        "angular"
+    ],
+    "author": "Hossein Mousavi <dev.hosseinmousavi.com> (https://hmousavi.dev/)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/hossein13m/angular-form-builder/issues"
+    },
+    "homepage": "https://github.com/hossein13m/angular-form-builder#readme"
 }
