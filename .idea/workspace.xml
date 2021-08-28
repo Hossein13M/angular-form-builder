@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="update(package): update package.json">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/README.md" afterDir="false" />
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="docs(README): fix installation note">
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="refactor/css" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,11 +35,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1629062593" />
+                    <option name="lastUsedInstant" value="1630177543" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="refactor/css" />
-                    <option name="lastUsedInstant" value="1629051581" />
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1630177474" />
                   </RecentBranch>
                 </list>
               </option>
@@ -382,17 +381,18 @@
       <option name="project" value="LOCAL" />
       <updated>1630177199264</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="docs(README): fix installation note">
+      <created>1630177390551</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1630177390551</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="additionalRoots">
-      <list>
-        <option value="$PROJECT_DIR$/dist/ag-form-builder/ag-form-builder.d.ts" />
-        <option value="$PROJECT_DIR$/dist/ag-form-builder" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -407,7 +407,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor(global): prettify and format ts files" />
     <MESSAGE value="perf(global): enhance performance and reduce bundle size" />
     <MESSAGE value="fix(wrapper): remove showing version" />
     <MESSAGE value="fix(appComponentSpec): remove title check test case" />
@@ -432,7 +431,8 @@
     <MESSAGE value="docs(README): update project readme" />
     <MESSAGE value="docs(README): update package.json" />
     <MESSAGE value="update(package): update package.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="update(package): update package.json" />
+    <MESSAGE value="docs(README): fix installation note" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs(README): fix installation note" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
