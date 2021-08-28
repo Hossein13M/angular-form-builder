@@ -1,24 +1,28 @@
-# NgxFormBuilder
+# AG-FormBuilder
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+AG-FormBuilder is an Angular library for creating dynamic forms and interacting with them.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project ngx-form-builder` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-form-builder`.
-> Note: Don't forget to add `--project ngx-form-builder` or else it will be added to the default project in your `angular.json` file. 
+Use the package manager NPM to install AG-FormBuilder.
 
-## Build
+```bash
+npm install ag-formbuilder
+```
 
-Run `ng build ngx-form-builder` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Publishing
 
-After building your library with `ng build ngx-form-builder`, go to the dist folder `cd dist/ngx-form-builder` and run `npm publish`.
+import `AgFormBuilderModule` into your module
+then you can use it in your template like bellow:
+```
+<lib-ag-form-builder (formInfo)="handleFormInfo($event)"></lib-ag-form-builder>
 
-## Running unit tests
+```
 
-Run `ng test ngx-form-builder` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
