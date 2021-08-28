@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="docs(README): update project readme">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/package.json" afterDir="false" />
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="docs(README): update package.json">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,17 +353,25 @@
       <option name="project" value="LOCAL" />
       <updated>1630175515712</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="docs(README): update project readme">
+      <created>1630176672128</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1630176672128</updated>
+    </task>
+    <task id="LOCAL-00029" summary="docs(README): update package.json">
+      <created>1630176709024</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1630176709024</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="additionalRoots">
-      <list>
-        <option value="$PROJECT_DIR$/dist/ag-form-builder/ag-form-builder.d.ts" />
-        <option value="$PROJECT_DIR$/dist/ag-form-builder" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -380,7 +386,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore(appComponentDemo):remove template and style file" />
     <MESSAGE value="chore(appComponentDemo): remove template and style file" />
     <MESSAGE value="refactor(global): prettify and format ts files" />
     <MESSAGE value="perf(global): enhance performance and reduce bundle size" />
@@ -405,7 +410,8 @@
     <MESSAGE value="fix(demo): fix project layout and bring it to the demo application" />
     <MESSAGE value="doc(README): update project readme" />
     <MESSAGE value="docs(README): update project readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs(README): update project readme" />
+    <MESSAGE value="docs(README): update package.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs(README): update package.json" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
