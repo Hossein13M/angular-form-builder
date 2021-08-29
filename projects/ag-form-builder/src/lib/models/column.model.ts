@@ -1,5 +1,5 @@
-import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
-import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
+import { InputFormConfiguration } from './inputFormConfiguration.model';
+import { ButtonFormConfiguration } from './buttonFormConfiguration';
 
 export interface ColumnModel {
     columnId: number;

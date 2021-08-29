@@ -1,5 +1,5 @@
-import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
-import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
+import { ButtonFormConfiguration } from './buttonFormConfiguration';
+import { InputFormConfiguration } from './inputFormConfiguration.model';
 
 export interface ColumnComponentModel {
     index: number;

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
-import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
+import { InputFormConfiguration } from '../../models/inputFormConfiguration.model';
 
 @Component({
     selector: 'app-input-configuration',

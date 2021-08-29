@@ -1,4 +1,4 @@
-import { ColumnComponentModel } from '#models/columnComponent.model';
+import { ColumnComponentModel } from './columnComponent.model';
 
 export interface Section {
     columnsCount: number;

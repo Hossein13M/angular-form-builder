@@ -4,7 +4,6 @@ import { WrapperComponent } from './wrapper.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { ButtonModule } from '#components/button/button.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -12,7 +11,8 @@ import { SettingModalModule } from '../setting-modal/setting-modal.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
-import { InputModule } from '#components/input/input.module';
+import { ButtonModule } from '../../components/button/button.module';
+import { InputModule } from '../../components/input/input.module';
 
 @NgModule({
     declarations: [WrapperComponent],
