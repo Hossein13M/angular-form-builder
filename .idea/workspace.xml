@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="update(package): update library package version">
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(lib): change browser module with common module in library">
       <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +24,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -407,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630215686201</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fix(lib): change browser module with common module in library">
+      <created>1630217192263</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1630217192263</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +441,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(appComponentSpec): remove title check test case" />
     <MESSAGE value="fix(styles): remove style assets" />
     <MESSAGE value="fix(package.json): fix dependency problem for glob-parent" />
     <MESSAGE value="fix(package.json): fix build problem" />
@@ -451,7 +465,8 @@
     <MESSAGE value="docs(README): fix installation note" />
     <MESSAGE value="chore(ag-form-builder): change event emitter and component naming conventions" />
     <MESSAGE value="update(package): update library package version" />
-    <option name="LAST_COMMIT_MESSAGE" value="update(package): update library package version" />
+    <MESSAGE value="fix(lib): change browser module with common module in library" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(lib): change browser module with common module in library" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
