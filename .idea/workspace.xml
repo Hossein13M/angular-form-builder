@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="feat(buttonConfiguration): change model name, implement data binding for button configuration">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/README.md" afterDir="false" />
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="update(package): update library package version">
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -402,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630214669627</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="update(package): update library package version">
+      <created>1630215686201</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1630215686201</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +426,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(wrapper): remove showing version" />
     <MESSAGE value="fix(appComponentSpec): remove title check test case" />
     <MESSAGE value="fix(styles): remove style assets" />
     <MESSAGE value="fix(package.json): fix dependency problem for glob-parent" />
@@ -446,7 +450,8 @@
     <MESSAGE value="update(package): update package.json" />
     <MESSAGE value="docs(README): fix installation note" />
     <MESSAGE value="chore(ag-form-builder): change event emitter and component naming conventions" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(ag-form-builder): change event emitter and component naming conventions" />
+    <MESSAGE value="update(package): update library package version" />
+    <option name="LAST_COMMIT_MESSAGE" value="update(package): update library package version" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
