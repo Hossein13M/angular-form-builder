@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Section } from '#models/section.model';
+import { Section } from '../../../ag-form-builder/src/lib/models/section.model';
 
 @Component({
     selector: 'app-root',

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { ButtonFormConfiguration } from '#models/buttonFormConfiguration';
+import { ButtonFormConfiguration } from '../../models/buttonFormConfiguration';
 
 @Component({
     selector: 'app-button',
