@@ -1,5 +1,5 @@
-import { InputFormConfiguration } from '#models/inputFormConfiguration.model';
 import { FormControl } from '@angular/forms';
+import { InputFormConfiguration } from '../models/inputFormConfiguration.model';
 
 export const defaultInputConfiguration: InputFormConfiguration = {
     componentType: 'input',

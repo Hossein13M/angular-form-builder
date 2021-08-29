@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Section } from '#models/section.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { SettingModalComponent } from '../setting-modal/setting-modal.component';
-import { ColumnComponentModel } from '#models/columnComponent.model';
+import { ColumnComponentModel } from '../../models/columnComponent.model';
+import { Section } from '../../models/section.model';
 
 @Component({
     selector: 'lib-wrapper',

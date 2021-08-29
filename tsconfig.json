@@ -15,10 +15,10 @@
         "downlevelIteration": true,
         "paths": {
             "ag-form-builder": ["dist/ag-form-builder/ag-form-builder", "dist/ag-form-builder"],
-            "#components/*": ["projects/ag-form-builder/src/lib/components/*"],
-            "#models/*": ["projects/ag-form-builder/src/lib/models/*"],
-            "#env/*": ["projects/ag-form-builder/src/lib/environments/*"],
-            "#const/*": ["projects/ag-form-builder/src/lib/const/*"]
+//            "#components/*": ["projects/ag-form-builder/src/lib/components/*"],
+//            "#models/*": ["projects/ag-form-builder/src/lib/models/*"],
+//            "#env/*": ["projects/ag-form-builder/src/lib/environments/*"],
+//            "#const/*": ["projects/ag-form-builder/src/lib/const/*"]
         },
         "experimentalDecorators": true,
         "moduleResolution": "node",
