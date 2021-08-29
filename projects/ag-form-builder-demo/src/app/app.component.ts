@@ -4,9 +4,9 @@ import { Section } from '../../../ag-form-builder/src/lib/models/section.model';
 @Component({
     selector: 'app-root',
     template: `
-        <div class="demo-wrapper">
-            <lib-ag-form-builder (formInfo)="handleFormInfo($event)"></lib-ag-form-builder>
-        </div>
+      <div class='demo-wrapper'>
+        <ag-form-builder (emittedForm)='handleFormInfo($event)'></ag-form-builder>
+      </div>
     `,
     styles: [
         `
