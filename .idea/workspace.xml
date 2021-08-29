@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="feat(buttonConfiguration): change model name, implement data binding for button configuration">
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="fix/path" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,7 +77,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -393,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630177390551</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="chore(ag-form-builder): change event emitter and component naming conventions">
+      <created>1630214669627</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1630214669627</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +421,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="perf(global): enhance performance and reduce bundle size" />
     <MESSAGE value="fix(wrapper): remove showing version" />
     <MESSAGE value="fix(appComponentSpec): remove title check test case" />
     <MESSAGE value="fix(styles): remove style assets" />
@@ -437,7 +445,8 @@
     <MESSAGE value="docs(README): update package.json" />
     <MESSAGE value="update(package): update package.json" />
     <MESSAGE value="docs(README): fix installation note" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs(README): fix installation note" />
+    <MESSAGE value="chore(ag-form-builder): change event emitter and component naming conventions" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(ag-form-builder): change event emitter and component naming conventions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
