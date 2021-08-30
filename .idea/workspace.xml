@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(lib): change browser module with common module in library">
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/ag-form-builder.module.ts" afterDir="false" />
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(inputConfiguration): fix circular reference error and change input structure">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,13 +15,14 @@
       <list>
         <option value="HTML File" />
         <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fix/path" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,7 +45,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1630177543" />
+                    <option name="lastUsedInstant" value="1630305814" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -76,7 +78,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -91,6 +93,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components" />
+      <recent name="$PROJECT_DIR$/projects/ag-form-builder-demo/src/scss" />
       <recent name="$PROJECT_DIR$/projects/ngx-form-builder/assets" />
       <recent name="$PROJECT_DIR$/projects/ngx-form-builder" />
     </key>
@@ -176,6 +180,7 @@
       <workItem from="1629702013448" duration="2873000" />
       <workItem from="1629793266422" duration="154000" />
       <workItem from="1629810298611" duration="1033000" />
+      <workItem from="1630305147066" duration="6927000" />
     </task>
     <task id="LOCAL-00001" summary="chore(global): implement library structure">
       <created>1628975165966</created>
@@ -422,7 +427,28 @@
       <option name="project" value="LOCAL" />
       <updated>1630217192263</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="chore(globalStyles): remove global styles from library">
+      <created>1630306045904</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1630306045904</updated>
+    </task>
+    <task id="LOCAL-00037" summary="chore(global): restructure the whole library">
+      <created>1630306665775</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1630306665775</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fix(inputConfiguration): fix circular reference error and change input structure">
+      <created>1630314157813</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1630314157813</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,9 +467,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(styles): remove style assets" />
-    <MESSAGE value="fix(package.json): fix dependency problem for glob-parent" />
-    <MESSAGE value="fix(package.json): fix build problem" />
     <MESSAGE value="fix(angular.json): change build output path for github page" />
     <MESSAGE value="ci(global): build project in docs folder for gh-page" />
     <MESSAGE value="refactor(wrapper): add utility classes for wrapper component" />
@@ -466,7 +489,10 @@
     <MESSAGE value="chore(ag-form-builder): change event emitter and component naming conventions" />
     <MESSAGE value="update(package): update library package version" />
     <MESSAGE value="fix(lib): change browser module with common module in library" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(lib): change browser module with common module in library" />
+    <MESSAGE value="chore(globalStyles): remove global styles from library" />
+    <MESSAGE value="chore(global): restructure the whole library" />
+    <MESSAGE value="fix(inputConfiguration): fix circular reference error and change input structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(inputConfiguration): fix circular reference error and change input structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

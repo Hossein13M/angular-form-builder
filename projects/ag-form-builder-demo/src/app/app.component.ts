@@ -4,9 +4,9 @@ import { Section } from '../../../ag-form-builder/src/lib/models/section.model';
 @Component({
     selector: 'app-root',
     template: `
-      <div class='demo-wrapper'>
-        <ag-form-builder (emittedForm)='handleFormInfo($event)'></ag-form-builder>
-      </div>
+        <div class="demo-wrapper">
+            <ag-form-builder (emittedFormInfo)="handleFormInfo($event)"></ag-form-builder>
+        </div>
     `,
     styles: [
         `
@@ -20,7 +20,7 @@ import { Section } from '../../../ag-form-builder/src/lib/models/section.model';
     ],
 })
 export class AppComponent {
-    public handleFormInfo(event: { name: string; section: Array<Section> }): void {
+    public handleFormInfo(event: { name: string; sections: Array<Section> }): void {
         console.log(event);
     }
 }
