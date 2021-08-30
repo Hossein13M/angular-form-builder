@@ -20,20 +20,12 @@ mat-card {
                 border-left: 4px solid #b9b9b9;
             }
             mat-grid-tile {
-                .section-button {
-                }
                 border-radius: 10px;
                 background: #ecf1f5;
                 .add-section-button {
                     font-size: 70px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                 }
             }
         }
-    }
-    mat-card-actions {
-        display: flex;
     }
 }
