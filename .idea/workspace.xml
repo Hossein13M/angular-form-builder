@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(inputConfiguration): fix circular reference error and change input structure">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="update(lib): lib 0.0.3-beta.3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,12 +41,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1630305814" />
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1630315707" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1630177474" />
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1630305814" />
                   </RecentBranch>
                 </list>
               </option>
@@ -84,7 +81,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -151,6 +148,7 @@
         <item itemvalue="Karma.InputConfigurationComponent.should create" />
         <item itemvalue="npm.test" />
         <item itemvalue="Karma.InputConfigurationComponent.should create" />
+        <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
   </component>
@@ -448,7 +446,28 @@
       <option name="project" value="LOCAL" />
       <updated>1630314157813</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="refactor(git): add .idea directory to gitignore">
+      <created>1630315414994</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1630315414994</updated>
+    </task>
+    <task id="LOCAL-00040" summary="refactor(ag-form-builder): change number to string">
+      <created>1630315661139</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1630315661139</updated>
+    </task>
+    <task id="LOCAL-00041" summary="update(lib): lib 0.0.3-beta.3">
+      <created>1630315795335</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1630315795335</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,11 +486,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(angular.json): change build output path for github page" />
-    <MESSAGE value="ci(global): build project in docs folder for gh-page" />
-    <MESSAGE value="refactor(wrapper): add utility classes for wrapper component" />
-    <MESSAGE value="refactor(settingModal): add utility classes for settingModal" />
-    <MESSAGE value="refactor(buttons): add mat-button directive to buttons" />
     <MESSAGE value="refactor(lib): remove tailwinds from library" />
     <MESSAGE value="fix(settingModal): fix button hover issue" />
     <MESSAGE value="fix(tailwindConfig): remove tailwind config file" />
@@ -492,7 +506,12 @@
     <MESSAGE value="chore(globalStyles): remove global styles from library" />
     <MESSAGE value="chore(global): restructure the whole library" />
     <MESSAGE value="fix(inputConfiguration): fix circular reference error and change input structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(inputConfiguration): fix circular reference error and change input structure" />
+    <MESSAGE value="git(git): add .idea directory to gitignore" />
+    <MESSAGE value="refactor(git): add .idea directory to gitignore" />
+    <MESSAGE value="refactor(ag-form-builder): change number to string" />
+    <MESSAGE value="publish(lib): lib 0.0.3-beta.3" />
+    <MESSAGE value="update(lib): lib 0.0.3-beta.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="update(lib): lib 0.0.3-beta.3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
