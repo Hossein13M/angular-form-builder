@@ -20,7 +20,7 @@ import { Section } from '../../../ag-form-builder/src/lib/models/section.model';
     ],
 })
 export class AppComponent {
-    public handleFormInfo(event: { name: string; section: Array<Section> }): void {
+    public handleFormInfo(event: { name: string; sections: Array<Section> }): void {
         console.log(event);
     }
 }

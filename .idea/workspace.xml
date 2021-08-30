@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="chore(global): restructure the whole library">
-      <change afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.service.ts" afterDir="false" />
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="fix(inputConfiguration): fix circular reference error and change input structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/const/defaultInputConfiguration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/const/defaultInputConfiguration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/models/inputFormConfiguration.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/models/inputFormConfiguration.model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +180,7 @@
       <workItem from="1629702013448" duration="2873000" />
       <workItem from="1629793266422" duration="154000" />
       <workItem from="1629810298611" duration="1033000" />
-      <workItem from="1630305147066" duration="6696000" />
+      <workItem from="1630305147066" duration="6927000" />
     </task>
     <task id="LOCAL-00001" summary="chore(global): implement library structure">
       <created>1628975165966</created>
@@ -449,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630306665775</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fix(inputConfiguration): fix circular reference error and change input structure">
+      <created>1630314157813</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1630314157813</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +467,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(package.json): fix build problem" />
     <MESSAGE value="fix(angular.json): change build output path for github page" />
     <MESSAGE value="ci(global): build project in docs folder for gh-page" />
     <MESSAGE value="refactor(wrapper): add utility classes for wrapper component" />
@@ -493,7 +491,8 @@
     <MESSAGE value="fix(lib): change browser module with common module in library" />
     <MESSAGE value="chore(globalStyles): remove global styles from library" />
     <MESSAGE value="chore(global): restructure the whole library" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(global): restructure the whole library" />
+    <MESSAGE value="fix(inputConfiguration): fix circular reference error and change input structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(inputConfiguration): fix circular reference error and change input structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
