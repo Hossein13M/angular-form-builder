@@ -81,8 +81,7 @@
                                     "with": "projects/ag-form-builder-demo/src/environments/environment.prod.ts"
                                 }
                             ],
-                            "outputHashing": "all",
-                            "baseHref": "https://hossein13m.github.io/angular-form-builder/"
+                            "outputHashing": "all"
                         },
                         "development": {
                             "buildOptimizer": false,
