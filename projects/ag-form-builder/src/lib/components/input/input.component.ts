@@ -1,5 +1,4 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { InputFormConfiguration } from '../../models/inputFormConfiguration.model';
 
 @Component({
@@ -10,10 +9,9 @@ import { InputFormConfiguration } from '../../models/inputFormConfiguration.mode
 export class InputComponent implements OnChanges {
     public hideInputTextForPasswordInputs = false;
     @Input() readonlyForDemo: boolean = false;
-
     @Input() inputFormConfiguration: InputFormConfiguration = {
         componentType: 'input',
-        formControl: new FormControl(),
+        formControlName: '',
         type: { name: 'text', icon: 'article' },
         placeholder: 'placeholder',
         label: 'test',
@@ -27,11 +25,6 @@ export class InputComponent implements OnChanges {
     };
 
     ngOnChanges(): void {
-        if (!this.FC) throw new Error('FC Input is required');
         if (this.inputFormConfiguration.isInputTypePassword) this.hideInputTextForPasswordInputs = true;
-    }
-
-    public get FC(): FormControl {
-        return this.inputFormConfiguration.formControl as FormControl;
     }
 }

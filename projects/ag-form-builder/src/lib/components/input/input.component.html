@@ -3,7 +3,6 @@
     <input
         matInput
         [attr.placeholder]="inputFormConfiguration.placeholder"
-        [formControl]="FC"
         [type]="hideInputTextForPasswordInputs ? 'password' : inputFormConfiguration.type.name"
         [class.text-ltr]="inputFormConfiguration.isRtl"
         [attr.type]="inputFormConfiguration.type.name === 'numeric' ? 'number' : inputFormConfiguration.type.name"
@@ -21,14 +20,4 @@
         <mat-icon fontSet="material-icons-outlined">{{ hideInputTextForPasswordInputs ? 'visibility_off' : 'remove_red_eye' }}</mat-icon>
     </button>
     <mat-hint *ngIf="inputFormConfiguration.hint">{{ inputFormConfiguration.hint }}</mat-hint>
-
-    <!--    <mat-error>-->
-    <!--        <ng-container *ngFor="let errorMessage of inputFormConfiguration.errorMessages; let last = last">-->
-    <!--            <span class="app-input-mat-error">{{ errorMessage.errorMessage }}</span>-->
-    <!--            <ng-container *ngIf="FC && FC.hasError(errorMessage.errorName) && (FC.dirty || FC.touched)">-->
-    <!--                <span>{{ errorMessage.errorMessage }}</span>-->
-    <!--                <span *ngIf="!last" class="app-input-mat-error-sep"></span>-->
-    <!--            </ng-container>-->
-    <!--        </ng-container>-->
-    <!--    </mat-error>-->
 </mat-form-field>

@@ -2,11 +2,11 @@
     <div class="ag-h-5-6 ag-overflow-y-auto ag-flex ag-flex-col">
         <mat-form-field appearance="outline" class="ag-mx-3">
             <mat-label>Form Control Name</mat-label>
-            <input matInput type="text" formControlName="formControl" pattern="[a-zA-Z ]*" />
-            <button *ngIf="form.get('formControl')!.value" matSuffix mat-icon-button (click)="form.get('formControl')?.setValue('')">
+            <input matInput type="text" formControlName="formControlName" pattern="[a-zA-Z ]*" />
+            <button *ngIf="form.get('formControlName')!.value" matSuffix mat-icon-button (click)="form.get('formControlName')?.setValue('')">
                 <mat-icon fontSet="material-icons-outlined">close</mat-icon>
             </button>
-            <mat-error *ngIf="form.get('formControl')!.hasError('pattern')"> You should only use English letters for this field </mat-error>
+            <mat-error *ngIf="form.get('formControlName')!.hasError('pattern')"> You should only use English letters for this field </mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="ag-mx-3">
@@ -62,7 +62,9 @@
         </mat-form-field>
 
         <div class="ag-mx-3 ag-mb-3-5">
-            <mat-slide-toggle class="ag-my-2" formControlName="isInputTypePassword" color="primary"> Is your input component's type password? </mat-slide-toggle>
+            <mat-slide-toggle class="ag-my-2" formControlName="isInputTypePassword" color="primary">
+                Is your input component's type password?
+            </mat-slide-toggle>
             <mat-slide-toggle class="ag-my-2" formControlName="isRtl" color="primary"> Is your input component's alignment RTL? </mat-slide-toggle>
         </div>
     </div>

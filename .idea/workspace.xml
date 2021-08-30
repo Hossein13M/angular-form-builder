@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="feat(buttonConfiguration): change model name, implement data binding for button configuration">
+    <list default="true" id="32edd797-101e-4292-9068-ba4d889cdab7" name="Default Changelist" comment="chore(global): restructure the whole library">
+      <change afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder-demo/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input-configuration/input-configuration.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components/input/input.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/const/defaultInputConfiguration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/const/defaultInputConfiguration.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/models/inputFormConfiguration.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/ag-form-builder/src/lib/models/inputFormConfiguration.model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,16 +23,25 @@
       <list>
         <option value="HTML File" />
         <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fix/path" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -37,7 +53,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1630177543" />
+                    <option name="lastUsedInstant" value="1630305814" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -70,7 +86,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -85,6 +101,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/projects/ag-form-builder/src/lib/components" />
+      <recent name="$PROJECT_DIR$/projects/ag-form-builder-demo/src/scss" />
       <recent name="$PROJECT_DIR$/projects/ngx-form-builder/assets" />
       <recent name="$PROJECT_DIR$/projects/ngx-form-builder" />
     </key>
@@ -170,6 +188,7 @@
       <workItem from="1629702013448" duration="2873000" />
       <workItem from="1629793266422" duration="154000" />
       <workItem from="1629810298611" duration="1033000" />
+      <workItem from="1630305147066" duration="6696000" />
     </task>
     <task id="LOCAL-00001" summary="chore(global): implement library structure">
       <created>1628975165966</created>
@@ -402,7 +421,35 @@
       <option name="project" value="LOCAL" />
       <updated>1630214669627</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="update(package): update library package version">
+      <created>1630215686201</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1630215686201</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix(lib): change browser module with common module in library">
+      <created>1630217192263</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1630217192263</updated>
+    </task>
+    <task id="LOCAL-00036" summary="chore(globalStyles): remove global styles from library">
+      <created>1630306045904</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1630306045904</updated>
+    </task>
+    <task id="LOCAL-00037" summary="chore(global): restructure the whole library">
+      <created>1630306665775</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1630306665775</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,10 +468,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(wrapper): remove showing version" />
-    <MESSAGE value="fix(appComponentSpec): remove title check test case" />
-    <MESSAGE value="fix(styles): remove style assets" />
-    <MESSAGE value="fix(package.json): fix dependency problem for glob-parent" />
     <MESSAGE value="fix(package.json): fix build problem" />
     <MESSAGE value="fix(angular.json): change build output path for github page" />
     <MESSAGE value="ci(global): build project in docs folder for gh-page" />
@@ -446,7 +489,11 @@
     <MESSAGE value="update(package): update package.json" />
     <MESSAGE value="docs(README): fix installation note" />
     <MESSAGE value="chore(ag-form-builder): change event emitter and component naming conventions" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(ag-form-builder): change event emitter and component naming conventions" />
+    <MESSAGE value="update(package): update library package version" />
+    <MESSAGE value="fix(lib): change browser module with common module in library" />
+    <MESSAGE value="chore(globalStyles): remove global styles from library" />
+    <MESSAGE value="chore(global): restructure the whole library" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(global): restructure the whole library" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

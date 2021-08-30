@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
 import { InputFormConfiguration } from '../../models/inputFormConfiguration.model';
 
@@ -23,7 +23,7 @@ export class InputConfigurationComponent implements OnInit {
 
     public form: FormGroup = this.fb.group({
         componentType: ['input'],
-        formControl: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
+        formControlName: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
         type: [null, Validators.required],
         label: ['', Validators.required],
         placeholder: [''],
@@ -40,14 +40,25 @@ export class InputConfigurationComponent implements OnInit {
     }
 
     public submitComponentConfigurationForm() {
-        const data: InputFormConfiguration = this.form.value;
-        data.formControl = new FormControl(this.form.value.formControl);
+        const data: InputFormConfiguration = {
+            componentType: this.form.get('componentType')!.value,
+            formControlName: this.form.get('formControlName')!.value,
+            type: this.form.get('type')!.value,
+            label: this.form.get('label')!.value,
+            placeholder: this.form.get('placeholder')!.value,
+            isInputTypePassword: this.form.get('isInputTypePassword')!.value,
+            themeColor: this.form.get('themeColor')!.value,
+            isRtl: this.form.get('isRtl')!.value,
+            hint: this.form.get('hint')!.value,
+        };
         this.componentConfiguration.emit(data);
     }
 
     private setFormValue(): void {
+        if (!!this.inputConfiguration.formControlName) {
+            this.form.get('formControlName')?.setValue(this.inputConfiguration.formControlName);
+        }
         this.form.get('componentType')?.setValue(this.inputConfiguration.componentType);
-        this.form.get('formControl')?.setValue(this.inputConfiguration.formControl!.value);
         this.form.get('label')?.setValue(this.inputConfiguration.label);
         this.form.get('placeholder')?.setValue(this.inputConfiguration.placeholder);
         this.form.get('isInputTypePassword')?.setValue(this.inputConfiguration.isInputTypePassword);
