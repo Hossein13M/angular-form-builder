@@ -1,0 +1,7 @@
+<div class="wrapper">
+    <button mat-stroked-button color="primary" routerLink="/ag-form-viewer">
+        <mat-icon fontSet="material-icons-outlined">build</mat-icon>
+        <span>Form Viewer</span>
+    </button>
+    <lib-ag-form-builder class="demo-wrapper" (emittedFormInfo)="handleFormInfo($event)"></lib-ag-form-builder>
+</div>

@@ -1,8 +1,7 @@
-import { FormControl } from '@angular/forms';
 import { ButtonFormConfiguration } from '../models/buttonFormConfiguration';
 
 export const defaultButtonConfiguration: ButtonFormConfiguration = {
-    formControlName: new FormControl(),
+    formControlName: '',
     componentType: 'button',
     type: { name: 'accept', icon: 'check_circle' },
     themeColor: 'primary',

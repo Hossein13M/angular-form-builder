@@ -4,15 +4,15 @@ import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { ButtonModule } from './components/button/button.module';
+import { ButtonModule } from '../../components/button/button.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
-import { SettingModalModule } from './components/setting-modal/setting-modal.module';
+import { SettingModalModule } from '../../components/setting-modal/setting-modal.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
-import { InputModule } from './components/input/input.module';
+import { InputModule } from '../../components/input/input.module';
 
 @NgModule({
     declarations: [AgFormBuilderComponent],
