@@ -8,6 +8,7 @@
                         <mat-select [value]="column.columnComponentType ?? 'input'" #matSelect (valueChange)="onComponentTypeValueChange(column, $event)">
                             <mat-option value="input">Input Component</mat-option>
                             <mat-option value="button">Button Component</mat-option>
+                            <mat-option value="date">Datepicker Component</mat-option>
                         </mat-select>
                     </mat-form-field>
 
@@ -36,6 +37,12 @@
                     [inputConfiguration]="returnInputFormConfiguration(column)"
                     (componentConfiguration)="getComponentConfigurationEvent($event, 'input', index)"
                 ></app-input-configuration>
+
+                <lib-ag-date-picker-configuration
+                    *ngIf="matSelect.value === 'date'"
+                    [datepickerConfiguration]="returnDatepickerFormConfiguration(column)"
+                    (componentConfiguration)="getComponentConfigurationEvent($event, 'date', index)"
+                ></lib-ag-date-picker-configuration>
             </mat-card-content>
         </mat-card>
 

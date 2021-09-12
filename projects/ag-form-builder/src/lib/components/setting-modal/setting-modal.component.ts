@@ -5,8 +5,11 @@ import { defaultInputConfiguration } from '../../const/defaultInputConfiguration
 import { InputFormConfiguration } from '../../models/inputFormConfiguration.model';
 import { ButtonFormConfiguration } from '../../models/buttonFormConfiguration';
 import { defaultButtonConfiguration } from '../../const/defaultButtonConfiguration';
-import { ColumnModel } from '../../models/column.model';
+import { ColumnModel, ComponentSettings, ComponentTypes } from '../../models/column.model';
 import { Section } from '../../models/section.model';
+import { Datepicker } from '../../models/datepicker.model';
+import { defaultDatepickerConfiguration } from '../../const/defaultDatepickerConfiguration';
+import { defaultComponentsList } from '../../const/defaultComponentsList';
 
 @Component({
     selector: 'app-setting-modal',
@@ -24,12 +27,17 @@ export class SettingModalComponent {
         if (this.data.sectionInfo.columnsCount > 0) this.setDataForEditMode();
     }
 
-    public addColumn(componentType: 'input' | 'button'): void {
+    public addColumn(componentType: ComponentTypes): void {
         this.columns.push({
             columnId: 1,
             columnComponentType: 'input',
-            columnSetting: componentType === 'input' ? defaultInputConfiguration : defaultButtonConfiguration,
+            columnSetting: this.addDefaultComponentConfigurationBasedOnSelectedComponent(componentType),
         });
+    }
+
+    private addDefaultComponentConfigurationBasedOnSelectedComponent(componentType: ComponentTypes): ComponentSettings {
+        const component = defaultComponentsList.find((item) => item.componentType === componentType);
+        return component!.defaultComponent;
     }
 
     public removeColumn(column: ColumnModel): void {
@@ -50,7 +58,7 @@ export class SettingModalComponent {
         this.matDialog.close(this.sectionInfo);
     }
 
-    public getComponentConfigurationEvent(event: any, componentType: 'button' | 'input', columnIndex: number): void {
+    public getComponentConfigurationEvent(event: any, componentType: ComponentTypes, columnIndex: number): void {
         this.sectionInfo.sectionColumns[columnIndex] = { index: columnIndex, componentType: componentType, componentInfo: event };
     }
 
@@ -70,10 +78,14 @@ export class SettingModalComponent {
         return this.columns.length > 0 ? <ButtonFormConfiguration>sectionColumn.columnSetting : defaultButtonConfiguration;
     }
 
-    public onComponentTypeValueChange(column: ColumnModel, selectedColumnComponentType: 'input' | 'button') {
+    public returnDatepickerFormConfiguration(sectionColumn: ColumnModel): Datepicker {
+        return this.columns.length > 0 ? <Datepicker>sectionColumn.columnSetting : defaultDatepickerConfiguration;
+    }
+
+    public onComponentTypeValueChange(column: ColumnModel, selectedColumnComponentType: ComponentTypes) {
         const columnIndex = this.columns.indexOf(column);
         this.columns[columnIndex] = {
-            columnSetting: selectedColumnComponentType === 'button' ? defaultButtonConfiguration : defaultInputConfiguration,
+            columnSetting: this.addDefaultComponentConfigurationBasedOnSelectedComponent(selectedColumnComponentType),
             columnId: this.columns[columnIndex].columnId,
             columnComponentType: selectedColumnComponentType,
         };
