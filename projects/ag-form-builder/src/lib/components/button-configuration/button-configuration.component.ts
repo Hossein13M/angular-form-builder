@@ -45,13 +45,12 @@ export class ButtonConfigurationComponent implements OnInit {
 
     public submitComponentConfigurationForm(): void {
         const data: ButtonFormConfiguration = this.form.value;
-        data.formControlName = new FormControl(this.form.value.formControlName);
         this.componentConfiguration.emit(data);
     }
 
     private setDataForEditMode() {
         this.form.get('componentType')?.setValue(this.buttonConfiguration.componentType);
-        this.form.get('formControlName')?.setValue(this.buttonConfiguration.formControlName!.value);
+        this.form.get('formControlName')?.setValue(this.buttonConfiguration.formControlName);
         this.form.get('width')?.setValue(this.buttonConfiguration.width);
         this.form.get('label')?.setValue(this.buttonConfiguration.label);
         this.form.get('themeColor')?.setValue(this.buttonConfiguration.themeColor);
