@@ -3,17 +3,18 @@ import { ThemePalette } from '@angular/material/core';
 export interface Datepicker {
     componentType: 'datepicker';
     formControlName: string | null;
-    appearance: 'outline' | 'fill' | 'legacy' | 'standard';
+    appearance: Appearance;
     label: string;
-    datePickerIcon: datePickerIcon;
+    datePickerIcon: DatePickerIcon;
     themeColor?: ThemePalette;
     popupColor?: ThemePalette;
     errorMessages?: Array<{ errorName: string; errorMessage: string }>;
     isRtl?: boolean;
     hint?: string;
-    disableMode: disableMode;
+    disableMode: DisableMode;
     locale: string; // this should be the correct local like : 'en-US' or 'fa-IR'
 }
 
-export type disableMode = 'popup' | 'input' | 'whole' | 'none';
-export type datePickerIcon = 'event' | 'calendar_today' | 'today' | 'edit_calendar' | 'calendar_view_month';
+export type DisableMode = 'popup' | 'input' | 'whole' | 'none';
+export type DatePickerIcon = 'event' | 'calendar_today' | 'today' | 'edit_calendar' | 'calendar_view_month';
+export type Appearance = 'outline' | 'fill' | 'legacy' | 'standard';
