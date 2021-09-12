@@ -11,6 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { InputConfigurationModule } from '../input-configuration/input-configuration.module';
 import { ButtonConfigurationModule } from '../button-configuration/button-configuration.module';
+import { AgDatePickerConfigurationModule } from '../ag-date-picker-configuration/ag-date-picker-configuration.module';
 
 @NgModule({
     declarations: [SettingModalComponent],
@@ -26,6 +27,7 @@ import { ButtonConfigurationModule } from '../button-configuration/button-config
         MatIconModule,
         MatDividerModule,
         MatTooltipModule,
+        AgDatePickerConfigurationModule
     ],
     entryComponents: [SettingModalComponent],
     exports: [SettingModalComponent],

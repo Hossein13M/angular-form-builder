@@ -13,24 +13,26 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputModule } from '../../components/input/input.module';
+import { AgDatePickerModule } from '../../components/ag-date-picker/ag-date-picker.module';
 
 @NgModule({
     declarations: [AgFormBuilderComponent],
-    imports: [
-        CommonModule,
-        MatCardModule,
-        MatButtonModule,
-        MatGridListModule,
-        ButtonModule,
-        MatIconModule,
-        MatTooltipModule,
-        MatDialogModule,
-        SettingModalModule,
-        MatFormFieldModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        InputModule,
-    ],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatButtonModule,
+    MatGridListModule,
+    ButtonModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatDialogModule,
+    SettingModalModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    InputModule,
+    AgDatePickerModule
+  ],
     exports: [AgFormBuilderComponent],
 })
 export class AgFormBuilderModule {}
