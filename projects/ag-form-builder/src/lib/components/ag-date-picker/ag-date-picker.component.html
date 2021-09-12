@@ -1,0 +1,15 @@
+<div [dir]="datePickerConfiguration.isRtl ? 'rtl' : 'ltr'">
+    <mat-form-field [color]="datePickerConfiguration.themeColor" [appearance]="datePickerConfiguration.appearance">
+        <mat-label>{{ datePickerConfiguration.label }}</mat-label>
+        <input
+            matInput
+            [matDatepicker]="picker"
+            [disabled]="datePickerConfiguration.disableMode === 'whole' || datePickerConfiguration.disableMode === 'input'"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker" [disabled]="datePickerConfiguration.disableMode === 'popup'">
+            <mat-icon matDatepickerToggleIcon>{{ datePickerConfiguration.datePickerIcon }}</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker [color]="datePickerConfiguration.popupColor" [disabled]="datePickerConfiguration.disableMode === 'whole'"></mat-datepicker>
+        <mat-hint>{{ datePickerConfiguration.hint }}</mat-hint>
+    </mat-form-field>
+</div>
