@@ -54,6 +54,11 @@
                                 [readonlyForDemo]="true"
                                 [inputFormConfiguration]="column.componentInfo"
                             ></app-input>
+
+                            <lib-ag-date-picker
+                                *ngIf="column.componentInfo.componentType === 'datepicker'"
+                                [datePickerConfiguration]="column.componentInfo"
+                            ></lib-ag-date-picker>
                         </div>
                     </div>
 
