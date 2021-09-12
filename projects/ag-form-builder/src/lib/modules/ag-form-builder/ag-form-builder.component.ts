@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { Section } from './models/section.model';
-import { SettingModalComponent } from './components/setting-modal/setting-modal.component';
-import { ColumnComponentModel } from './models/columnComponent.model';
+import { Section } from '../../models/section.model';
+import { SettingModalComponent } from '../../components/setting-modal/setting-modal.component';
+import { ColumnComponentModel } from '../../models/columnComponent.model';
 
 @Component({
-    selector: 'ag-form-builder',
+    selector: 'lib-ag-form-builder',
     templateUrl: './ag-form-builder.component.html',
     styleUrls: ['./ag-form-builder.component.scss'],
     encapsulation: ViewEncapsulation.None,
