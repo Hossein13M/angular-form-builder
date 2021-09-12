@@ -1,0 +1,117 @@
+<form (submit)="submitComponentConfigurationForm()" [formGroup]="form" class="ag-flex ag-flex-col ag-h-full">
+    <div class="ag-h-5-6 ag-overflow-y-auto ag-flex ag-flex-col">
+        <mat-form-field appearance="outline" class="ag-mx-3">
+            <mat-label>Form Control Name</mat-label>
+            <input matInput type="text" formControlName="formControlName" pattern="[a-zA-Z ]*" />
+            <button *ngIf="form.get('formControlName')!.value" matSuffix mat-icon-button (click)="form.get('formControlName')?.setValue('')">
+                <mat-icon fontSet="material-icons-outlined">close</mat-icon>
+            </button>
+            <mat-error *ngIf="form.get('formControlName')!.hasError('pattern')"> You should only use English letters for this field </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="ag-mx-3">
+            <mat-label>Label</mat-label>
+            <input matInput type="text" formControlName="label" />
+            <button *ngIf="form.get('label')!.value" matSuffix mat-icon-button (click)="form.get('label')?.setValue('')">
+                <mat-icon fontSet="material-icons-outlined">close</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="ag-mx-3">
+            <mat-label>Hint</mat-label>
+            <input matInput type="text" formControlName="hint" />
+            <button *ngIf="form.get('hint')!.value" matSuffix mat-icon-button (click)="form.get('hint')?.setValue('')">
+                <mat-icon fontSet="material-icons-outlined">close</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="ag-mx-3">
+            <mat-label>Appearance</mat-label>
+            <mat-select formControlName="appearance">
+                <mat-select-trigger class="ag-flex">
+                    <mat-icon fontSet="material-icons-outlined" color="accent">format_color_fill</mat-icon>
+                    <span style="line-height: 24px" class="ag-mx-4">{{ form.get('appearance')!.value | titlecase }}</span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let appearance of appearances" [value]="appearance">
+                    <mat-icon fontSet="material-icons-outlined" color="accent">format_color_fill</mat-icon>
+                    <span>{{ appearance | titlecase }}</span>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="ag-mx-3">
+            <mat-label>Disable Mode</mat-label>
+            <mat-select formControlName="disableMode">
+                <mat-select-trigger class="ag-flex">
+                    <mat-icon fontSet="material-icons-outlined" color="warn">{{ findDisableModeIcon(form.get('disableMode')!.value) }}</mat-icon>
+                    <span style="line-height: 24px" class="ag-mx-4">{{ form.get('disableMode')!.value | titlecase }}</span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let disableMode of disableModes" [value]="disableMode.name">
+                    <mat-icon fontSet="material-icons-outlined" color="warn">{{ disableMode.icon }}</mat-icon>
+                    <span>{{ disableMode.name | titlecase }}</span>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="ag-mx-3">
+            <mat-label>Datepicker theme</mat-label>
+            <mat-select formControlName="themeColor">
+                <mat-select-trigger class="ag-flex">
+                    <mat-icon fontSet="material-icons-outlined" [color]="form.get('themeColor')!.value">circle</mat-icon>
+                    <span style="line-height: 24px" class="ag-mx-4">{{ form.get('themeColor')!.value | titlecase }}</span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let themeColor of themeColors" [value]="themeColor">
+                    <mat-icon fontSet="material-icons-outlined" [color]="themeColor">circle</mat-icon>
+                    <span>{{ themeColor | titlecase }}</span>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="ag-mx-3">
+            <mat-label>Popup theme</mat-label>
+            <mat-select formControlName="popupColor">
+                <mat-select-trigger class="ag-flex">
+                    <mat-icon fontSet="material-icons-outlined" [color]="form.get('popupColor')!.value">circle</mat-icon>
+                    <span style="line-height: 24px" class="ag-mx-4">{{ form.get('popupColor')!.value | titlecase }}</span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let themeColor of themeColors" [value]="themeColor">
+                    <mat-icon fontSet="material-icons-outlined" [color]="themeColor">circle</mat-icon>
+                    <span>{{ themeColor | titlecase }}</span>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="ag-mx-3">
+            <mat-label>Datepicker icon</mat-label>
+            <mat-select formControlName="datePickerIcon">
+                <mat-select-trigger class="ag-flex">
+                    <mat-icon fontSet="material-icons-outlined" color="primary">{{ form.get('datePickerIcon')!.value }}</mat-icon>
+                    <span style="line-height: 24px" class="ag-mx-4">{{ form.get('datePickerIcon')!.value | titlecase }}</span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let datePickerIcon of datePickerIcons" [value]="datePickerIcon">
+                    <mat-icon fontSet="material-icons-outlined" color="primary">{{ datePickerIcon }}</mat-icon>
+                    <span>{{ datePickerIcon | titlecase }}</span>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="ag-mx-3">
+            <mat-label>Datepicker Locale</mat-label>
+            <mat-select formControlName="locale">
+                <mat-select-trigger class="ag-flex">
+                    <mat-icon fontSet="material-icons-outlined" color="primary">calendar_today</mat-icon>
+                    <span style="line-height: 24px" class="ag-mx-4">{{ setLocaleName(form.get('locale')!.value) | titlecase }}</span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let datePickerLocale of datePickerLocales" [value]="datePickerLocale.localeCode">
+                    <mat-icon fontSet="material-icons-outlined" color="primary">calendar_today</mat-icon>
+                    <span>{{ datePickerLocale.localeName | titlecase }}</span>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <button class="ag-w-3-5 ag-mx-auto ag-my-auto" mat-flat-button color="primary" type="submit" [disabled]="form.invalid">
+        <mat-icon fontSet="material-icons-outlined" class="ag-mx-2">save</mat-icon>
+        <span>Save Component Settings</span>
+    </button>
+</form>
