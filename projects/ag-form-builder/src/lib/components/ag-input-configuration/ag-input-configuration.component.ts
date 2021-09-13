@@ -4,11 +4,11 @@ import { ThemePalette } from '@angular/material/core';
 import { InputFormConfiguration } from '../../models/inputFormConfiguration.model';
 
 @Component({
-    selector: 'app-input-configuration',
-    templateUrl: './input-configuration.component.html',
-    styleUrls: ['./input-configuration.component.scss'],
+    selector: 'ag-input-configuration',
+    templateUrl: './ag-input-configuration.component.html',
+    styleUrls: ['./ag-input-configuration.component.scss'],
 })
-export class InputConfigurationComponent implements OnInit {
+export class AgInputConfigurationComponent implements OnInit {
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
     @Output() componentConfiguration: EventEmitter<InputFormConfiguration> = new EventEmitter<InputFormConfiguration>();
     @Input() inputConfiguration!: InputFormConfiguration;
