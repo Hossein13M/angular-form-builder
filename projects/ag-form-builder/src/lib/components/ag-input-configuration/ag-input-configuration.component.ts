@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
-import { InputFormConfiguration } from '../../models/inputFormConfiguration.model';
+import { AgInputFormConfiguration } from '../../models/agInputFormConfiguration.model';
 
 @Component({
     selector: 'ag-input-configuration',
@@ -10,8 +10,8 @@ import { InputFormConfiguration } from '../../models/inputFormConfiguration.mode
 })
 export class AgInputConfigurationComponent implements OnInit {
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
-    @Output() componentConfiguration: EventEmitter<InputFormConfiguration> = new EventEmitter<InputFormConfiguration>();
-    @Input() inputConfiguration!: InputFormConfiguration;
+    @Output() componentConfiguration: EventEmitter<AgInputFormConfiguration> = new EventEmitter<AgInputFormConfiguration>();
+    @Input() inputConfiguration!: AgInputFormConfiguration;
 
     public inputTypes: Array<{ name: string; icon: string }> = [
         { name: 'text', icon: 'article' },
@@ -40,7 +40,7 @@ export class AgInputConfigurationComponent implements OnInit {
     }
 
     public submitComponentConfigurationForm() {
-        const data: InputFormConfiguration = {
+        const data: AgInputFormConfiguration = {
             componentType: this.form.get('componentType')!.value,
             formControlName: this.form.get('formControlName')!.value,
             type: this.form.get('type')!.value,

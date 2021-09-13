@@ -1,6 +1,6 @@
-import { Datepicker } from '../models/datepicker.model';
+import { AgDatepicker } from '../models/agDatepicker.model';
 
-export const defaultDatepickerConfiguration: Datepicker = {
+export const defaultDatepickerConfiguration: AgDatepicker = {
     componentType: 'datepicker',
     formControlName: '',
     appearance: 'outline',

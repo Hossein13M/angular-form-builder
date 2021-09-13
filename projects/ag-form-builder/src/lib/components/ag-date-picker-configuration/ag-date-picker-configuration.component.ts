@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Appearance, Datepicker, DatePickerIcon, DisableMode } from '../../models/datepicker.model';
+import { AgAppearance, AgDatepicker, AgDatePickerIcon, AgDisableMode } from '../../models/agDatepicker.model';
 
 @Component({
     selector: 'lib-ag-date-picker-configuration',
@@ -10,20 +10,20 @@ import { Appearance, Datepicker, DatePickerIcon, DisableMode } from '../../model
 })
 export class AgDatePickerConfigurationComponent implements OnInit {
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
-    public appearances: Array<Appearance> = ['outline', 'legacy', 'standard', 'fill'];
-    public disableModes: Array<{ name: DisableMode; icon: string }> = [
+    public appearances: Array<AgAppearance> = ['outline', 'legacy', 'standard', 'fill'];
+    public disableModes: Array<{ name: AgDisableMode; icon: string }> = [
         { name: 'popup', icon: 'open_in_new_off' },
         { name: 'input', icon: 'power_input' },
         { name: 'none', icon: 'check_box_outline_blank' },
         { name: 'whole', icon: 'event' },
     ];
-    public datePickerIcons: Array<DatePickerIcon> = ['event', 'calendar_today', 'today', 'edit_calendar', 'calendar_view_month'];
+    public datePickerIcons: Array<AgDatePickerIcon> = ['event', 'calendar_today', 'today', 'edit_calendar', 'calendar_view_month'];
     public datePickerLocales: Array<{ localeCode: string; localeName: string }> = [
         { localeCode: 'fa-IR', localeName: 'Iranian Calendar' },
         { localeCode: 'en-US', localeName: 'Gregorian Calendar' },
     ];
-    @Output() componentConfiguration: EventEmitter<Datepicker> = new EventEmitter<Datepicker>();
-    @Input() datepickerConfiguration!: Datepicker;
+    @Output() componentConfiguration: EventEmitter<AgDatepicker> = new EventEmitter<AgDatepicker>();
+    @Input() datepickerConfiguration!: AgDatepicker;
 
     public form: FormGroup = this.fb.group({
         formControlName: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
@@ -45,7 +45,7 @@ export class AgDatePickerConfigurationComponent implements OnInit {
     }
 
     public submitComponentConfigurationForm(): void {
-        const data: Datepicker = this.form.value;
+        const data: AgDatepicker = this.form.value;
         this.componentConfiguration.emit(data);
         console.log(data);
         console.log(this.form.value);
@@ -68,7 +68,7 @@ export class AgDatePickerConfigurationComponent implements OnInit {
         return this.datePickerLocales.find((item) => item.localeCode === localeCode)!.localeName;
     }
 
-    public findDisableModeIcon(mode: DisableMode): string {
+    public findDisableModeIcon(mode: AgDisableMode): string {
         return this.disableModes.find((item) => item.name === mode)!.icon;
     }
 }

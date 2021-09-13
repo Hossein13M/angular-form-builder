@@ -1,15 +1,16 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { ColumnComponentModel } from '../../models/columnComponent.model';
+import { AgColumnComponentModel } from '../../models/agColumnComponent.model';
 import { defaultInputConfiguration } from '../../const/defaultInputConfiguration';
-import { InputFormConfiguration } from '../../models/inputFormConfiguration.model';
-import { ButtonFormConfiguration } from '../../models/buttonFormConfiguration';
+import { AgInputFormConfiguration } from '../../models/agInputFormConfiguration.model';
+import { AgButtonFormConfiguration } from '../../models/agButtonFormConfiguration';
 import { defaultButtonConfiguration } from '../../const/defaultButtonConfiguration';
-import { ColumnModel, ComponentSettings, ComponentTypes } from '../../models/column.model';
-import { Section } from '../../models/section.model';
-import { Datepicker } from '../../models/datepicker.model';
+import { AgSection } from '../../models/agSection.model';
 import { defaultDatepickerConfiguration } from '../../const/defaultDatepickerConfiguration';
 import { defaultComponentsList } from '../../const/defaultComponentsList';
+import { AgColumnModel } from '../../models/agColumn.model';
+import { AgComponentSettings, AgComponentTypes } from '../../models/agComponent.model';
+import { AgDatepicker } from '../../models/agDatepicker.model';
 
 @Component({
     selector: 'ag-setting-modal',
@@ -17,17 +18,20 @@ import { defaultComponentsList } from '../../const/defaultComponentsList';
     styleUrls: ['./ag-setting-modal.component.scss'],
 })
 export class AgSettingModalComponent {
-    public columns: Array<ColumnModel> = [];
-    public sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> } = {
+    public columns: Array<AgColumnModel> = [];
+    public sectionInfo: { sectionIndex: number; sectionColumns: Array<AgColumnComponentModel> } = {
         sectionIndex: this.data.sectionIndex,
         sectionColumns: [],
     };
 
-    constructor(private matDialog: MatDialogRef<AgSettingModalComponent>, @Inject(MAT_DIALOG_DATA) public data: { sectionIndex: number; sectionInfo: Section }) {
+    constructor(
+        private matDialog: MatDialogRef<AgSettingModalComponent>,
+        @Inject(MAT_DIALOG_DATA) public data: { sectionIndex: number; sectionInfo: AgSection }
+    ) {
         if (this.data.sectionInfo.columnsCount > 0) this.setDataForEditMode();
     }
 
-    public addColumn(componentType: ComponentTypes): void {
+    public addColumn(componentType: AgComponentTypes): void {
         this.columns.push({
             columnId: 1,
             columnComponentType: 'input',
@@ -35,12 +39,12 @@ export class AgSettingModalComponent {
         });
     }
 
-    private addDefaultComponentConfigurationBasedOnSelectedComponent(componentType: ComponentTypes): ComponentSettings {
+    private addDefaultComponentConfigurationBasedOnSelectedComponent(componentType: AgComponentTypes): AgComponentSettings {
         const component = defaultComponentsList.find((item) => item.componentType === componentType);
         return component!.defaultComponent;
     }
 
-    public removeColumn(column: ColumnModel): void {
+    public removeColumn(column: AgColumnModel): void {
         const columnIndex = this.columns.indexOf(column);
         this.columns.splice(columnIndex, 1);
         this.sectionInfo.sectionColumns.splice(columnIndex, 1);
@@ -58,7 +62,7 @@ export class AgSettingModalComponent {
         this.matDialog.close(this.sectionInfo);
     }
 
-    public getComponentConfigurationEvent(event: any, componentType: ComponentTypes, columnIndex: number): void {
+    public getComponentConfigurationEvent(event: any, componentType: AgComponentTypes, columnIndex: number): void {
         this.sectionInfo.sectionColumns[columnIndex] = { index: columnIndex, componentType: componentType, componentInfo: event };
     }
 
@@ -70,19 +74,19 @@ export class AgSettingModalComponent {
         });
     }
 
-    public returnInputFormConfiguration(sectionColumn: ColumnModel): InputFormConfiguration {
-        return this.columns.length > 0 ? <InputFormConfiguration>sectionColumn.columnSetting : defaultInputConfiguration;
+    public returnInputFormConfiguration(sectionColumn: AgColumnModel): AgInputFormConfiguration {
+        return this.columns.length > 0 ? <AgInputFormConfiguration>sectionColumn.columnSetting : defaultInputConfiguration;
     }
 
-    public returnButtonFormConfiguration(sectionColumn: ColumnModel): ButtonFormConfiguration {
-        return this.columns.length > 0 ? <ButtonFormConfiguration>sectionColumn.columnSetting : defaultButtonConfiguration;
+    public returnButtonFormConfiguration(sectionColumn: AgColumnModel): AgButtonFormConfiguration {
+        return this.columns.length > 0 ? <AgButtonFormConfiguration>sectionColumn.columnSetting : defaultButtonConfiguration;
     }
 
-    public returnDatepickerFormConfiguration(sectionColumn: ColumnModel): Datepicker {
-        return this.columns.length > 0 ? <Datepicker>sectionColumn.columnSetting : defaultDatepickerConfiguration;
+    public returnDatepickerFormConfiguration(sectionColumn: AgColumnModel): AgDatepicker {
+        return this.columns.length > 0 ? <AgDatepicker>sectionColumn.columnSetting : defaultDatepickerConfiguration;
     }
 
-    public onComponentTypeValueChange(column: ColumnModel, selectedColumnComponentType: ComponentTypes) {
+    public onComponentTypeValueChange(column: AgColumnModel, selectedColumnComponentType: AgComponentTypes) {
         const columnIndex = this.columns.indexOf(column);
         this.columns[columnIndex] = {
             columnSetting: this.addDefaultComponentConfigurationBasedOnSelectedComponent(selectedColumnComponentType),

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Section } from '../../../../../ag-form-builder/src/lib/models/section.model';
+import { AgSection } from '../../../../../ag-form-builder/src/lib/models/agSection.model';
 
 @Component({
     selector: 'app-ag-form-builder-demo',
@@ -9,7 +9,7 @@ import { Section } from '../../../../../ag-form-builder/src/lib/models/section.m
 export class AgFormBuilderDemoComponent {
     constructor() {}
 
-    public handleFormInfo(event: { name: string; sections: Array<Section> }): void {
+    public handleFormInfo(event: { name: string; sections: Array<AgSection> }): void {
         console.log(event);
     }
 }

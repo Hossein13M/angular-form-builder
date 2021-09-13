@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Datepicker } from '../../models/datepicker.model';
+import { AgDatepicker } from '../../models/agDatepicker.model';
 import { DateAdapter } from '@angular/material/core';
 
 @Component({
@@ -8,7 +8,7 @@ import { DateAdapter } from '@angular/material/core';
     styleUrls: ['./ag-date-picker.component.scss'],
 })
 export class AgDatePickerComponent implements OnInit {
-    @Input() datePickerConfiguration!: Datepicker;
+    @Input() datePickerConfiguration!: AgDatepicker;
 
     constructor(private dateAdapter: DateAdapter<any>) {}
 

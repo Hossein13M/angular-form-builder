@@ -1,6 +1,6 @@
-import { ButtonFormConfiguration } from '../models/buttonFormConfiguration';
+import { AgButtonFormConfiguration } from '../models/agButtonFormConfiguration';
 
-export const defaultButtonConfiguration: ButtonFormConfiguration = {
+export const defaultButtonConfiguration: AgButtonFormConfiguration = {
     formControlName: '',
     componentType: 'button',
     type: { name: 'accept', icon: 'check_circle' },

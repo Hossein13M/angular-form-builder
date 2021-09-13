@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { ButtonFormConfiguration } from '../../models/buttonFormConfiguration';
+import { AgButtonFormConfiguration } from '../../models/agButtonFormConfiguration';
 
 @Component({
     selector: 'ag-button',
@@ -9,7 +9,7 @@ import { ButtonFormConfiguration } from '../../models/buttonFormConfiguration';
 })
 export class AgButtonComponent {
     @Input() disableButton: boolean = false;
-    @Input() buttonConfiguration!: ButtonFormConfiguration;
+    @Input() buttonConfiguration!: AgButtonFormConfiguration;
 
     constructor(private router: Router) {}
 

@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { InputFormConfiguration } from '../../models/inputFormConfiguration.model';
+import { AgInputFormConfiguration } from '../../models/agInputFormConfiguration.model';
 
 @Component({
     selector: 'ag-input',
@@ -9,7 +9,7 @@ import { InputFormConfiguration } from '../../models/inputFormConfiguration.mode
 export class AgInputComponent implements OnChanges {
     public hideInputTextForPasswordInputs = false;
     @Input() readonlyForDemo: boolean = false;
-    @Input() inputFormConfiguration: InputFormConfiguration = {
+    @Input() inputFormConfiguration: AgInputFormConfiguration = {
         componentType: 'input',
         formControlName: '',
         type: { name: 'text', icon: 'article' },

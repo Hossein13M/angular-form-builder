@@ -1,6 +1,6 @@
 import { ThemePalette } from '@angular/material/core';
 
-export interface InputFormConfiguration {
+export interface AgInputFormConfiguration {
     componentType: 'input';
     formControlName: string | null;
     type: { name: 'text' | 'email' | 'tel' | 'url' | 'numeric'; icon: string };
