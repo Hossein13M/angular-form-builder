@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/cor
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Section } from '../../models/section.model';
-import { SettingModalComponent } from '../../components/setting-modal/setting-modal.component';
+import { AgSettingModalComponent } from '../../components/ag-setting-modal/ag-setting-modal.component';
 import { ColumnComponentModel } from '../../models/columnComponent.model';
 
 @Component({
@@ -37,7 +37,7 @@ export class AgFormBuilderComponent {
 
   public openSettingDialog(sectionIndex: number, sectionInfo: Section): void {
     this.dialog
-      .open(SettingModalComponent, { data: { sectionIndex, sectionInfo }, height: '800px', width: '1600px' })
+      .open(AgSettingModalComponent, { data: { sectionIndex, sectionInfo }, height: '800px', width: '1600px' })
       .afterClosed()
       .subscribe((sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> }) => {
         sectionInfo && this.createSectionPreview(sectionInfo);
