@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SettingModalComponent } from './setting-modal.component';
+import { AgSettingModalComponent } from './ag-setting-modal.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
@@ -9,12 +9,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { InputConfigurationModule } from '../input-configuration/input-configuration.module';
-import { ButtonConfigurationModule } from '../button-configuration/button-configuration.module';
+import { AgButtonConfigurationModule } from '../ag-button-configuration/ag-button-configuration.module';
 import { AgDatePickerConfigurationModule } from '../ag-date-picker-configuration/ag-date-picker-configuration.module';
+import { AgInputConfigurationModule } from '../ag-input-configuration/ag-input-configuration.module';
 
 @NgModule({
-    declarations: [SettingModalComponent],
+    declarations: [AgSettingModalComponent],
     imports: [
         CommonModule,
         MatCardModule,
@@ -22,14 +22,14 @@ import { AgDatePickerConfigurationModule } from '../ag-date-picker-configuration
         MatOptionModule,
         MatSelectModule,
         MatButtonModule,
-        InputConfigurationModule,
-        ButtonConfigurationModule,
+        AgInputConfigurationModule,
+        AgButtonConfigurationModule,
         MatIconModule,
         MatDividerModule,
         MatTooltipModule,
-        AgDatePickerConfigurationModule
+        AgDatePickerConfigurationModule,
     ],
-    entryComponents: [SettingModalComponent],
-    exports: [SettingModalComponent],
+    entryComponents: [AgSettingModalComponent],
+    exports: [AgSettingModalComponent],
 })
-export class SettingModalModule {}
+export class AgSettingModalModule {}

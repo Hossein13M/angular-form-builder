@@ -25,24 +25,24 @@
             <mat-card-content class="ag-overflow-y-auto ag-h-5-6">
                 <!--  Button Component  -->
 
-                <app-button-configuration
+                <ag-button-configuration
                     *ngIf="matSelect.value === 'button'"
                     [buttonConfiguration]="returnButtonFormConfiguration(column)"
                     (componentConfiguration)="getComponentConfigurationEvent($event, 'button', index)"
-                ></app-button-configuration>
+                ></ag-button-configuration>
 
                 <!--  Input Component  -->
-                <app-input-configuration
+                <ag-input-configuration
                     *ngIf="matSelect.value === 'input'"
                     [inputConfiguration]="returnInputFormConfiguration(column)"
                     (componentConfiguration)="getComponentConfigurationEvent($event, 'input', index)"
-                ></app-input-configuration>
+                ></ag-input-configuration>
 
-                <lib-ag-date-picker-configuration
+                <ag-date-picker-configuration
                     *ngIf="matSelect.value === 'date'"
                     [datepickerConfiguration]="returnDatepickerFormConfiguration(column)"
                     (componentConfiguration)="getComponentConfigurationEvent($event, 'date', index)"
-                ></lib-ag-date-picker-configuration>
+                ></ag-date-picker-configuration>
             </mat-card-content>
         </mat-card>
 

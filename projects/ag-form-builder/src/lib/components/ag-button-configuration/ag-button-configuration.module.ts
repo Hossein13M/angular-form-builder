@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonConfigurationComponent } from './button-configuration.component';
+import { AgButtonConfigurationComponent } from './ag-button-configuration.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -11,7 +11,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
-    declarations: [ButtonConfigurationComponent],
+    declarations: [AgButtonConfigurationComponent],
     imports: [
         CommonModule,
         MatFormFieldModule,
@@ -23,6 +23,6 @@ import { MatRadioModule } from '@angular/material/radio';
         MatSlideToggleModule,
         MatRadioModule,
     ],
-    exports: [ButtonConfigurationComponent],
+    exports: [AgButtonConfigurationComponent],
 })
-export class ButtonConfigurationModule {}
+export class AgButtonConfigurationModule {}

@@ -1,17 +1,17 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ButtonFormConfiguration } from '../../models/buttonFormConfiguration';
+import { AgButtonFormConfiguration } from '../../models/agButtonFormConfiguration';
 
 @Component({
-    selector: 'app-button-configuration',
-    templateUrl: './button-configuration.component.html',
-    styleUrls: ['./button-configuration.component.scss'],
+    selector: 'ag-button-configuration',
+    templateUrl: './ag-button-configuration.component.html',
+    styleUrls: ['./ag-button-configuration.component.scss'],
 })
-export class ButtonConfigurationComponent implements OnInit {
+export class AgButtonConfigurationComponent implements OnInit {
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
-    @Output() componentConfiguration: EventEmitter<ButtonFormConfiguration> = new EventEmitter<ButtonFormConfiguration>();
-    @Input() buttonConfiguration!: ButtonFormConfiguration;
+    @Output() componentConfiguration: EventEmitter<AgButtonFormConfiguration> = new EventEmitter<AgButtonFormConfiguration>();
+    @Input() buttonConfiguration!: AgButtonFormConfiguration;
 
     public buttonTypes: Array<{ name: string; icon: string }> = [
         { name: 'accept', icon: 'check_circle' },
@@ -44,7 +44,7 @@ export class ButtonConfigurationComponent implements OnInit {
     }
 
     public submitComponentConfigurationForm(): void {
-        const data: ButtonFormConfiguration = this.form.value;
+        const data: AgButtonFormConfiguration = this.form.value;
         this.componentConfiguration.emit(data);
     }
 

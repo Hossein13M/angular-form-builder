@@ -1,20 +1,20 @@
 import { ThemePalette } from '@angular/material/core';
 
-export interface Datepicker {
+export interface AgDatepicker {
     componentType: 'datepicker';
     formControlName: string | null;
-    appearance: Appearance;
+    appearance: AgAppearance;
     label: string;
-    datePickerIcon: DatePickerIcon;
+    datePickerIcon: AgDatePickerIcon;
     themeColor?: ThemePalette;
     popupColor?: ThemePalette;
     errorMessages?: Array<{ errorName: string; errorMessage: string }>;
     isRtl?: boolean;
     hint?: string;
-    disableMode: DisableMode;
+    disableMode: AgDisableMode;
     locale: string; // this should be the correct local like : 'en-US' or 'fa-IR'
 }
 
-export type DisableMode = 'popup' | 'input' | 'whole' | 'none';
-export type DatePickerIcon = 'event' | 'calendar_today' | 'today' | 'edit_calendar' | 'calendar_view_month';
-export type Appearance = 'outline' | 'fill' | 'legacy' | 'standard';
+export type AgDisableMode = 'popup' | 'input' | 'whole' | 'none';
+export type AgDatePickerIcon = 'event' | 'calendar_today' | 'today' | 'edit_calendar' | 'calendar_view_month';
+export type AgAppearance = 'outline' | 'fill' | 'legacy' | 'standard';

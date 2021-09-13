@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AgFormViewerService } from './ag-form-viewer.service';
-import { MockFormDataModel } from '../../models/mockFormData.model';
-import { Datepicker } from '../../models/datepicker.model';
+import { AgMockFormDataModel } from '../../models/agMockFormData.model';
+import { AgDatepicker } from '../../models/agDatepicker.model';
 import { defaultDatepickerConfiguration } from '../../const/defaultDatepickerConfiguration';
 
 @Component({
@@ -10,8 +10,8 @@ import { defaultDatepickerConfiguration } from '../../const/defaultDatepickerCon
     styleUrls: ['./ag-form-viewer.component.scss'],
 })
 export class AgFormViewerComponent implements OnInit {
-    public mockForm!: MockFormDataModel;
-    public defaultDatePicker: Datepicker = defaultDatepickerConfiguration;
+    public mockForm!: AgMockFormDataModel;
+    public defaultDatePicker: AgDatepicker = defaultDatepickerConfiguration;
     constructor(private readonly agFormViewerService: AgFormViewerService) {}
 
     ngOnInit(): void {

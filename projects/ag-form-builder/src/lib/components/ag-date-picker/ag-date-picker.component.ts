@@ -1,14 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Datepicker } from '../../models/datepicker.model';
+import { AgDatepicker } from '../../models/agDatepicker.model';
 import { DateAdapter } from '@angular/material/core';
 
 @Component({
-    selector: 'lib-ag-date-picker',
+    selector: 'ag-date-picker',
     templateUrl: './ag-date-picker.component.html',
     styleUrls: ['./ag-date-picker.component.scss'],
 })
 export class AgDatePickerComponent implements OnInit {
-    @Input() datePickerConfiguration!: Datepicker;
+    @Input() datePickerConfiguration!: AgDatepicker;
 
     constructor(private dateAdapter: DateAdapter<any>) {}
 

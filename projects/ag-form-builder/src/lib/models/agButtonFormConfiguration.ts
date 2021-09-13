@@ -1,4 +1,4 @@
-export interface ButtonFormConfiguration {
+export interface AgButtonFormConfiguration {
     formControlName: string | null;
     componentType: 'button';
     type: { name: 'accept' | 'reject' | 'upload' | 'download' | 'localRoute' | 'externalLink'; icon: string };

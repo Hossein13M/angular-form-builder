@@ -1,6 +1,6 @@
-import { MockFormDataModel } from '../models/mockFormData.model';
+import { AgMockFormDataModel } from '../models/agMockFormData.model';
 
-export const mockFormData: MockFormDataModel = {
+export const mockFormData: AgMockFormDataModel = {
     name: 'formName',
     sections: [
         {

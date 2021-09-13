@@ -46,19 +46,18 @@
                             class="ag-h-full ag-flex ag-justify-center ag-items-center ag-w-full component-group"
                             *ngFor="let column of sections[index].columnInfo"
                         >
-                            <!--  button component  -->
-                            <app-button *ngIf="column.componentInfo.componentType === 'button'" [buttonConfiguration]="column.componentInfo"> </app-button>
-                            <!--  input component  -->
-                            <app-input
+                            <ag-button *ngIf="column.componentInfo.componentType === 'button'" [buttonConfiguration]="column.componentInfo"> </ag-button>
+
+                            <ag-input
                                 *ngIf="column.componentInfo.componentType === 'input'"
                                 [readonlyForDemo]="true"
                                 [inputFormConfiguration]="column.componentInfo"
-                            ></app-input>
+                            ></ag-input>
 
-                            <lib-ag-date-picker
+                            <ag-date-picker
                                 *ngIf="column.componentInfo.componentType === 'datepicker'"
                                 [datePickerConfiguration]="column.componentInfo"
-                            ></lib-ag-date-picker>
+                            ></ag-date-picker>
                         </div>
                     </div>
 

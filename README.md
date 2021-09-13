@@ -16,7 +16,7 @@ npm i ag-form-builder
 import `AgFormBuilderModule` into your module
 then you can use it in your template like bellow:
 ```
-<ag-form-builder (emittedForm)="handleFormInfo($event)"></ag-form-builder>
+<lib-ag-form-builder (emittedForm)="handleFormInfo($event)"></lib-ag-form-builder>
 
 ```
 

@@ -1,6 +1,6 @@
-import { InputFormConfiguration } from '../models/inputFormConfiguration.model';
+import { AgInputFormConfiguration } from '../models/agInputFormConfiguration.model';
 
-export const defaultInputConfiguration: InputFormConfiguration = {
+export const defaultInputConfiguration: AgInputFormConfiguration = {
     componentType: 'input',
     formControlName: null,
     type: { name: 'text', icon: 'article' },
