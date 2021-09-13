@@ -1,1 +1,52 @@
-<ag-date-picker [datePickerConfiguration]='defaultDatePicker'></ag-date-picker>
+<mat-card class="ag-flex ag-flex-col ag-h-full ag-px-0 ag-pt-0 ag-bg-gray-100 ag-w-full">
+    <mat-card-header class="ag-flex ag-flex-col ag-text-center ag-m-0 ag-w-full ag-bg-blue-300 ag-mb-10">
+        <mat-card-title class="ag-text-base ag-flex ag-justify-around ag-items-baseline ag-pt-5">
+            <a href="https://github.com/hossein13m/angular-form-builder" target="_blank">
+                <h1 class="ag-flex ag-items-center ag-py-5">
+                    <span class="ag-mx-2"> AG FormViewer </span>
+                    <mat-icon fontSet="material-icons-outlined"> calendar_view_month </mat-icon>
+                </h1>
+            </a>
+
+            <h1>{{ formInfo.name }}</h1>
+        </mat-card-title>
+
+        <mat-card-subtitle>
+            <hr class="ag-w-full ag-my-3" />
+        </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="ag-overflow-y-auto ag-h-5-6 ag-mt-10 ag-flex ag-flex-col ag-items-center">
+        <mat-grid-list cols="1" rowHeight="150px" gutterSize="30px" class="ag-mx-5">
+            <form [formGroup]="form">
+                <mat-grid-tile *ngFor="let formSection of formInfo.sections; index as index">
+                    <div class="ag-flex ag-justify-evenly ag-items-center ag-w-full">
+                        <div *ngFor="let formColumn of formSection.columnInfo">
+                            <mat-form-field
+                                appearance="legacy"
+                                [formControlName]="formColumn.componentInfo.formControlName"
+                                *ngIf="formColumn.componentType === 'input'"
+                            >
+                                <mat-label>{{ formColumn.componentInfo.label }}</mat-label>
+                                <input matInput />
+<!--                                <mat-hint>{{ formColumn.componentInfo.hint }}</mat-hint>-->
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+            </form>
+        </mat-grid-list>
+    </mat-card-content>
+
+    <mat-card-actions class="ag-flex ag-justify-around">
+        <button mat-flat-button color="warn">
+            <mat-icon fontSet="material-icons-outlined" class="ag-text-2xl" inline>close</mat-icon>
+            <span>Cancel Data Entry</span>
+        </button>
+
+        <button mat-flat-button color="primary" class="ag-bg-light-blue-300" type="submit" (click)="onSubmit()">
+            <mat-icon fontSet="material-icons-outlined" class="ag-text-2xl" inline>save</mat-icon>
+            <span>Save Data Entry</span>
+        </button>
+    </mat-card-actions>
+</mat-card>
