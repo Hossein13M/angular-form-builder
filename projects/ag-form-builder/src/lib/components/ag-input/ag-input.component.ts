@@ -2,11 +2,11 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { InputFormConfiguration } from '../../models/inputFormConfiguration.model';
 
 @Component({
-    selector: 'app-input',
-    templateUrl: './input.component.html',
-    styleUrls: ['./input.component.scss'],
+    selector: 'ag-input',
+    templateUrl: './ag-input.component.html',
+    styleUrls: ['./ag-input.component.scss'],
 })
-export class InputComponent implements OnChanges {
+export class AgInputComponent implements OnChanges {
     public hideInputTextForPasswordInputs = false;
     @Input() readonlyForDemo: boolean = false;
     @Input() inputFormConfiguration: InputFormConfiguration = {
