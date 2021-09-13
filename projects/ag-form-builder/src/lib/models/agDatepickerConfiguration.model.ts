@@ -1,6 +1,6 @@
 import { ThemePalette } from '@angular/material/core';
 
-export interface AgDatepicker {
+export interface AgDatepickerConfiguration {
     componentType: 'datepicker';
     formControlName: string | null;
     appearance: AgAppearance;

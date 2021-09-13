@@ -10,7 +10,7 @@ import { defaultDatepickerConfiguration } from '../../const/defaultDatepickerCon
 import { defaultComponentsList } from '../../const/defaultComponentsList';
 import { AgColumnModel } from '../../models/agColumn.model';
 import { AgComponentSettings, AgComponentTypes } from '../../models/agComponent.model';
-import { AgDatepicker } from '../../models/agDatepicker.model';
+import { AgDatepickerConfiguration } from '../../models/agDatepickerConfiguration.model';
 
 @Component({
     selector: 'ag-setting-modal',
@@ -82,8 +82,8 @@ export class AgSettingModalComponent {
         return this.columns.length > 0 ? <AgButtonFormConfiguration>sectionColumn.columnSetting : defaultButtonConfiguration;
     }
 
-    public returnDatepickerFormConfiguration(sectionColumn: AgColumnModel): AgDatepicker {
-        return this.columns.length > 0 ? <AgDatepicker>sectionColumn.columnSetting : defaultDatepickerConfiguration;
+    public returnDatepickerFormConfiguration(sectionColumn: AgColumnModel): AgDatepickerConfiguration {
+        return this.columns.length > 0 ? <AgDatepickerConfiguration>sectionColumn.columnSetting : defaultDatepickerConfiguration;
     }
 
     public onComponentTypeValueChange(column: AgColumnModel, selectedColumnComponentType: AgComponentTypes) {

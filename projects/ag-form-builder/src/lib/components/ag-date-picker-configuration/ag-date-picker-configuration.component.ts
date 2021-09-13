@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AgAppearance, AgDatepicker, AgDatePickerIcon, AgDisableMode } from '../../models/agDatepicker.model';
+import { AgAppearance, AgDatepickerConfiguration, AgDatePickerIcon, AgDisableMode } from '../../models/agDatepickerConfiguration.model';
 
 @Component({
     selector: 'ag-date-picker-configuration',
@@ -22,8 +22,8 @@ export class AgDatePickerConfigurationComponent implements OnInit {
         { localeCode: 'fa-IR', localeName: 'Iranian Calendar' },
         { localeCode: 'en-US', localeName: 'Gregorian Calendar' },
     ];
-    @Output() componentConfiguration: EventEmitter<AgDatepicker> = new EventEmitter<AgDatepicker>();
-    @Input() datepickerConfiguration!: AgDatepicker;
+    @Output() componentConfiguration: EventEmitter<AgDatepickerConfiguration> = new EventEmitter<AgDatepickerConfiguration>();
+    @Input() datepickerConfiguration!: AgDatepickerConfiguration;
 
     public form: FormGroup = this.fb.group({
         formControlName: [null, [Validators.required, Validators.pattern(/^[a-zA-Z]*$/)]],
@@ -45,7 +45,7 @@ export class AgDatePickerConfigurationComponent implements OnInit {
     }
 
     public submitComponentConfigurationForm(): void {
-        const data: AgDatepicker = this.form.value;
+        const data: AgDatepickerConfiguration = this.form.value;
         this.componentConfiguration.emit(data);
         console.log(data);
         console.log(this.form.value);
