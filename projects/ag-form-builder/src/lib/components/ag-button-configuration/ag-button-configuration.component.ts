@@ -4,11 +4,11 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { ButtonFormConfiguration } from '../../models/buttonFormConfiguration';
 
 @Component({
-    selector: 'app-button-configuration',
-    templateUrl: './button-configuration.component.html',
-    styleUrls: ['./button-configuration.component.scss'],
+    selector: 'ag-button-configuration',
+    templateUrl: './ag-button-configuration.component.html',
+    styleUrls: ['./ag-button-configuration.component.scss'],
 })
-export class ButtonConfigurationComponent implements OnInit {
+export class AgButtonConfigurationComponent implements OnInit {
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
     @Output() componentConfiguration: EventEmitter<ButtonFormConfiguration> = new EventEmitter<ButtonFormConfiguration>();
     @Input() buttonConfiguration!: ButtonFormConfiguration;
