@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from './button.component';
+import { AgButtonComponent } from './ag-button.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-    declarations: [ButtonComponent],
+    declarations: [AgButtonComponent],
     imports: [CommonModule, MatButtonModule, MatTooltipModule, MatIconModule, RouterModule],
-    exports: [ButtonComponent],
+    exports: [AgButtonComponent],
 })
-export class ButtonModule {}
+export class AgButtonModule {}

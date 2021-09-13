@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ButtonFormConfiguration } from '../../models/buttonFormConfiguration';
 
 @Component({
-    selector: 'app-button',
-    templateUrl: './button.component.html',
-    styleUrls: ['./button.component.scss'],
+    selector: 'ag-button',
+    templateUrl: './ag-button.component.html',
+    styleUrls: ['./ag-button.component.scss'],
 })
-export class ButtonComponent {
+export class AgButtonComponent {
     @Input() disableButton: boolean = false;
     @Input() buttonConfiguration!: ButtonFormConfiguration;
 
