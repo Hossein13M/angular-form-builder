@@ -47,8 +47,6 @@ export class AgDatePickerConfigurationComponent implements OnInit {
     public submitComponentConfigurationForm(): void {
         const data: AgDatepickerConfiguration = this.form.value;
         this.componentConfiguration.emit(data);
-        console.log(data);
-        console.log(this.form.value);
     }
 
     private setDataForEditMode() {
@@ -64,7 +62,6 @@ export class AgDatePickerConfigurationComponent implements OnInit {
     }
 
     public setLocaleName(localeCode: string): string {
-        console.log(localeCode);
         return this.datePickerLocales.find((item) => item.localeCode === localeCode)!.localeName;
     }
 
