@@ -38,11 +38,11 @@
                     (componentConfiguration)="getComponentConfigurationEvent($event, 'input', index)"
                 ></ag-input-configuration>
 
-                <lib-ag-date-picker-configuration
+                <ag-date-picker-configuration
                     *ngIf="matSelect.value === 'date'"
                     [datepickerConfiguration]="returnDatepickerFormConfiguration(column)"
                     (componentConfiguration)="getComponentConfigurationEvent($event, 'date', index)"
-                ></lib-ag-date-picker-configuration>
+                ></ag-date-picker-configuration>
             </mat-card-content>
         </mat-card>
 

@@ -3,7 +3,7 @@ import { AgDatepicker } from '../../models/agDatepicker.model';
 import { DateAdapter } from '@angular/material/core';
 
 @Component({
-    selector: 'lib-ag-date-picker',
+    selector: 'ag-date-picker',
     templateUrl: './ag-date-picker.component.html',
     styleUrls: ['./ag-date-picker.component.scss'],
 })

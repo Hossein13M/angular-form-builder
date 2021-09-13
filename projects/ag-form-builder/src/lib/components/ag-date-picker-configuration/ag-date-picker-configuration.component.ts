@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AgAppearance, AgDatepicker, AgDatePickerIcon, AgDisableMode } from '../../models/agDatepicker.model';
 
 @Component({
-    selector: 'lib-ag-date-picker-configuration',
+    selector: 'ag-date-picker-configuration',
     templateUrl: './ag-date-picker-configuration.component.html',
     styleUrls: ['./ag-date-picker-configuration.component.scss'],
 })
