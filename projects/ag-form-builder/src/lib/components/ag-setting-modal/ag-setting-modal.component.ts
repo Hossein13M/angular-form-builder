@@ -12,18 +12,18 @@ import { defaultDatepickerConfiguration } from '../../const/defaultDatepickerCon
 import { defaultComponentsList } from '../../const/defaultComponentsList';
 
 @Component({
-    selector: 'app-setting-modal',
-    templateUrl: './setting-modal.component.html',
-    styleUrls: ['./setting-modal.component.scss'],
+    selector: 'ag-setting-modal',
+    templateUrl: './ag-setting-modal.component.html',
+    styleUrls: ['./ag-setting-modal.component.scss'],
 })
-export class SettingModalComponent {
+export class AgSettingModalComponent {
     public columns: Array<ColumnModel> = [];
     public sectionInfo: { sectionIndex: number; sectionColumns: Array<ColumnComponentModel> } = {
         sectionIndex: this.data.sectionIndex,
         sectionColumns: [],
     };
 
-    constructor(private matDialog: MatDialogRef<SettingModalComponent>, @Inject(MAT_DIALOG_DATA) public data: { sectionIndex: number; sectionInfo: Section }) {
+    constructor(private matDialog: MatDialogRef<AgSettingModalComponent>, @Inject(MAT_DIALOG_DATA) public data: { sectionIndex: number; sectionInfo: Section }) {
         if (this.data.sectionInfo.columnsCount > 0) this.setDataForEditMode();
     }
 

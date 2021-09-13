@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SettingModalComponent } from './setting-modal.component';
+import { AgSettingModalComponent } from './ag-setting-modal.component';
 
 describe('SettingModalComponent', () => {
-    let component: SettingModalComponent;
-    let fixture: ComponentFixture<SettingModalComponent>;
+    let component: AgSettingModalComponent;
+    let fixture: ComponentFixture<AgSettingModalComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [SettingModalComponent],
+            declarations: [AgSettingModalComponent],
         }).compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(SettingModalComponent);
+        fixture = TestBed.createComponent(AgSettingModalComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
