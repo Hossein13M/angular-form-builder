@@ -1,0 +1,26 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    footer {
+        display: flex;
+        justify-content: space-between;
+        a {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+        }
+        img {
+            height: 50px;
+        }
+    }
+
+    .demo-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        height: 700px;
+    }
+}
