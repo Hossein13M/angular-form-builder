@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AgSection } from '../../../ag-form-builder/src/lib/models/agSection.model';
+import { AgMockFormDataModel } from '../../../ag-form-builder/src/lib/models/agMockFormData.model';
+import { AgFormViewerService } from '../../../ag-form-builder/src/lib/modules/ag-form-viewer/ag-form-viewer.service';
 
 @Component({
     selector: 'app-root',
     styleUrls: ['./app.component.scss'],
     template: `
         <div class="wrapper">
-            <mat-tab-group color="accent" backgroundColor="primary" mat-align-tabs="center">
+            <mat-tab-group color="accent" backgroundColor="primary" mat-align-tabs="center" [selectedIndex]="1">
                 <mat-tab class="ag-flex ag-justify-center">
                     <ng-template mat-tab-label> <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">build</mat-icon> AG Form Builder </ng-template>
                     <lib-ag-form-builder class="demo-wrapper" (emittedFormInfo)="handleFormInfo($event)"></lib-ag-form-builder>
@@ -16,7 +18,7 @@ import { AgSection } from '../../../ag-form-builder/src/lib/models/agSection.mod
                     <ng-template mat-tab-label>
                         <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">calendar_view_month</mat-icon> AG Form Viewer
                     </ng-template>
-                    <lib-ag-form-viewer class="demo-wrapper"></lib-ag-form-viewer>
+                    <lib-ag-form-viewer [formInfo]="mockForm" class="demo-wrapper"></lib-ag-form-viewer>
                 </mat-tab>
             </mat-tab-group>
 
@@ -36,8 +38,15 @@ import { AgSection } from '../../../ag-form-builder/src/lib/models/agSection.mod
         </div>
     `,
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+    public mockForm!: AgMockFormDataModel;
+    constructor(private readonly agFormViewerService: AgFormViewerService) {}
+
     public handleFormInfo(event: { name: string; sections: Array<AgSection> }): void {
         console.log(event);
+    }
+
+    ngOnInit(): void {
+        this.agFormViewerService.getMockData().subscribe((result) => (this.mockForm = result));
     }
 }
