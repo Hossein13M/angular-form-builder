@@ -19,21 +19,31 @@
     <mat-card-content class="ag-overflow-y-auto ag-h-5-6 ag-mt-10 ag-flex ag-flex-col ag-items-center">
         <mat-grid-list cols="1" rowHeight="150px" gutterSize="30px" class="ag-mx-5">
             <form [formGroup]="form">
-                <mat-grid-tile *ngFor="let formSection of formInfo.sections; index as index">
-                    <div class="ag-flex ag-justify-evenly ag-items-center ag-w-full">
-                        <div *ngFor="let formColumn of formSection.columnInfo">
-                            <mat-form-field
-                                appearance="legacy"
-                                [formControlName]="formColumn.componentInfo.formControlName"
-                                *ngIf="formColumn.componentType === 'input'"
-                            >
-                                <mat-label>{{ formColumn.componentInfo.label }}</mat-label>
-                                <input matInput />
-<!--                                <mat-hint>{{ formColumn.componentInfo.hint }}</mat-hint>-->
-                            </mat-form-field>
+                <div formArrayName="formArray">
+                    <mat-grid-tile *ngFor="let formGroup of getFormArray.value?.controls; index as index">
+                        <div class="ag-flex ag-justify-evenly ag-items-center ag-w-full" [formGroup]="getFormGroup(formGroup)">
+                            <ng-container *ngFor="let dastan of returnFormGroupControls(formGroup)">
+                                <div [ngSwitch]="returnFormControlName(index, dastan)?.componentType">
+                                    <div *ngSwitchCase="'input'">
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>{{ returnFormControlName(index, dastan)?.componentInfo?.label }}</mat-label>
+                                            <input [formControlName]="dastan" matInput />
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div *ngSwitchCase="'date'">
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>{{ returnFormControlName(index, dastan)?.componentInfo?.label }}</mat-label>
+                                            <input [formControlName]="dastan" matInput [matDatepicker]="picker" />
+                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </ng-container>
                         </div>
-                    </div>
-                </mat-grid-tile>
+                    </mat-grid-tile>
+                </div>
             </form>
         </mat-grid-list>
     </mat-card-content>
