@@ -10,15 +10,19 @@ import { AgFormViewerService } from '../../../ag-form-builder/src/lib/modules/ag
         <div class="wrapper">
             <mat-tab-group color="accent" backgroundColor="primary" mat-align-tabs="center" [selectedIndex]="1">
                 <mat-tab class="ag-flex ag-justify-center">
-                    <ng-template mat-tab-label> <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">build</mat-icon> AG Form Builder </ng-template>
-                    <lib-ag-form-builder class="demo-wrapper" (emittedFormInfo)="handleFormInfo($event)"></lib-ag-form-builder>
+                    <ng-template mat-tab-label>
+                        <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">build</mat-icon>
+                        AG Form Builder
+                    </ng-template>
+                    <lib-ag-form-builder class="demo-wrapper" (emittedFormInfo)="handleFormBuilderInfo($event)"></lib-ag-form-builder>
                 </mat-tab>
 
                 <mat-tab>
                     <ng-template mat-tab-label>
-                        <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">calendar_view_month</mat-icon> AG Form Viewer
+                        <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">calendar_view_month</mat-icon>
+                        AG Form Viewer
                     </ng-template>
-                    <lib-ag-form-viewer [formInfo]="mockForm" class="demo-wrapper"></lib-ag-form-viewer>
+                    <lib-ag-form-viewer [formInfo]="mockForm" (emittedFormViewerInfo)="handleFormViewerInfo($event)" class="demo-wrapper"></lib-ag-form-viewer>
                 </mat-tab>
             </mat-tab-group>
 
@@ -42,7 +46,11 @@ export class AppComponent implements OnInit {
     public mockForm!: AgMockFormDataModel;
     constructor(private readonly agFormViewerService: AgFormViewerService) {}
 
-    public handleFormInfo(event: { name: string; sections: Array<AgSection> }): void {
+    public handleFormBuilderInfo(event: { name: string; sections: Array<AgSection> }): void {
+        console.log(event);
+    }
+
+    public handleFormViewerInfo(event: { name: string; sections: Array<any> }): void {
         console.log(event);
     }
 
