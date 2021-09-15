@@ -1,2 +1,16 @@
 @import '../../scss/utility';
 @import '../../scss/mg-pd';
+
+mat-card {
+    display: flex;
+    mat-card-content {
+        mat-grid-list {
+            min-width: 1400px;
+            padding: 20px;
+            mat-grid-tile {
+                border-radius: 10px;
+                background: #ecf1f5;
+            }
+        }
+    }
+}
