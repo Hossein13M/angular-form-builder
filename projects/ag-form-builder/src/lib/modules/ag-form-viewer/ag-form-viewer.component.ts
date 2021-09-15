@@ -1,7 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AgMockFormDataModel } from '../../models/agMockFormData.model';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { formatDate } from '@angular/common';
+import { AgSection } from '../../models/agSection.model';
 
 @Component({
     selector: 'lib-ag-form-viewer',
@@ -10,6 +11,10 @@ import { formatDate } from '@angular/common';
 })
 export class AgFormViewerComponent implements OnInit {
     @Input() formInfo!: AgMockFormDataModel;
+    @Output() emittedFormViewerInfo: EventEmitter<{ name: string; sections: Array<any> }> = new EventEmitter<{
+        name: string;
+        sections: Array<AgSection>;
+    }>();
     public form: FormGroup;
     public formArray: FormArray = this.fb.array([]);
     public hasFormCreated: boolean = false;
@@ -40,6 +45,7 @@ export class AgFormViewerComponent implements OnInit {
     }
 
     public onSubmit(): void {
+        const finalData = { name: this.form.get('name')?.value, sections: [] };
         this.form.get('formArray')?.value.value.map((item: any) => {
             for (const key in item) {
                 if (AgFormViewerComponent.isDate(item[key])) {
@@ -48,11 +54,11 @@ export class AgFormViewerComponent implements OnInit {
             }
         });
 
-        const dastan = { ...this.form.get('formArray')?.value.value, name: this.form.get('name')?.value };
-        console.log(dastan);
+        finalData.sections = this.form.get('formArray')?.value.value;
+        this.emittedFormViewerInfo.emit(finalData);
     }
 
-    public returnFormGroupControls(formGroup: any) {
+    public returnFormGroupControls(formGroup: FormGroup) {
         const formControlNames: string[] = [];
         Object.keys(formGroup.controls).map((formControl) => formControlNames.push(formControl));
         return formControlNames;
@@ -72,7 +78,7 @@ export class AgFormViewerComponent implements OnInit {
         return formatDate(date, 'yyyy-MM-dd', 'en_US');
     }
 
-    private static isDate(dateStr: string): boolean {
-        return !isNaN(new Date(dateStr).getDate()) && dateStr !== null;
+    private static isDate(dateString: string): boolean {
+        return !isNaN(new Date(dateString).getDate()) && dateString !== null;
     }
 }
