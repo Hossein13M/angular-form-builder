@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { AgMockFormDataModel } from '../../models/agMockFormData.model';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { formatDate } from '@angular/common';
@@ -8,6 +8,7 @@ import { AgSection } from '../../models/agSection.model';
     selector: 'lib-ag-form-viewer',
     templateUrl: './ag-form-viewer.component.html',
     styleUrls: ['./ag-form-viewer.component.scss'],
+    encapsulation: ViewEncapsulation.None,
 })
 export class AgFormViewerComponent implements OnInit {
     @Input() formInfo!: AgMockFormDataModel;
