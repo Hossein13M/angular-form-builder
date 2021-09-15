@@ -17,9 +17,6 @@
                     <button *ngIf="form.get('name')!.value" matSuffix mat-icon-button (click)="form.get('name')?.setValue(null)">
                         <mat-icon fontSet="material-icons-outlined">close</mat-icon>
                     </button>
-                    <mat-hint *ngIf="!form.get('name')!.hasError('pattern')" class="ag-flex">
-                        <span>Can't be changed in future</span>
-                    </mat-hint>
                     <mat-error *ngIf="form.get('name')!.hasError('pattern')" class="ag-flex">
                         <span>Only English letters are accepted</span>
                     </mat-error>
