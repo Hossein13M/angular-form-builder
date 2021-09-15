@@ -7,7 +7,7 @@
                         <mat-label>Select your component type</mat-label>
                         <mat-select [value]="column.columnComponentType ?? 'input'" #matSelect (valueChange)="onComponentTypeValueChange(column, $event)">
                             <mat-option value="input">Input Component</mat-option>
-                            <mat-option value="button">Button Component</mat-option>
+                            <!--                            <mat-option value="button">Button Component</mat-option>-->
                             <mat-option value="date">Datepicker Component</mat-option>
                         </mat-select>
                     </mat-form-field>
