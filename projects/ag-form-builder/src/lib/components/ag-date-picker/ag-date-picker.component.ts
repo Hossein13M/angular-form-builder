@@ -16,7 +16,7 @@ export class AgDatePickerComponent implements OnInit {
         this.setLocale();
     }
 
-    private setLocale() {
+    private setLocale(): void {
         this.dateAdapter.setLocale(this.datePickerConfiguration.locale);
     }
 }
