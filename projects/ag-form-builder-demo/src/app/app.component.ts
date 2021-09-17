@@ -22,7 +22,12 @@ import { AgFormViewerService } from '../../../ag-form-builder/src/lib/modules/ag
                         <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">calendar_view_month</mat-icon>
                         AG Form Viewer
                     </ng-template>
-                    <lib-ag-form-viewer [formInfo]="mockForm" (emittedFormViewerInfo)="handleFormViewerInfo($event)" class="demo-wrapper"></lib-ag-form-viewer>
+                    <lib-ag-form-viewer
+                        [formInfo]="mockForm"
+                        [dateLocale]="'en-US'"
+                        (emittedFormViewerInfo)="handleFormViewerInfo($event)"
+                        class="demo-wrapper"
+                    ></lib-ag-form-viewer>
                 </mat-tab>
             </mat-tab-group>
 

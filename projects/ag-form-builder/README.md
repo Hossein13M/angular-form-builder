@@ -12,11 +12,19 @@ npm i ag-form-builder
 
 ## Usage
 
+#FormBuilder
 import `AgFormBuilderModule` into your module
 then you can use it in your template like bellow:
 ```
 <lib-ag-form-builder (emittedForm)="handleFormInfo($event)"></lib-ag-form-builder>
 
+```
+
+#FormViewer
+import `AgFormViewerModule` into your module
+then you can use it in your template like bellow:
+```
+<lib-ag-form-viewer [formInfo]="mockForm" [dateLocale]="'en-US'" (emittedFormViewerInfo)="handleFormViewerInfo($event)"></lib-ag-form-viewer>
 ```
 ## Working Demo
 

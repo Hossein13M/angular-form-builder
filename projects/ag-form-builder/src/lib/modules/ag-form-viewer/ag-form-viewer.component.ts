@@ -3,6 +3,7 @@ import { AgMockFormDataModel } from '../../models/agMockFormData.model';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { formatDate } from '@angular/common';
 import { AgSection } from '../../models/agSection.model';
+import { DateAdapter } from '@angular/material/core';
 
 @Component({
     selector: 'lib-ag-form-viewer',
@@ -12,6 +13,7 @@ import { AgSection } from '../../models/agSection.model';
 })
 export class AgFormViewerComponent implements OnInit {
     @Input() formInfo!: AgMockFormDataModel;
+    @Input() dateLocale: string = 'en-US';
     @Output() emittedFormViewerInfo: EventEmitter<{ name: string; sections: Array<any> }> = new EventEmitter<{
         name: string;
         sections: Array<AgSection>;
@@ -20,12 +22,13 @@ export class AgFormViewerComponent implements OnInit {
     public formArray: FormArray = this.fb.array([]);
     public hasFormCreated: boolean = false;
 
-    constructor(private readonly fb: FormBuilder) {
+    constructor(private readonly fb: FormBuilder, private dateAdapter: DateAdapter<any>) {
         this.form = this.fb.group({ name: ['', Validators.required], formArray: [] });
     }
 
     public ngOnInit(): void {
         this.createFormGroups();
+        this.setLocale();
     }
 
     get getFormArray(): FormArray {
@@ -73,6 +76,10 @@ export class AgFormViewerComponent implements OnInit {
 
     public getFormGroup(form: AbstractControl) {
         return form as FormGroup;
+    }
+
+    private setLocale(): void {
+        this.dateAdapter.setLocale(this.dateLocale);
     }
 
     private static convertDateToGregorianFormatForServer(date: Date): string {
