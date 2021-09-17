@@ -18,10 +18,7 @@ export class AgDatePickerConfigurationComponent implements OnInit {
         { name: 'whole', icon: 'event' },
     ];
     public datePickerIcons: Array<AgDatePickerIcon> = ['event', 'calendar_today', 'today', 'edit_calendar', 'calendar_view_month'];
-    public datePickerLocales: Array<{ localeCode: string; localeName: string }> = [
-        { localeCode: 'fa-IR', localeName: 'Iranian Calendar' },
-        { localeCode: 'en-US', localeName: 'Gregorian Calendar' },
-    ];
+
     @Output() componentConfiguration: EventEmitter<AgDatepickerConfiguration> = new EventEmitter<AgDatepickerConfiguration>();
     @Input() datepickerConfiguration!: AgDatepickerConfiguration;
 
@@ -32,7 +29,6 @@ export class AgDatePickerConfigurationComponent implements OnInit {
         datePickerIcon: ['', Validators.required],
         themeColor: ['primary', Validators.required],
         popupColor: ['', Validators.required],
-        locale: [Validators.required],
         disableMode: ['input', Validators.required],
         hint: [''],
         appearance: ['outline', Validators.required],
@@ -55,14 +51,9 @@ export class AgDatePickerConfigurationComponent implements OnInit {
         this.form.get('appearance')?.setValue(this.datepickerConfiguration.appearance);
         this.form.get('label')?.setValue(this.datepickerConfiguration.label);
         this.form.get('themeColor')?.setValue(this.datepickerConfiguration.themeColor);
-        this.form.get('locale')?.setValue(this.datepickerConfiguration.locale);
         this.form.get('disableMode')?.setValue(this.datepickerConfiguration.disableMode);
         this.form.get('popupColor')?.setValue(this.datepickerConfiguration.popupColor);
         this.form.get('datePickerIcon')?.setValue(this.datepickerConfiguration.datePickerIcon);
-    }
-
-    public setLocaleName(localeCode: string): string {
-        return this.datePickerLocales.find((item) => item.localeCode === localeCode)!.localeName;
     }
 
     public findDisableModeIcon(mode: AgDisableMode): string {
