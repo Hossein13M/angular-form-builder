@@ -12,6 +12,7 @@ export interface AgDatepickerConfiguration {
     isRtl?: boolean;
     hint?: string;
     disableMode: AgDisableMode;
+    locale: string; // this should be the correct local like : 'en-US' or 'fa-IR'
 }
 
 export type AgDisableMode = 'popup' | 'input' | 'whole' | 'none';
