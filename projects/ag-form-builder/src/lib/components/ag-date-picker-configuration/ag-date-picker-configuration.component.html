@@ -94,20 +94,6 @@
                 </mat-option>
             </mat-select>
         </mat-form-field>
-
-        <mat-form-field appearance="outline" class="ag-mx-3">
-            <mat-label>Datepicker Locale</mat-label>
-            <mat-select formControlName="locale">
-                <mat-select-trigger class="ag-flex">
-                    <mat-icon fontSet="material-icons-outlined" color="primary">calendar_today</mat-icon>
-                    <span style="line-height: 24px" class="ag-mx-4">{{ setLocaleName(form.get('locale')!.value) | titlecase }}</span>
-                </mat-select-trigger>
-                <mat-option *ngFor="let datePickerLocale of datePickerLocales" [value]="datePickerLocale.localeCode">
-                    <mat-icon fontSet="material-icons-outlined" color="primary">calendar_today</mat-icon>
-                    <span>{{ datePickerLocale.localeName | titlecase }}</span>
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
     </div>
 
     <button class="ag-w-3-5 ag-mx-auto ag-my-auto" mat-flat-button color="primary" type="submit" [disabled]="form.invalid">

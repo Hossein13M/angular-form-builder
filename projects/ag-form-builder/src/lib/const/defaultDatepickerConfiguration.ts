@@ -11,5 +11,4 @@ export const defaultDatepickerConfiguration: AgDatepickerConfiguration = {
     hint: '',
     disableMode: 'input',
     datePickerIcon: 'calendar_today',
-    locale: 'en-US',
 };
