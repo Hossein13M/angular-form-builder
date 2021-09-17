@@ -24,7 +24,7 @@ import { AgFormViewerService } from '../../../ag-form-builder/src/lib/modules/ag
                     </ng-template>
                     <lib-ag-form-viewer
                         [formInfo]="mockForm"
-                        [dateLocale]="'fa-IR'"
+                        [dateLocale]="'en-US'"
                         (emittedFormViewerInfo)="handleFormViewerInfo($event)"
                         class="demo-wrapper"
                     ></lib-ag-form-viewer>
