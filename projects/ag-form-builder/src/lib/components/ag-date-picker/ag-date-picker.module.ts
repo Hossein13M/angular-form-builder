@@ -10,6 +10,6 @@ import { MatIconModule } from '@angular/material/icon';
 @NgModule({
     declarations: [AgDatePickerComponent],
     exports: [AgDatePickerComponent],
-  imports: [CommonModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatIconModule]
+    imports: [CommonModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatIconModule],
 })
 export class AgDatePickerModule {}

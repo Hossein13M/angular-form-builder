@@ -15,7 +15,20 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
     declarations: [AgFormViewerComponent],
-    imports: [CommonModule, AgDatePickerModule, MatCardModule, MatIconModule, MatGridListModule, MatButtonModule, AgButtonModule, AgInputModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule],
+    imports: [
+        CommonModule,
+        AgDatePickerModule,
+        MatCardModule,
+        MatIconModule,
+        MatGridListModule,
+        MatButtonModule,
+        AgButtonModule,
+        AgInputModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDatepickerModule,
+    ],
     exports: [AgFormViewerComponent],
 })
 export class AgFormViewerModule {}

@@ -7,22 +7,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 
-
-
 @NgModule({
-  declarations: [
-    AgDatePickerConfigurationComponent
-  ],
-  exports: [
-    AgDatePickerConfigurationComponent
-  ],
-  imports: [
-    CommonModule,
-    MatSelectModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatButtonModule
-  ]
+    declarations: [AgDatePickerConfigurationComponent],
+    exports: [AgDatePickerConfigurationComponent],
+    imports: [CommonModule, MatSelectModule, MatIconModule, ReactiveFormsModule, MatInputModule, MatButtonModule],
 })
-export class AgDatePickerConfigurationModule { }
+export class AgDatePickerConfigurationModule {}
