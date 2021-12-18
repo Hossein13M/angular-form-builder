@@ -11,7 +11,7 @@ import { AgFormViewerService } from '../../../ag-form-builder/src/lib/modules/ag
             <mat-tab-group color="accent" backgroundColor="primary" mat-align-tabs="center" [selectedIndex]="1">
                 <mat-tab class="ag-flex ag-justify-center">
                     <ng-template mat-tab-label>
-                        <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">build</mat-icon>
+                        <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">settings</mat-icon>
                         AG Form Builder
                     </ng-template>
                     <lib-ag-form-builder class="demo-wrapper" (emittedFormInfo)="handleFormBuilderInfo($event)"></lib-ag-form-builder>
@@ -19,7 +19,7 @@ import { AgFormViewerService } from '../../../ag-form-builder/src/lib/modules/ag
 
                 <mat-tab>
                     <ng-template mat-tab-label>
-                        <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">calendar_view_month</mat-icon>
+                        <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">visibility</mat-icon>
                         AG Form Viewer
                     </ng-template>
                     <lib-ag-form-viewer
