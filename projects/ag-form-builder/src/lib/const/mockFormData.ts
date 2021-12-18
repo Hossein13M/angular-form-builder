@@ -1,7 +1,7 @@
 import { AgMockFormDataModel } from '../models/agMockFormData.model';
 
 export const mockFormData: AgMockFormDataModel = {
-    name: 'DastanForm',
+    name: 'TestForm',
     sections: [
         {
             columnInfo: [
