@@ -15,23 +15,48 @@ npm i ag-form-builder
 #FormBuilder
 import `AgFormBuilderModule` into your module
 then you can use it in your template like bellow:
-```
-<lib-ag-form-builder (emittedForm)="handleFormInfo($event)"></lib-ag-form-builder>
 
 ```
+<lib-ag-form-builder (emittedForm)="handleFormInfo($event)"></lib-ag-form-builder>
+```
+
+##Locale
+You have two options for the locale of your calendar, which you can set with `date locale`. You can find a list of them [here](https://www.science.co.il/language/Locale-codes.php).
+
+```
+<lib-ag-form-builder [dateLocale]="'en-US'"></lib-ag-form-builder>
+```
+
+## Edit An Existing Form
+
+If you want to edit an existing form, you need to pass the data to the component like below:
+
+```
+<lib-ag-form-builder [formData]="mockForm"></lib-ag-form-builder>
+```
+
+Make sure that the `mockForm` has a type of : `AgMockFormDataModel`
 
 #FormViewer
 import `AgFormViewerModule` into your module
 then you can use it in your template like bellow:
+
 ```
-<lib-ag-form-viewer [formInfo]="mockForm" [dateLocale]="'en-US'" (emittedFormViewerInfo)="handleFormViewerInfo($event)"></lib-ag-form-viewer>
+<lib-ag-form-viewer [formInfo]="mockForm" (emittedFormViewerInfo)="handleFormViewerInfo($event)"></lib-ag-form-viewer>
 ```
+
 ## Working Demo
 
 You can find a working demo [here](https://angular-formbuilder.netlify.app/).
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Pull requests are welcome. Please open an issue first to discuss what you would like to change for major changes. You can also discuss new ideas on issues.
+
+## Star
+
+If this tool helped you with your projects, you could give it a star!
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
