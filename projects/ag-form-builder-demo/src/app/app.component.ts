@@ -14,7 +14,7 @@ import { AgFormViewerService } from '../../../ag-form-builder/src/lib/modules/ag
                         <mat-icon fontSet="material-icons-outlined" class="ag-mx-5">settings</mat-icon>
                         AG Form Builder
                     </ng-template>
-                    <lib-ag-form-builder class="demo-wrapper" (emittedFormInfo)="handleFormBuilderInfo($event)"></lib-ag-form-builder>
+                    <lib-ag-form-builder class="demo-wrapper" [formData]="mockForm" (emittedFormInfo)="handleFormBuilderInfo($event)"></lib-ag-form-builder>
                 </mat-tab>
 
                 <mat-tab>

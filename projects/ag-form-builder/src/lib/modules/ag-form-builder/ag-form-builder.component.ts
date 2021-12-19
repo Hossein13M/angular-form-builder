@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { AgSection } from '../../models/agSection.model';
 import { AgSettingModalComponent } from '../../components/ag-setting-modal/ag-setting-modal.component';
 import { AgColumnComponentModel } from '../../models/agColumnComponent.model';
+import { AgMockFormDataModel } from '../../models/agMockFormData.model';
 
 @Component({
     selector: 'lib-ag-form-builder',
@@ -11,8 +12,9 @@ import { AgColumnComponentModel } from '../../models/agColumnComponent.model';
     styleUrls: ['./ag-form-builder.component.scss'],
     encapsulation: ViewEncapsulation.None,
 })
-export class AgFormBuilderComponent {
+export class AgFormBuilderComponent implements OnInit {
     @Output() emittedFormInfo: EventEmitter<{ name: string; sections: Array<AgSection> }> = new EventEmitter<{ name: string; sections: Array<AgSection> }>();
+    @Input() formData!: AgMockFormDataModel;
 
     public sections: Array<AgSection> = [];
     public form: FormGroup = this.fb.group({
@@ -20,6 +22,19 @@ export class AgFormBuilderComponent {
     });
 
     constructor(private dialog: MatDialog, private fb: FormBuilder) {}
+
+    ngOnInit(): void {
+        this.checkForEditMode() && this.setDataForEditMode();
+    }
+
+    private checkForEditMode(): boolean {
+        return !!this.formData;
+    }
+
+    private setDataForEditMode(): void {
+        this.form.get('name')?.setValue(this.formData.name);
+        this.sections = this.formData.sections;
+    }
 
     public clearForm(): void {
         this.sections = [];
@@ -45,6 +60,8 @@ export class AgFormBuilderComponent {
     }
 
     public submitForm(): void {
+        console.log('hello');
+        console.log({ name: this.form.get('name')!.value, sections: this.sections });
         this.emittedFormInfo.emit({ name: this.form.get('name')!.value, sections: this.sections });
     }
 
