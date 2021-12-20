@@ -36,7 +36,10 @@
                 <div class="ag-flex ag-flex-col ag-w-full ag-h-full">
                     <div class="ag-flex ag-justify-around ag-w-full ag-text-center ag-h-full ag-items-center">
                         <div *ngIf="sections[index].columnsCount === 0" class="ag-flex ag-items-center">
-                            <h1 class="ag-mb-0">Click on setting button to add components into this section</h1>
+                            <h1 class="ag-mb-0 ag-flex ag-items-center">
+                                <mat-icon fontSet="material-icons-outlined" class="ag-text-blue-600">priority_high</mat-icon>
+                                <span>No component found.</span>
+                            </h1>
                         </div>
                         <div
                             class="ag-h-full ag-flex ag-justify-center ag-items-center ag-w-full component-group"
