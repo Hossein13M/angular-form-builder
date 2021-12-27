@@ -12,7 +12,7 @@ npm i ag-form-builder
 
 ## Usage
 
-#FormBuilder
+## FormBuilder
 import `AgFormBuilderModule` into your module
 then you can use it in your template like bellow:
 
@@ -20,7 +20,7 @@ then you can use it in your template like bellow:
 <lib-ag-form-builder (emittedForm)="handleFormInfo($event)"></lib-ag-form-builder>
 ```
 
-##Locale
+## Locale
 You have two options for the locale of your calendar, which you can set with `date locale`. You can find a list of them [here](https://www.science.co.il/language/Locale-codes.php).
 
 ```
@@ -37,7 +37,7 @@ If you want to edit an existing form, you need to pass the data to the component
 
 Make sure that the `mockForm` has a type of : `AgMockFormDataModel`
 
-#FormViewer
+## FormViewer
 import `AgFormViewerModule` into your module
 then you can use it in your template like bellow:
 
