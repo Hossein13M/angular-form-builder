@@ -19,10 +19,13 @@
         "typeScript",
         "angular"
     ],
-    "author": "Hossein Mousavi <dev.hosseinmousavi.com> (https://hmousavi.dev/)",
+    "author": "Hossein Mousavi <dev.hosseinmousavi@gmail.com> (https://hmousavi.dev/)",
+    "contributors": [
+        "Joe <joe@whatever.com> (https://whatever.com)"
+    ],
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/hossein13m/angular-form-builder/issues"
     },
-    "homepage": "https://github.com/hossein13m/angular-form-builder#readme"
+    "homepage": "https://www.ag-form-builder.hmousavi.dev/"
 }
