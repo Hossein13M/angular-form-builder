@@ -2,6 +2,20 @@
 
 AG-FormBuilder is an Angular library for creating dynamic forms and interacting with them.
 
+#Here is an image of AG-Form Builder
+![AG Form Builder](./projects/ag-form-builder-demo/src/assets/images/ag-form-builder.png)
+
+
+##Here is an image of AG-Form Viewer
+![AG Form Builder](./projects/ag-form-builder-demo/src/assets/images/ag-form-viewer.png)
+
+## Working Demo 
+
+You can find a working demo [here](https://www.ag-form-builder.hmousavi.dev).
+Feel free to work with it and try it out.
+Make sure to check your console for the output once you want to save the form to get the data structure of ag-form builder/viewer
+
+
 ## Installation
 
 Use the package manager NPM to install AG-FormBuilder.
@@ -45,9 +59,7 @@ then you can use it in your template like bellow:
 <lib-ag-form-viewer [formInfo]="mockForm" (emittedFormViewerInfo)="handleFormViewerInfo($event)"></lib-ag-form-viewer>
 ```
 
-## Working Demo
 
-You can find a working demo [here](https://www.ag-form-builder.hmousavi.dev).
 
 ## Contributing
 
