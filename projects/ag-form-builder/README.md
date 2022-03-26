@@ -3,11 +3,11 @@
 AG-FormBuilder is an Angular library for creating dynamic forms and interacting with them.
 
 #Here is an image of AG-Form Builder
-![AG Form Builder](../../projects/ag-form-builder-demo/src/assets/images/ag-form-builder.png)
+![AG Form Builder](/home/hossein/Projects/angular-form-builder/projects/ag-form-builder/src/lib/assets/ag-form-builder.png)
 
 
 ##Here is an image of AG-Form Viewer
-![AG Form Builder](../../projects/ag-form-builder-demo/src/assets/images/ag-form-viewer.png)
+![AG Form Builder](/home/hossein/Projects/angular-form-builder/projects/ag-form-builder/src/lib/assets/ag-form-viewer.png)
 
 ## Working Demo
 
