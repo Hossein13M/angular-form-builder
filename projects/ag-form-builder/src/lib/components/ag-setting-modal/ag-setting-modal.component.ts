@@ -13,6 +13,7 @@ import { AgComponentSettings, AgComponentTypes } from '../../models/agComponent.
 import { AgDatepickerConfiguration } from '../../models/agDatepickerConfiguration.model';
 
 @Component({
+    standalone: false,
     selector: 'ag-setting-modal',
     templateUrl: './ag-setting-modal.component.html',
     styleUrls: ['./ag-setting-modal.component.scss'],

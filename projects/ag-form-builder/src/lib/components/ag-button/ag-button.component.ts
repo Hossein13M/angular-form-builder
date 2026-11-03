@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AgButtonFormConfiguration } from '../../models/agButtonFormConfiguration';
 
 @Component({
+    standalone: false,
     selector: 'ag-button',
     templateUrl: './ag-button.component.html',
     styleUrls: ['./ag-button.component.scss'],

@@ -4,13 +4,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AgAppearance, AgDatepickerConfiguration, AgDatePickerIcon, AgDisableMode } from '../../models/agDatepickerConfiguration.model';
 
 @Component({
+    standalone: false,
     selector: 'ag-date-picker-configuration',
     templateUrl: './ag-date-picker-configuration.component.html',
     styleUrls: ['./ag-date-picker-configuration.component.scss'],
 })
 export class AgDatePickerConfigurationComponent implements OnInit {
     public themeColors: Array<ThemePalette> = ['primary', 'accent', 'warn'];
-    public appearances: Array<AgAppearance> = ['outline', 'legacy', 'standard', 'fill'];
+    public appearances: Array<AgAppearance> = ['outline', 'fill'];
     public disableModes: Array<{ name: AgDisableMode; icon: string }> = [
         { name: 'popup', icon: 'open_in_new_off' },
         { name: 'input', icon: 'power_input' },

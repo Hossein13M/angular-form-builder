@@ -7,6 +7,7 @@ import { AgColumnComponentModel } from '../../models/agColumnComponent.model';
 import { AgMockFormDataModel } from '../../models/agMockFormData.model';
 
 @Component({
+    standalone: false,
     selector: 'lib-ag-form-builder',
     templateUrl: './ag-form-builder.component.html',
     styleUrls: ['./ag-form-builder.component.scss'],

@@ -29,7 +29,6 @@ import { AgInputConfigurationModule } from '../ag-input-configuration/ag-input-c
         MatTooltipModule,
         AgDatePickerConfigurationModule,
     ],
-    entryComponents: [AgSettingModalComponent],
     exports: [AgSettingModalComponent],
 })
 export class AgSettingModalModule {}
