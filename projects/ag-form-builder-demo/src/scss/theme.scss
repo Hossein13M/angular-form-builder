@@ -1,5 +1,4 @@
-@import '~@angular/material/theming';
-@include mat-core();
+@use '@angular/material' as mat;
 
 $primary-palette: (
     50: #e4e7f1,
@@ -101,10 +100,19 @@ $warn-palette: (
     ),
 );
 
-$palette-primary: mat-palette($primary-palette);
-$palette-accent: mat-palette($accent-palette);
-$palette-warn: mat-palette($warn-palette);
+$palette-primary: mat.m2-define-palette($primary-palette);
+$palette-accent: mat.m2-define-palette($accent-palette);
+$palette-warn: mat.m2-define-palette($warn-palette);
 
-$panel-theme: mat-light-theme($palette-primary, $palette-accent, $palette-warn);
+$panel-theme: mat.m2-define-light-theme(
+    (
+        color: (
+            primary: $palette-primary,
+            accent: $palette-accent,
+            warn: $palette-warn,
+        ),
+    )
+);
 
-@include angular-material-theme($panel-theme);
+@include mat.all-component-themes($panel-theme);
+@include mat.color-variants-backwards-compatibility($panel-theme);

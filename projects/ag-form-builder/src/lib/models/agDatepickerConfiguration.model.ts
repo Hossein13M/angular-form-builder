@@ -17,4 +17,4 @@ export interface AgDatepickerConfiguration {
 
 export type AgDisableMode = 'popup' | 'input' | 'whole' | 'none';
 export type AgDatePickerIcon = 'event' | 'calendar_today' | 'today' | 'edit_calendar' | 'calendar_view_month';
-export type AgAppearance = 'outline' | 'fill' | 'legacy' | 'standard';
+export type AgAppearance = 'outline' | 'fill';

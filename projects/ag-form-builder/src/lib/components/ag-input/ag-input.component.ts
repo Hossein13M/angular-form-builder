@@ -2,6 +2,7 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { AgInputFormConfiguration } from '../../models/agInputFormConfiguration.model';
 
 @Component({
+    standalone: false,
     selector: 'ag-input',
     templateUrl: './ag-input.component.html',
     styleUrls: ['./ag-input.component.scss'],

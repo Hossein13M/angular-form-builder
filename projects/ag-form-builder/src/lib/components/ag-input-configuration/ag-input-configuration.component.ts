@@ -4,6 +4,7 @@ import { ThemePalette } from '@angular/material/core';
 import { AgInputFormConfiguration } from '../../models/agInputFormConfiguration.model';
 
 @Component({
+    standalone: false,
     selector: 'ag-input-configuration',
     templateUrl: './ag-input-configuration.component.html',
     styleUrls: ['./ag-input-configuration.component.scss'],

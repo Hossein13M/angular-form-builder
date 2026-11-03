@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { AgButtonFormConfiguration } from '../../models/agButtonFormConfiguration';
 
 @Component({
+    standalone: false,
     selector: 'ag-button-configuration',
     templateUrl: './ag-button-configuration.component.html',
     styleUrls: ['./ag-button-configuration.component.scss'],

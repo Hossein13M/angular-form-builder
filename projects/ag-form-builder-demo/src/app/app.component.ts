@@ -4,6 +4,7 @@ import { AgMockFormDataModel } from '../../../ag-form-builder/src/lib/models/agM
 import { AgFormViewerService } from '../../../ag-form-builder/src/lib/modules/ag-form-viewer/ag-form-viewer.service';
 
 @Component({
+    standalone: false,
     selector: 'app-root',
     styleUrls: ['./app.component.scss'],
     template: `

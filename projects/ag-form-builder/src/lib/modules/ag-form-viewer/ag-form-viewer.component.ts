@@ -6,6 +6,7 @@ import { AgSection } from '../../models/agSection.model';
 import { DateAdapter } from '@angular/material/core';
 
 @Component({
+    standalone: false,
     selector: 'lib-ag-form-viewer',
     templateUrl: './ag-form-viewer.component.html',
     styleUrls: ['./ag-form-viewer.component.scss'],
